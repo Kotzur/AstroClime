@@ -1,10 +1,30 @@
 package astroclime;
 
-public class Main {
+import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class Main extends Application {
 
 	public static void main(String[] args) {
-		System.out.println("test"); //this is a test
-		//this is also a test
+		launch(args);
 	}
 
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		Parent root = FXMLLoader.load(getClass().getResource("fxml/test.fxml"));
+		primaryStage.setTitle("Welcome");
+
+		primaryStage.setOnCloseRequest(e -> {
+			Platform.exit();
+		});
+
+		Scene scene = new Scene(root, 600, 400);
+		primaryStage.setScene(scene);
+		primaryStage.show();
+
+	}
 }
