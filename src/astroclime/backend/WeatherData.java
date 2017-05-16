@@ -86,7 +86,7 @@ public class WeatherData {
 	}
 	
 	public static float getRainfall(CurrentWeather c) {
-		float r = -1;
+		float r = 0;
 		
 		if (c.hasRainInstance() && c.getRainInstance().hasRain3h()) {
 			r = c.getRainInstance().getRain3h();

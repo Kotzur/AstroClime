@@ -1,12 +1,10 @@
 package astroclime.controllers;
 
 import javafx.fxml.FXML;
-import javafx.scene.canvas.Canvas;
-import javafx.scene.image.ImageView;
+import javafx.scene.web.WebView;
+import javafx.scene.web.WebEngine;
 import javafx.scene.layout.AnchorPane;
-import org.json.JSONException;
 
-import java.io.IOException;
 
 public class MapViewController {
 
@@ -14,11 +12,11 @@ public class MapViewController {
     private AnchorPane mapFrame;
 
     @FXML
-    private ImageView imageView;
+    private WebView lightMapView;
 
-    public void initialize() throws JSONException, IOException {
-
-
+    public void initialize() {
+        WebEngine webEngine = lightMapView.getEngine();
+        webEngine.load("https://markwgraves.carto.com/viz/c82ff74e-5e85-11e6-9e35-0e05a8b3e3d7/embed_map");
     }
 
 }
