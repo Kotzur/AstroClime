@@ -1,22 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXColorPicker?>
-<?import com.jfoenix.controls.JFXProgressBar?>
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXRippler?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.validation.RequiredFieldValidator?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.TestController">
+<?import com.jfoenix.transitions.hamburger.HamburgerSlideCloseTransition?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="300.0" stylesheets="@../stylesheets/jfoenix.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.TestController">
 
     <center>
         <VBox alignment="CENTER" prefHeight="651.0" prefWidth="600.0" spacing="20.0" BorderPane.alignment="CENTER">
             <children>
-            <JFXProgressBar />
-            <JFXColorPicker />
-                <Label text="Test1" />
-                <Button fx:id="enterButton" onAction="#handleTest1Click" text="Go There" />
+                <Label text="Some messing around with JFoenix" />
+
+                <JFXRippler>
+                    <Label style="-fx-background-color: WHITE; -fx-padding: 20;" text="Label" />
+                </JFXRippler>
+
+                <JFXButton fx:id="enterButton" onAction="#handleTest1Click" text="JFenix Button" />
+                <JFXButton styleClass=".button-raised" text="RAISED BUTTON" />
+
+                <JFXCheckBox styleClass="custom-jfx-check-box" text="JFoenix TextBox" />
+
+                <!--Combo Box under construction (handles collections strangely in the fxml format-->
+                <!--<JFXComboBox promptText="Select one">
+                    <items>
+                        <Label text="1" />
+                        <Label text="2" />
+                        <Label text="3" />
+                        <Label text="4" />
+                    </items>
+                </JFXComboBox>-->
+
+                <JFXHamburger fx:id="h1" onMouseClicked="#handleMouseClick">
+                    <HamburgerSlideCloseTransition fx:id="burgerTask" rate="-1"/>
+                </JFXHamburger>
+
+                <JFXTextField fx:id="field" labelFloat="true" promptText="Floating prompt" />
+
+                <JFXTextField fx:id="validationField" promptText="with validation.." onKeyPressed="#handleKeyPressed">
+                    <validators>
+                        <RequiredFieldValidator fx:id="validator" message="Input Required" />
+                    </validators>
+                </JFXTextField>
+
             </children>
         </VBox>
     </center>
+    <top>
+    </top>
 </BorderPane>

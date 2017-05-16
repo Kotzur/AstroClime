@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.EventController">
+   <children>
+      <VBox prefHeight="450.0" prefWidth="300.0">
+         <children>
+            <HBox prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="101.0" />
+                  <Label alignment="CENTER" text="Percipitation  /  Humidity" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Monday" />
+                        <Label text="01" />
+                        <Label text="May" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Good Visibility" />
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                           <children>
+                              <Label text="20%" />
+                              <Label text="  /  " />
+                              <Label text="15%" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Tuesday" />
+                        <Label text="02" />
+                        <Label text="May" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Moderate Visibility" />
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                           <children>
+                              <Label text="22%" />
+                              <Label text="  /  " />
+                              <Label text="18%" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Wednesday" />
+                        <Label text="03" />
+                        <Label text="May" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Good Visibility" />
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                           <children>
+                              <Label text="18%" />
+                              <Label text="  /  " />
+                              <Label text="10%" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Thursday" />
+                        <Label text="04" />
+                        <Label text="May" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Poor Visibility" />
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                           <children>
+                              <Label text="20%" />
+                              <Label text="  /  " />
+                              <Label text="15%" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Friday" />
+                        <Label text="05" />
+                        <Label text="May" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Moderate Visibility" />
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                           <children>
+                              <Label text="15%" />
+                              <Label text="  /  " />
+                              <Label text="20%" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Saturday" />
+                        <Label text="06" />
+                        <Label text="May" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Good Visibility" />
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                           <children>
+                              <Label text="09%" />
+                              <Label text="  /  " />
+                              <Label text="16%" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Sunday" />
+                        <Label text="07" />
+                        <Label text="May" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Poor Visibility" />
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                           <children>
+                              <Label text="70%" />
+                              <Label text="  /  " />
+                              <Label text="30%" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
