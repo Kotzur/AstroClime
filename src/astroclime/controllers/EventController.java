@@ -13,6 +13,5 @@ public class EventController {
     Stage stage;
 
     public void handleActionEvent(ActionEvent event) throws IOException {
-
     }
 }
