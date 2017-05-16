@@ -15,14 +15,14 @@
       <Label layoutX="20.0" layoutY="173.0" prefHeight="17.0" prefWidth="72.0" text="LOCATION" />
       <Label layoutX="23.0" layoutY="298.0" text="LANGUAGE" />
       <JFXButton buttonType="RAISED" layoutX="28.0" layoutY="30.0" text="&lt; BACK" />
-      <JFXToggleButton fx:id="celcius" layoutX="14.0" layoutY="111.0" onAction="#changeUnits" text="°C">
+      <JFXComboBox fx:id="location" editable="true" layoutX="26.0" layoutY="202.0" onAction="#changeLocation" prefHeight="25.0" prefWidth="159.0" />
+      <JFXComboBox fx:id="language" layoutX="26.0" layoutY="334.0" prefHeight="25.0" prefWidth="159.0" />
+      <JFXRadioButton fx:id="celcius" layoutX="31.0" layoutY="123.0" text="°C">
          <toggleGroup>
             <ToggleGroup fx:id="units" />
          </toggleGroup>
-      </JFXToggleButton>
-      <JFXToggleButton fx:id="fahrenheit" layoutX="109.0" layoutY="111.0" onAction="#changeUnits" text="°F" toggleGroup="$units" />
-      <JFXToggleButton fx:id="kelvin" layoutX="217.0" layoutY="111.0" onAction="#changeUnits" text="K" toggleGroup="$units" />
-      <JFXComboBox fx:id="location" editable="true" layoutX="26.0" layoutY="202.0" onAction="#changeLocation" prefHeight="25.0" prefWidth="159.0" />
-      <JFXComboBox fx:id="language" layoutX="26.0" layoutY="334.0" onAction="#changeLanguage" prefHeight="25.0" prefWidth="159.0" />
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="fahrenheit" layoutX="112.0" layoutY="123.0" text="°F" toggleGroup="$units" />
+      <JFXRadioButton fx:id="kelvin" layoutX="189.0" layoutY="123.0" text="K" toggleGroup="$units" />
    </children>
 </AnchorPane>

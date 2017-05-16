@@ -2,55 +2,42 @@ package astroclime.controllers;
 
     import astroclime.backend.WeatherData;
     import com.jfoenix.controls.JFXComboBox;
-    import com.jfoenix.controls.JFXToggleButton;
+    import com.jfoenix.controls.JFXRadioButton;
     import javafx.fxml.FXML;
     import javafx.scene.control.ToggleGroup;
     import javafx.event.ActionEvent;
 
-public class SettingsController {
+    public class SettingsController {
 
-    @FXML
-    private JFXToggleButton kelvin;
+        @FXML
+        private JFXComboBox<?> location;
 
-    @FXML
-    private JFXComboBox<?> location;
+        @FXML
+        private JFXComboBox<?> language;
 
-    @FXML
-    private JFXComboBox<?> language;
+        @FXML
+        private ToggleGroup units;
 
-    @FXML
-    private ToggleGroup units;
+        @FXML
+        private JFXRadioButton celcius;
 
-    @FXML
-    private JFXToggleButton celcius;
+        @FXML
+        private JFXRadioButton fahrenheit;
 
-    @FXML
-    private JFXToggleButton fahrenheit;
 
-    //TODO: add logic for Kelvin
-    @FXML
-    void changeUnits(ActionEvent event) {
-       if(celcius.isSelected()){
-           WeatherData.CELCIUS = true;
-       } else WeatherData.CELCIUS = false;
+        @FXML
+        private JFXRadioButton kelvin;
+
+        //TODO: add logic to check location is valid
+        @FXML
+        void changeLocation(ActionEvent event) {
+
+        }
+
+        private void onExit() {
+            WeatherData.CELCIUS = celcius.isSelected();
+            WeatherData.CITY_NAME = location.getValue().toString();
+        }
+
+
     }
-
-
-    @FXML
-    void changeLocation(ActionEvent event) {
-        WeatherData.CITY_NAME = location.getValue().toString();
-    }
-
-    //TODO: add language logic
-    @FXML
-    void changeLanguage(ActionEvent event) {
-       // languageName = language.getValue().toString();
-    }
-
-    public void initialize() {
-    }
-
-
-}
-
-
