@@ -8,7 +8,7 @@ import org.json.JSONException;
 
 import net.aksingh.owmjapis.CurrentWeather;
 import net.aksingh.owmjapis.DailyForecast;
-
+import net.aksingh.owmjapis.HourlyForecast;
 import net.aksingh.owmjapis.OpenWeatherMap;
 
 public class WeatherData {
@@ -104,15 +104,6 @@ public class WeatherData {
 	public static void main(String args[]) {
 		try {
 			CurrentWeather cwd = getCurrentWeather("Cambridge","GB");
-		
-			System.out.println(getVisibility(cwd));
-			System.out.println(getTemperature(cwd,true));
-			System.out.println(getHumidity(cwd));
-			System.out.println(getRainfall(cwd));
-			System.out.println(getWeather(cwd));
-			
-			System.out.println(cwd.getCoordInstance().getLatitude());
-			System.out.println(cwd.getCoordInstance().getLongitude());
 			
 		} catch (JSONException | IOException e) {
 			// TODO Auto-generated catch block

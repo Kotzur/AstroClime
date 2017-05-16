@@ -15,14 +15,14 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		Parent root = FXMLLoader.load(getClass().getResource("scenes/WeekView.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("scenes/MainWindow.fxml"));
 		primaryStage.setTitle("Welcome");
-
+		primaryStage.setResizable(false);
 		primaryStage.setOnCloseRequest(e -> {
 			Platform.exit();
 		});
 
-		Scene scene = new Scene(root, 300, 450);
+		Scene scene = new Scene(root, primaryStage.getWidth(), primaryStage.getHeight());
 
 		primaryStage.setScene(scene);
 		primaryStage.show();
