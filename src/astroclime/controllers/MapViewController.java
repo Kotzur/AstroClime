@@ -2,6 +2,7 @@ package astroclime.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import org.json.JSONException;
 

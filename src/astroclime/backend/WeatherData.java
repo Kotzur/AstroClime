@@ -10,8 +10,8 @@ import net.aksingh.owmjapis.OpenWeatherMap;
 
 public class WeatherData {
 	
-	public static String CITY_NAME;
-	public static String COUNTRY_CODE;
+	public static String CITY_NAME = "Cambridge";
+	public static String COUNTRY_CODE = "GB";
 	
 	private static OpenWeatherMap OWM;
 	
