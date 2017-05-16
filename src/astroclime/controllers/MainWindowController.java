@@ -26,14 +26,24 @@ public class MainWindowController {
 	@FXML 
 	private Label rainfallLabel;
 	
+	@FXML
+	private Label sunsetLabel;
+	
+	@FXML
+	private Label sunriseLabel;
 	
 	public void initialize() throws JSONException, IOException {
 		CurrentWeather cwd = WeatherData.getCurrentWeather("Cambridge", "GB");
+		
+		
 		temperatureLabel.setText((WeatherData.getTemperature(cwd, true)) + "°C");
 		cloudCoverLabel.setText("Cloud Cover : " + (int) WeatherData.getCloudCover(cwd) + "%");
 		visibilityLabel.setText("Visibility : " + (int) WeatherData.getVisibility(cwd) + "km");
 		humidityLabel.setText("Humidity : " + (int) WeatherData.getHumidity(cwd) + "%");
-		rainfallLabel.setText("Rainfall : " + WeatherData.getRainfall(cwd));
+		rainfallLabel.setText("Rainfall : " + WeatherData.getRainfall(cwd) + "mm");
+		
+		sunriseLabel.setText(WeatherData.getSunrise(cwd));
+		sunsetLabel.setText(WeatherData.getSunset(cwd));
 	}
 
 }
