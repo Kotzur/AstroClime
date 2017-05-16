@@ -1,42 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.MainWindowController" stylesheets="../stylesheets/style.css">
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.MainWindowController">
    <children>
-      <Label fx:id="temperatureLabel" styleClass="temperature-label" alignment="CENTER" contentDisplay="CENTER" layoutX="-7.0" layoutY="524.0" prefHeight="61.0" prefWidth="341.0" text="t oC" textAlignment="CENTER" AnchorPane.bottomAnchor="82.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="-9.0" AnchorPane.topAnchor="524.0"/>
-
-      <Label fx:id="cloudCoverLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-7.0" layoutY="334.0" prefHeight="41.0" prefWidth="341.0" text="Cloud Cover : 50%" textAlignment="CENTER">
+      <Label fx:id="temperatureLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-7.0" layoutY="524.0" prefHeight="61.0" prefWidth="341.0" text="t oC" textAlignment="CENTER" AnchorPane.bottomAnchor="82.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="-9.0" AnchorPane.topAnchor="524.0">
+         <font>
+            <Font name="Lato Thin" size="47.0" />
+         </font>
+      </Label>
+      <Label fx:id="cloudCoverLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-5.0" layoutY="360.0" prefHeight="41.0" prefWidth="341.0" text="Cloud Cover : 50%" textAlignment="CENTER">
          <font>
             <Font name="Lato Thin" size="32.0" />
          </font>
       </Label>
-      <Label fx:id="visibilityLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-9.0" layoutY="375.0" prefHeight="41.0" prefWidth="341.0" text="Visibility : 50km" textAlignment="CENTER">
+      <Label fx:id="visibilityLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-7.0" layoutY="401.0" prefHeight="41.0" prefWidth="341.0" text="Visibility : 50km" textAlignment="CENTER">
          <font>
             <Font name="Lato Thin" size="32.0" />
          </font>
       </Label>
-      <Label fx:id="humidityLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-9.0" layoutY="416.0" prefHeight="41.0" prefWidth="341.0" text="Humidity : 50%" textAlignment="CENTER">
+      <Label fx:id="humidityLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-7.0" layoutY="442.0" prefHeight="41.0" prefWidth="341.0" text="Humidity : 50%" textAlignment="CENTER">
          <font>
             <Font name="Lato Thin" size="32.0" />
          </font>
       </Label>
-      <Label fx:id="rainfallLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-8.0" layoutY="457.0" prefHeight="41.0" prefWidth="341.0" text="Rainfall : 5mm" textAlignment="CENTER">
+      <Label fx:id="rainfallLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-6.0" layoutY="483.0" prefHeight="41.0" prefWidth="341.0" text="Rainfall : 5mm" textAlignment="CENTER">
          <font>
             <Font name="Lato Thin" size="32.0" />
          </font>
       </Label>
-      <Label fx:id="sunsetLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="119.0" prefHeight="24.0" prefWidth="100.0" text="20:20" textAlignment="CENTER">
+      <Label fx:id="sunsetLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="80.0" prefHeight="24.0" prefWidth="100.0" text="20:20" textAlignment="CENTER">
          <font>
             <Font name="Lato Thin" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="sunriseLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="210.0" layoutY="119.0" prefHeight="24.0" prefWidth="100.0" text="20:20" textAlignment="CENTER">
+      <Label fx:id="sunriseLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="211.0" layoutY="80.0" prefHeight="24.0" prefWidth="100.0" text="20:20" textAlignment="CENTER">
          <font>
             <Font name="Lato Thin" size="18.0" />
          </font>
       </Label>
+      <Label fx:id="cityLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-8.0" layoutY="104.0" prefHeight="41.0" prefWidth="341.0" text="Cambridge" textAlignment="CENTER">
+         <font>
+            <Font name="Lato Thin" size="32.0" />
+         </font>
+      </Label>
+      <Canvas fx:id="weatherImage" height="200.0" layoutX="64.0" layoutY="141.0" width="200.0" />
    </children>
 </AnchorPane>

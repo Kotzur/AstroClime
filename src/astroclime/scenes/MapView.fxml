@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.VBox?>
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  prefHeight="667.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.TestController">
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
 
-    <center>
-        <VBox alignment="CENTER" prefHeight="651.0" prefWidth="600.0" spacing="20.0" BorderPane.alignment="CENTER">
-            <children>
-            </children>
-        </VBox>
-    </center>
-</BorderPane>
+<AnchorPane fx:id="mapFrame" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.MapViewController">
+   <children>
+      <WebView fx:id="lightMapView" prefHeight="788.0" prefWidth="325.0" />
+   </children>
+</AnchorPane>

@@ -10,8 +10,8 @@ import net.aksingh.owmjapis.OpenWeatherMap;
 
 public class WeatherData {
 	
-	public static String CITY_NAME;
-	public static String COUNTRY_CODE;
+	public static String CITY_NAME = "Cambridge";
+	public static String COUNTRY_CODE = "GB";
 	
 	private static OpenWeatherMap OWM;
 	
@@ -85,7 +85,7 @@ public class WeatherData {
 	}
 	
 	public static float getRainfall(CurrentWeather c) {
-		float r = -1;
+		float r = 0;
 		
 		if (c.hasRainInstance() && c.getRainInstance().hasRain3h()) {
 			r = c.getRainInstance().getRain3h();

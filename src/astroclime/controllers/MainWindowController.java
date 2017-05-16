@@ -1,15 +1,38 @@
 package astroclime.controllers;
 
+import java.awt.image.BufferedImage;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Paths;
+
+import javax.imageio.ImageIO;
 
 import org.json.JSONException;
 
+import com.jfoenix.controls.JFXDrawer;
+
 import astroclime.backend.WeatherData;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Label;
+import javafx.scene.effect.BlendMode;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
 import net.aksingh.owmjapis.CurrentWeather;
 
 public class MainWindowController {
+	
+	@FXML
+	private AnchorPane mainPane;
 	
 	@FXML
 	private Label temperatureLabel;
@@ -32,8 +55,16 @@ public class MainWindowController {
 	@FXML
 	private Label sunriseLabel;
 	
-	public void initialize() throws JSONException, IOException {
-		CurrentWeather cwd = WeatherData.getCurrentWeather("Cambridge", "GB");
+	@FXML
+	private Label cityLabel;
+	
+	@FXML
+	private Canvas weatherImage;
+	
+	
+	
+	public void initialize() throws JSONException, IOException, URISyntaxException {
+		CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
 		
 		
 		temperatureLabel.setText((WeatherData.getTemperature(cwd, true)) + "°C");
@@ -44,6 +75,17 @@ public class MainWindowController {
 		
 		sunriseLabel.setText(WeatherData.getSunrise(cwd));
 		sunsetLabel.setText(WeatherData.getSunset(cwd));
+		
+		cityLabel.setText(WeatherData.CITY_NAME);
+		
+		System.out.println(cwd.getWeatherInstance(0).getWeatherIconName());
+		
+		FileInputStream f = new FileInputStream(Paths.get("Icons/" + cwd.getWeatherInstance(0).getWeatherIconName() + ".PNG").toFile());
+		
+		Image img = new Image(f, weatherImage.getWidth(),weatherImage.getHeight(),false,false);
+		GraphicsContext gc = weatherImage.getGraphicsContext2D();
+		gc.setGlobalBlendMode(BlendMode.SCREEN);
+		gc.drawImage(img, 0, 0);
 	}
 
 }
