@@ -12,6 +12,7 @@ public class WeatherData {
 	
 	public static String CITY_NAME = "Cambridge";
 	public static String COUNTRY_CODE = "GB";
+	public static Boolean CELCIUS = true;
 	
 	private static OpenWeatherMap OWM;
 	
@@ -39,7 +40,7 @@ public class WeatherData {
 		}
 	}
 	
-	public static int getTemperature(CurrentWeather c, boolean asCelcius) {
+	public static int getTemperature(CurrentWeather c) {
 		
 		float t = -1;
 		
@@ -47,7 +48,7 @@ public class WeatherData {
 			t = c.getMainInstance().getTemperature();
 		}
 		
-		if (asCelcius) {
+		if (CELCIUS) {
 			t = (t-32) * (0.5556f);
 		}
 		

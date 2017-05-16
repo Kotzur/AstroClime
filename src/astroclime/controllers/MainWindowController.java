@@ -67,7 +67,7 @@ public class MainWindowController {
 		CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
 		
 		
-		temperatureLabel.setText((WeatherData.getTemperature(cwd, true)) + "°C");
+		temperatureLabel.setText((WeatherData.getTemperature(cwd)) + "ï¿½C");
 		cloudCoverLabel.setText("Cloud Cover : " + (int) WeatherData.getCloudCover(cwd) + "%");
 		visibilityLabel.setText("Visibility : " + (int) WeatherData.getVisibility(cwd) + "km");
 		humidityLabel.setText("Humidity : " + (int) WeatherData.getHumidity(cwd) + "%");
