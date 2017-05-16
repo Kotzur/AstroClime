@@ -1,5 +1,10 @@
+@font-face {
+    font-family: LatoThin;
+    src: url(/Lato2OFL/Lato-Light.ttf);
+}
+
 .root {
-    -fx-font-family: "Roboto";
+    -fx-font-family: "LatoThin";
 }
 
 .side-menu {
@@ -740,10 +745,6 @@
     -fx-font-size: 1.0em;
 }
 
-.jfx-text-field:error, .jfx-password-field:error, .jfx-text-area:error, .jfx-combo-box:error {
-    -jfx-focus-color: #D34336;
-    -jfx-unfocus-color: #D34336;
-}
 
 .jfx-text-field .error-label, .jfx-password-field .error-label, .jfx-text-area .error-label {
     -fx-text-fill: #D34336;
@@ -753,12 +754,4 @@
 .jfx-text-field .error-icon, .jfx-password-field .error-icon, .jfx-text-area .error-icon {
     -fx-fill: #D34336;
     -fx-font-size: 1.0em;
-}
-
-.jfx-scroll-pane .main-header {
-    -fx-background-image: url("../bg1.jpg");
-}
-
-.jfx-scroll-pane .condensed-header {
-    -fx-background-image: url("../bg4.jpg");
 }

@@ -15,7 +15,7 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		Parent root = FXMLLoader.load(getClass().getResource("scenes/MainWindow.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("scenes/WeekView.fxml"));
 		primaryStage.setTitle("Welcome");
 		primaryStage.setResizable(false);
 		primaryStage.setOnCloseRequest(e -> {

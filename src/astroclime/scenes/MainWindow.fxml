@@ -4,13 +4,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.MainWindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.MainWindowController" stylesheets="../stylesheets/style.css">
    <children>
-      <Label fx:id="temperatureLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-7.0" layoutY="524.0" prefHeight="61.0" prefWidth="341.0" text="t oC" textAlignment="CENTER" AnchorPane.bottomAnchor="82.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="-9.0" AnchorPane.topAnchor="524.0">
-         <font>
-            <Font name="Lato Thin" size="47.0" />
-         </font>
-      </Label>
+      <Label fx:id="temperatureLabel" styleClass="temperature-label" alignment="CENTER" contentDisplay="CENTER" layoutX="-7.0" layoutY="524.0" prefHeight="61.0" prefWidth="341.0" text="t oC" textAlignment="CENTER" AnchorPane.bottomAnchor="82.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="-9.0" AnchorPane.topAnchor="524.0"/>
+
       <Label fx:id="cloudCoverLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-7.0" layoutY="334.0" prefHeight="41.0" prefWidth="341.0" text="Cloud Cover : 50%" textAlignment="CENTER">
          <font>
             <Font name="Lato Thin" size="32.0" />
