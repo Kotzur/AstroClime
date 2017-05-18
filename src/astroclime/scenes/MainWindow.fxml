@@ -62,5 +62,6 @@
          </image>
       </ImageView>
       <JFXDrawer fx:id="topDrawer" defaultDrawerSize="789.0" direction="TOP" layoutX="-7.0" layoutY="-8.0" maxWidth="-Infinity" minWidth="-Infinity" overLayVisible="false" prefHeight="9.0" prefWidth="341.0" resizableOnDrag="true" />
+      <JFXDrawer fx:id="rightDrawer" defaultDrawerSize="350.0" direction="RIGHT" layoutX="-8.0" layoutY="-1.0" prefHeight="685.0" prefWidth="348.0" resizableOnDrag="true" />
    </children>
 </AnchorPane>

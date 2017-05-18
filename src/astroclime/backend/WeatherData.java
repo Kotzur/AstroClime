@@ -9,6 +9,7 @@ import java.util.List;
 import org.json.JSONException;
 
 import net.aksingh.owmjapis.CurrentWeather;
+import net.aksingh.owmjapis.DailyForecast;
 import net.aksingh.owmjapis.OpenWeatherMap;
 
 public class WeatherData {
@@ -142,6 +143,13 @@ public class WeatherData {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}	
+	}
+	
+	public static DailyForecast getDailyForecast(String cityName, String countryCode) throws JSONException, IOException {
+		
+		DailyForecast df = getOWM().dailyForecastByCityName(cityName, countryCode, (byte) 8);
+		
+		return df;
 	}
 	
 	
