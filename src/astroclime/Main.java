@@ -1,5 +1,6 @@
 package astroclime;
 
+import astroclime.controllers.MainWindowController;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +16,10 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		Parent root = FXMLLoader.load(getClass().getResource("scenes/WeekView.fxml"));
+		
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("scenes/MainWindow.fxml"));
+		
+		Parent root = loader.load();
 		primaryStage.setTitle("Welcome");
 		primaryStage.setResizable(false);
 		primaryStage.setOnCloseRequest(e -> {
@@ -24,6 +28,10 @@ public class Main extends Application {
 
 		Scene scene = new Scene(root, primaryStage.getWidth(), primaryStage.getHeight());
 
+		MainWindowController controllerHandle = (MainWindowController) loader.getController();
+		
+		scene.setOnKeyPressed(event -> controllerHandle.test(event));
+		
 		primaryStage.setScene(scene);
 		primaryStage.show();
 

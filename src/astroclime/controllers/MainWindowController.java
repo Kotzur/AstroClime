@@ -17,6 +17,7 @@ import astroclime.backend.WeatherData;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -24,6 +25,8 @@ import javafx.scene.control.Label;
 import javafx.scene.effect.BlendMode;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
@@ -61,13 +64,14 @@ public class MainWindowController {
 	@FXML
 	private Canvas weatherImage;
 	
-	
+	@FXML
+	private JFXDrawer topDrawer;
 	
 	public void initialize() throws JSONException, IOException, URISyntaxException {
 		CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
 		
 		
-		temperatureLabel.setText((WeatherData.getTemperature(cwd, true)) + "°C");
+		temperatureLabel.setText((WeatherData.getTemperature(cwd)) + "°C");
 		cloudCoverLabel.setText("Cloud Cover : " + (int) WeatherData.getCloudCover(cwd) + "%");
 		visibilityLabel.setText("Visibility : " + (int) WeatherData.getVisibility(cwd) + "km");
 		humidityLabel.setText("Humidity : " + (int) WeatherData.getHumidity(cwd) + "%");
@@ -86,6 +90,23 @@ public class MainWindowController {
 		GraphicsContext gc = weatherImage.getGraphicsContext2D();
 		gc.setGlobalBlendMode(BlendMode.SCREEN);
 		gc.drawImage(img, 0, 0);
+		
+		
+		AnchorPane map = FXMLLoader.load(getClass().getResource("../scenes/MapView.fxml"));
+		topDrawer.setSidePane(map);
+		
+	
 	}
-
+	
+	public void test(KeyEvent key) {
+		if (key.getCode().equals(KeyCode.DOWN)) {
+			if (topDrawer.isShown()) {
+				topDrawer.close();
+			}else{
+				topDrawer.open();
+			}
+		}
+	}
+	
+   
 }
