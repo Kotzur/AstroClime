@@ -3,10 +3,14 @@ package astroclime.controllers;
 import astroclime.backend.WeatherData;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import net.aksingh.owmjapis.CurrentWeather;
+import net.aksingh.owmjapis.DailyForecast;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.time.ZonedDateTime;
 
 public class WeekViewController {
@@ -168,14 +172,26 @@ public class WeekViewController {
         Label [] humidity = new Label[]{day1_humidity, day2_humidity, day3_humidity, day4_humidity, day5_humidity, day6_humidity, day7_humidity};
         ImageView [] images = new ImageView[]{day1_img, day2_img, day3_img, day4_img, day5_img, day6_img, day7_img};
 
-        CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME,WeatherData.COUNTRY_CODE);
-
+        DailyForecast df = WeatherData.getDailyForecast(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
+        
+        
+        
+        for (int i = 1; i < df.getForecastCount(); i++) {
+        	FileInputStream f = new FileInputStream(Paths.get("Icons/" + df.getForecastInstance(i).getWeatherInstance(0).getWeatherIconName() + ".PNG").toFile());
+    		Image img = new Image(f, images[i-1].getFitWidth(),images[i-1].getFitHeight(),false,false);
+    		images[i-1].setImage(img);
+    		
+	    	float h = df.getForecastInstance(i).getHumidity();
+	    	humidity[i-1].setText(String.valueOf((int)h) + "%");
+        }
+        
+        
         ZonedDateTime today = ZonedDateTime.now();
         for(int i = 0; i < 7; i++){
             //setting the date
-            dayNames[i].setText(today.plusDays(i).getDayOfWeek().toString());
-            dayDates[i].setText(Integer.toString(today.plusDays(i).getDayOfMonth()));
-            dayMonths[i].setText(today.plusDays(i).getMonth().toString());
+            dayNames[i].setText(today.plusDays(i+1).getDayOfWeek().toString());
+            dayDates[i].setText(Integer.toString(today.plusDays(i+1).getDayOfMonth()));
+            dayMonths[i].setText(today.plusDays(i+1).getMonth().toString());
 
             //setting the weather predictions
 

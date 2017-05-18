@@ -67,6 +67,9 @@ public class MainWindowController {
 	@FXML
 	private JFXDrawer topDrawer;
 	
+	@FXML 
+	private JFXDrawer rightDrawer;
+	
 	public void initialize() throws JSONException, IOException, URISyntaxException {
 		CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
 		
@@ -82,7 +85,6 @@ public class MainWindowController {
 		
 		cityLabel.setText(WeatherData.CITY_NAME);
 		
-		System.out.println(cwd.getWeatherInstance(0).getWeatherIconName());
 		
 		FileInputStream f = new FileInputStream(Paths.get("Icons/" + cwd.getWeatherInstance(0).getWeatherIconName() + ".PNG").toFile());
 		
@@ -95,7 +97,8 @@ public class MainWindowController {
 		AnchorPane map = FXMLLoader.load(getClass().getResource("../scenes/MapView.fxml"));
 		topDrawer.setSidePane(map);
 		
-	
+		AnchorPane weeklyView = FXMLLoader.load(getClass().getResource("../scenes/WeekView.fxml"));
+		rightDrawer.setSidePane(weeklyView);
 	}
 	
 	public void test(KeyEvent key) {
@@ -104,6 +107,14 @@ public class MainWindowController {
 				topDrawer.close();
 			}else{
 				topDrawer.open();
+			}
+		}
+		
+		if (key.getCode().equals(KeyCode.RIGHT)) {
+			if (rightDrawer.isShown()) {
+				rightDrawer.close();
+			}else{
+				rightDrawer.open();
 			}
 		}
 	}
