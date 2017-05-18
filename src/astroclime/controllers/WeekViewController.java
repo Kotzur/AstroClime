@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import net.aksingh.owmjapis.CurrentWeather;
 import net.aksingh.owmjapis.DailyForecast;
 
 import java.io.FileInputStream;
@@ -193,7 +192,6 @@ public class WeekViewController {
             dayNames[i-1].setText(today.plusDays(i).getDayOfWeek().toString());
             dayDates[i-1].setText(Integer.toString(today.plusDays(i).getDayOfMonth()));
             dayMonths[i-1].setText(today.plusDays(i).getMonth().toString());
-
 
             //setting visibility
 

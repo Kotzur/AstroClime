@@ -73,6 +73,9 @@
                            </VBox.margin>
                         </HBox>
                      </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
                   </VBox>
                   <ImageView fx:id="day1_img" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -145,6 +148,9 @@
                            </VBox.margin>
                         </HBox>
                      </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
                   </VBox>
                   <ImageView fx:id="day2_img" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -184,7 +190,7 @@
                               <Font name="Lato Thin" size="18.0" />
                            </font>
                         </Label>
-                        <HBox alignment="CENTER" prefHeight="11.0" prefWidth="162.0">
+                        <HBox alignment="CENTER" prefHeight="41.0" prefWidth="162.0">
                            <children>
                               <Label fx:id="day3_percipitation" text="20%">
                                  <font>
@@ -198,6 +204,9 @@
                                  </font>
                               </Label>
                            </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
                         </HBox>
                         <HBox prefHeight="0.0" prefWidth="165.0">
                            <children>
@@ -218,6 +227,9 @@
                            </VBox.margin>
                         </HBox>
                      </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
                   </VBox>
                   <ImageView fx:id="day3_img" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -291,6 +303,9 @@
                            </VBox.margin>
                         </HBox>
                      </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
                   </VBox>
                   <ImageView fx:id="day4_img" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -364,6 +379,9 @@
                            </VBox.margin>
                         </HBox>
                      </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
                   </VBox>
                   <ImageView fx:id="day5_img" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -437,6 +455,9 @@
                            </VBox.margin>
                         </HBox>
                      </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
                   </VBox>
                   <ImageView fx:id="day6_img" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -510,6 +531,9 @@
                            </VBox.margin>
                         </HBox>
                      </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
                   </VBox>
                   <ImageView fx:id="day7_img" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
                      <image>
