@@ -13,33 +13,20 @@
    <children>
       <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="667.0" prefWidth="325.0">
          <children>
-            <AnchorPane prefHeight="37.0" prefWidth="325.0">
-               <children>
-                  <Label layoutX="94.0" layoutY="10.0" text="Percipitation">
-                     <font>
-                        <Font name="Lato Thin" size="14.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="188.0" layoutY="10.0" text="Humidity">
-                     <font>
-                        <Font name="Lato Thin" size="14.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
+            <AnchorPane prefHeight="37.0" prefWidth="325.0" />
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
                   <VBox alignment="CENTER" prefHeight="89.0" prefWidth="102.0">
                      <children>
-                        <Label fx:id="day1_name">
+                        <Label fx:id="day1_name" text="Monday">
                            <font>
                               <Font name="Lato Light" size="18.0" />
                            </font></Label>
-                        <Label fx:id="day1_date">
+                        <Label fx:id="day1_date" text="01">
                            <font>
                               <Font name="Lato Light" size="18.0" />
                            </font></Label>
-                        <Label fx:id="day1_month">
+                        <Label fx:id="day1_month" text="May">
                            <font>
                               <Font name="Lato Light" size="18.0" />
                            </font></Label>
@@ -48,13 +35,13 @@
                         <Insets />
                      </HBox.margin>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="89.0" prefWidth="170.0">
+                  <VBox alignment="CENTER" prefHeight="16.0" prefWidth="165.0">
                      <children>
-                        <Label fx:id="day1_visibility" text="Good Visibility">
+                        <Label fx:id="day1_visibility" prefHeight="64.0" prefWidth="112.0" text="Good Visibility" underline="true">
                            <font>
                               <Font name="Lato Thin" size="18.0" />
                            </font></Label>
-                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                        <HBox alignment="CENTER" prefHeight="11.0" prefWidth="162.0">
                            <children>
                               <Label fx:id="day1_percipitation" text="20%">
                                  <font>
@@ -66,6 +53,24 @@
                                     <Font name="Lato Thin" size="18.0" />
                                  </font></Label>
                            </children>
+                        </HBox>
+                        <HBox prefHeight="0.0" prefWidth="165.0">
+                           <children>
+                              <Label text="Percipitation">
+                                 <font>
+                                    <Font name="Lato Thin" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="    " />
+                              <Label text="Humidity">
+                                 <font>
+                                    <Font name="Lato Thin" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
                         </HBox>
                      </children>
                   </VBox>
@@ -99,14 +104,14 @@
                         <Insets />
                      </HBox.margin>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="89.0" prefWidth="170.0">
+                  <VBox alignment="CENTER" prefHeight="16.0" prefWidth="165.0">
                      <children>
-                        <Label fx:id="day2_visibility" text="Moderate Visibility">
+                        <Label fx:id="day2_visibility" prefHeight="64.0" prefWidth="112.0" text="Good Visibility" underline="true">
                            <font>
                               <Font name="Lato Thin" size="18.0" />
                            </font>
                         </Label>
-                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                        <HBox alignment="CENTER" prefHeight="11.0" prefWidth="162.0">
                            <children>
                               <Label fx:id="day2_percipitation" text="20%">
                                  <font>
@@ -120,6 +125,24 @@
                                  </font>
                               </Label>
                            </children>
+                        </HBox>
+                        <HBox prefHeight="0.0" prefWidth="165.0">
+                           <children>
+                              <Label text="Percipitation">
+                                 <font>
+                                    <Font name="Lato Thin" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="    " />
+                              <Label text="Humidity">
+                                 <font>
+                                    <Font name="Lato Thin" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
                         </HBox>
                      </children>
                   </VBox>
@@ -154,14 +177,14 @@
                         <Insets />
                      </HBox.margin>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="89.0" prefWidth="170.0">
+                  <VBox alignment="CENTER" prefHeight="16.0" prefWidth="165.0">
                      <children>
-                        <Label fx:id="day3_visibility" text="Poor Visibility">
+                        <Label fx:id="day1_visibility2" prefHeight="64.0" prefWidth="112.0" text="Good Visibility" underline="true">
                            <font>
                               <Font name="Lato Thin" size="18.0" />
                            </font>
                         </Label>
-                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                        <HBox alignment="CENTER" prefHeight="11.0" prefWidth="162.0">
                            <children>
                               <Label fx:id="day3_percipitation" text="20%">
                                  <font>
@@ -175,6 +198,24 @@
                                  </font>
                               </Label>
                            </children>
+                        </HBox>
+                        <HBox prefHeight="0.0" prefWidth="165.0">
+                           <children>
+                              <Label text="Percipitation">
+                                 <font>
+                                    <Font name="Lato Thin" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="    " />
+                              <Label text="Humidity">
+                                 <font>
+                                    <Font name="Lato Thin" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
                         </HBox>
                      </children>
                   </VBox>
@@ -209,14 +250,14 @@
                         <Insets />
                      </HBox.margin>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="89.0" prefWidth="170.0">
+                  <VBox alignment="CENTER" prefHeight="16.0" prefWidth="165.0">
                      <children>
-                        <Label fx:id="day4_visibility" text="Good Visibility">
+                        <Label fx:id="day3_visibility" prefHeight="64.0" prefWidth="112.0" text="Good Visibility" underline="true">
                            <font>
                               <Font name="Lato Thin" size="18.0" />
                            </font>
                         </Label>
-                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                        <HBox alignment="CENTER" prefHeight="11.0" prefWidth="162.0">
                            <children>
                               <Label fx:id="day4_percipitation" text="20%">
                                  <font>
@@ -230,6 +271,24 @@
                                  </font>
                               </Label>
                            </children>
+                        </HBox>
+                        <HBox prefHeight="0.0" prefWidth="165.0">
+                           <children>
+                              <Label text="Percipitation">
+                                 <font>
+                                    <Font name="Lato Thin" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="    " />
+                              <Label text="Humidity">
+                                 <font>
+                                    <Font name="Lato Thin" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
                         </HBox>
                      </children>
                   </VBox>
@@ -264,14 +323,14 @@
                         <Insets />
                      </HBox.margin>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="89.0" prefWidth="170.0">
+                  <VBox alignment="CENTER" prefHeight="16.0" prefWidth="165.0">
                      <children>
-                        <Label fx:id="day5_visibility" text="Moderate Visibility">
+                        <Label fx:id="day4_visibility" prefHeight="64.0" prefWidth="112.0" text="Good Visibility" underline="true">
                            <font>
                               <Font name="Lato Thin" size="18.0" />
                            </font>
                         </Label>
-                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                        <HBox alignment="CENTER" prefHeight="11.0" prefWidth="162.0">
                            <children>
                               <Label fx:id="day5_percipitation" text="20%">
                                  <font>
@@ -285,6 +344,24 @@
                                  </font>
                               </Label>
                            </children>
+                        </HBox>
+                        <HBox prefHeight="0.0" prefWidth="165.0">
+                           <children>
+                              <Label text="Percipitation">
+                                 <font>
+                                    <Font name="Lato Thin" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="    " />
+                              <Label text="Humidity">
+                                 <font>
+                                    <Font name="Lato Thin" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
                         </HBox>
                      </children>
                   </VBox>
@@ -319,14 +396,14 @@
                         <Insets />
                      </HBox.margin>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="89.0" prefWidth="170.0">
+                  <VBox alignment="CENTER" prefHeight="16.0" prefWidth="165.0">
                      <children>
-                        <Label fx:id="day6_visibility" text="Poor Visibility">
+                        <Label fx:id="day5_visibility" prefHeight="64.0" prefWidth="112.0" text="Good Visibility" underline="true">
                            <font>
                               <Font name="Lato Thin" size="18.0" />
                            </font>
                         </Label>
-                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                        <HBox alignment="CENTER" prefHeight="11.0" prefWidth="162.0">
                            <children>
                               <Label fx:id="day6_percipitation" text="20%">
                                  <font>
@@ -340,6 +417,24 @@
                                  </font>
                               </Label>
                            </children>
+                        </HBox>
+                        <HBox prefHeight="0.0" prefWidth="165.0">
+                           <children>
+                              <Label text="Percipitation">
+                                 <font>
+                                    <Font name="Lato Thin" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="    " />
+                              <Label text="Humidity">
+                                 <font>
+                                    <Font name="Lato Thin" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
                         </HBox>
                      </children>
                   </VBox>
@@ -374,14 +469,14 @@
                         <Insets />
                      </HBox.margin>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="89.0" prefWidth="170.0">
+                  <VBox alignment="CENTER" prefHeight="16.0" prefWidth="165.0">
                      <children>
-                        <Label fx:id="day7_visibility" text="Good Visibility">
+                        <Label fx:id="day6_visibility" prefHeight="64.0" prefWidth="112.0" text="Good Visibility" underline="true">
                            <font>
                               <Font name="Lato Thin" size="18.0" />
                            </font>
                         </Label>
-                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                        <HBox alignment="CENTER" prefHeight="11.0" prefWidth="162.0">
                            <children>
                               <Label fx:id="day7_percipitation" text="20%">
                                  <font>
@@ -395,6 +490,24 @@
                                  </font>
                               </Label>
                            </children>
+                        </HBox>
+                        <HBox prefHeight="0.0" prefWidth="165.0">
+                           <children>
+                              <Label text="Percipitation">
+                                 <font>
+                                    <Font name="Lato Thin" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="    " />
+                              <Label text="Humidity">
+                                 <font>
+                                    <Font name="Lato Thin" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
                         </HBox>
                      </children>
                   </VBox>

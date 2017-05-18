@@ -166,6 +166,7 @@ public class WeekViewController {
         Label [] dayMonths = new Label[]{day1_month, day2_month, day3_month, day4_month, day5_month, day6_month, day7_month};
         Label [] percipitation = new Label[]{day1_percipitation, day2_percipitation, day3_percipitation, day4_percipitation, day5_percipitation, day6_percipitation, day7_percipitation};
         Label [] humidity = new Label[]{day1_humidity, day2_humidity, day3_humidity, day4_humidity, day5_humidity, day6_humidity, day7_humidity};
+        Label [] visibility = new Label[]{day1_visibility, day2_visibility, day3_visibility, day4_visibility, day5_visibility, day6_visibility, day7_visibility};
         ImageView [] images = new ImageView[]{day1_img, day2_img, day3_img, day4_img, day5_img, day6_img, day7_img};
 
         CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME,WeatherData.COUNTRY_CODE);
@@ -178,6 +179,8 @@ public class WeekViewController {
             dayMonths[i].setText(today.plusDays(i).getMonth().toString());
 
             //setting the weather predictions
+
+            //setting visibility
 
         }
 
