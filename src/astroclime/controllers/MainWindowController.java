@@ -77,7 +77,7 @@ public class MainWindowController {
 		CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
 		temperatureLabel.setText((WeatherData.getTemperature(cwd)) + "�C");
 		cloudCoverLabel.setText("Cloud Cover : " + (int) WeatherData.getCloudCover(cwd) + "%");
-		visibilityLabel.setText("Vis : " + (int) WeatherData.getVisibility(cwd) + "km");
+		visibilityLabel.setText("Visibility : " + (int) WeatherData.getVisibility(cwd) + "km");
 		humidityLabel.setText("Humidity : " + (int) WeatherData.getHumidity(cwd) + "%");
 		rainfallLabel.setText("Rainfall : " + WeatherData.getRainfall(cwd) + "mm");
 
@@ -96,7 +96,7 @@ public class MainWindowController {
 	}
 
 	
-	private void initialize() throws JSONException, IOException, URISyntaxException {
+	public void initialize() throws JSONException, IOException, URISyntaxException {
 		CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
 
 		temperatureLabel.setText((WeatherData.getTemperature(cwd)) + "�C");
