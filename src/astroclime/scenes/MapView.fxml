@@ -3,8 +3,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane fx:id="mapFrame" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.MapViewController">
+<AnchorPane fx:id="mapFrame" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="789.0" prefWidth="332.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.MapViewController">
    <children>
-      <WebView fx:id="lightMapView" prefHeight="788.0" prefWidth="325.0" />
+      <WebView fx:id="lightMapView" layoutX="-6.0" prefHeight="796.0" prefWidth="344.0" />
    </children>
 </AnchorPane>
