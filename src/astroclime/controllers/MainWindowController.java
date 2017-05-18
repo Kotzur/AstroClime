@@ -36,8 +36,6 @@ import net.aksingh.owmjapis.CurrentWeather;
 
 public class MainWindowController {
 
-	private Timer timer = new Timer();
-	
 	@FXML
 	private AnchorPane mainPane;
 	
@@ -77,7 +75,7 @@ public class MainWindowController {
 
 	private void refresh() throws IOException {
 		CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
-		temperatureLabel.setText((WeatherData.getTemperature(cwd)) + "°C");
+		temperatureLabel.setText((WeatherData.getTemperature(cwd)) + "ï¿½C");
 		cloudCoverLabel.setText("Cloud Cover : " + (int) WeatherData.getCloudCover(cwd) + "%");
 		visibilityLabel.setText("Visibility : " + (int) WeatherData.getVisibility(cwd) + "km");
 		humidityLabel.setText("Humidity : " + (int) WeatherData.getHumidity(cwd) + "%");
@@ -100,19 +98,8 @@ public class MainWindowController {
 	
 	public void initialize() throws JSONException, IOException, URISyntaxException {
 		CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
-		timer.scheduleAtFixedRate(new TimerTask() {
 
-			@Override
-			public void run() {
-                try {
-                    refresh();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-		}, 2*60*1000, 2*60*1000);
-		
-		temperatureLabel.setText((WeatherData.getTemperature(cwd)) + "°C");
+		temperatureLabel.setText((WeatherData.getTemperature(cwd)) + "ï¿½C");
 		cloudCoverLabel.setText("Cloud Cover : " + (int) WeatherData.getCloudCover(cwd) + "%");
 		visibilityLabel.setText("Visibility : " + (int) WeatherData.getVisibility(cwd) + "km");
 		humidityLabel.setText("Humidity : " + (int) WeatherData.getHumidity(cwd) + "%");
@@ -139,21 +126,27 @@ public class MainWindowController {
 		rightDrawer.setSidePane(weeklyView);
 	}
 	
-	public void test(KeyEvent key) {
-		if (key.getCode().equals(KeyCode.DOWN)) {
-			if (topDrawer.isShown()) {
-				topDrawer.close();
-			}else if (!rightDrawer.isShown()){
-				topDrawer.open();
+	public void test(KeyEvent key)  {
+		try {
+			if (key.getCode().equals(KeyCode.DOWN)) {
+				if (topDrawer.isShown()) {
+					refresh();
+					topDrawer.close();
+				} else {
+					topDrawer.open();
+				}
 			}
-		}
-		
-		if (key.getCode().equals(KeyCode.RIGHT)) {
-			if (rightDrawer.isShown()) {
-				rightDrawer.close();
-			}else if (!topDrawer.isShown()){
-				rightDrawer.open();
+
+			if (key.getCode().equals(KeyCode.RIGHT)) {
+				if (rightDrawer.isShown()) {
+					refresh();
+					rightDrawer.close();
+				} else {
+					rightDrawer.open();
+				}
 			}
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 	
