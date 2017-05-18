@@ -189,11 +189,10 @@ public class WeekViewController {
         ZonedDateTime today = ZonedDateTime.now();
         for(int i = 1; i <= 7; i++){
             //setting the date
-            dayNames[i].setText(today.plusDays(i+1).getDayOfWeek().toString());
-            dayDates[i].setText(Integer.toString(today.plusDays(i+1).getDayOfMonth()));
-            dayMonths[i].setText(today.plusDays(i+1).getMonth().toString());
+            dayNames[i-1].setText(today.plusDays(i).getDayOfWeek().toString());
+            dayDates[i-1].setText(Integer.toString(today.plusDays(i).getDayOfMonth()));
+            dayMonths[i-1].setText(today.plusDays(i).getMonth().toString());
 
-            //setting the weather predictions
 
         }
 
