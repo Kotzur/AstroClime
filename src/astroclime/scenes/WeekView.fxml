@@ -20,7 +20,7 @@
                      <children>
                         <Label fx:id="day1_name" text="Monday">
                            <font>
-                              <Font name="Lato Light" size="18.0" />
+                              <Font name="Lato Light" size="15.0" />
                            </font></Label>
                         <Label fx:id="day1_date" text="01">
                            <font>
