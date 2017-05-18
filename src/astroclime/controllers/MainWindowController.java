@@ -73,7 +73,7 @@ public class MainWindowController {
 	private JFXDrawer rightDrawer;
 
 
-	public void refresh() throws IOException {
+	private void refresh() throws IOException {
 		CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
 		temperatureLabel.setText((WeatherData.getTemperature(cwd)) + "�C");
 		cloudCoverLabel.setText("Cloud Cover : " + (int) WeatherData.getCloudCover(cwd) + "%");
