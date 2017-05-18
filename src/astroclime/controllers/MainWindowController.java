@@ -101,6 +101,8 @@ public class MainWindowController {
 	public void initialize() throws JSONException, IOException, URISyntaxException {
 		CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
 		timer.scheduleAtFixedRate(new TimerTask() {
+
+			@Override
 			public void run() {
                 try {
                     refresh();
