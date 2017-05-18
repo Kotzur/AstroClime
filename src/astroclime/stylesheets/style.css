@@ -1,0 +1,23 @@
+@font-face {
+    font-family: LatoThin;
+    src: url(/Lato2OFL/Lato-Light.ttf);
+}
+
+.root {
+    -fx-font-family: "LatoThin";
+}
+
+.temperature-label{
+    -fx-font-family: "LatoThin";
+    -fx-font-size: 47.0pt;
+}
+
+.weather-label{
+    -fx-font-family: "LatoThin";
+    -fx-font-size: 32.0pt;
+}
+
+.sun-label{
+    -fx-font-family: "LatoThin";
+    -fx-font-size: 18.0pt;
+}
