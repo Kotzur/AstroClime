@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import com.jfoenix.controls.*?>
-<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.SettingsController">
    <children>
@@ -14,9 +11,9 @@
       <Label layoutX="40.0" layoutY="94.0" text="UNITS" />
       <Label layoutX="20.0" layoutY="173.0" prefHeight="17.0" prefWidth="72.0" text="LOCATION" />
       <Label layoutX="23.0" layoutY="298.0" text="LANGUAGE" />
-      <JFXButton buttonType="RAISED" layoutX="28.0" layoutY="30.0" text="&lt; BACK" />
-      <JFXComboBox fx:id="location" editable="true" layoutX="26.0" layoutY="202.0" onAction="#changeLocation" prefHeight="25.0" prefWidth="159.0" />
-      <JFXComboBox fx:id="language" layoutX="26.0" layoutY="334.0" prefHeight="25.0" prefWidth="159.0" />
+      <JFXButton buttonType="RAISED" layoutX="28.0" layoutY="30.0" text="BACK" />
+      <JFXComboBox fx:id="locationBox" layoutX="26.0" layoutY="202.0" prefHeight="25.0" prefWidth="159.0" />
+      <JFXComboBox fx:id="languageBox" layoutX="26.0" layoutY="334.0" prefHeight="25.0" prefWidth="159.0" />
       <JFXRadioButton fx:id="celcius" layoutX="31.0" layoutY="123.0" text="°C">
          <toggleGroup>
             <ToggleGroup fx:id="units" />
@@ -24,5 +21,10 @@
       </JFXRadioButton>
       <JFXRadioButton fx:id="fahrenheit" layoutX="112.0" layoutY="123.0" text="°F" toggleGroup="$units" />
       <JFXRadioButton fx:id="kelvin" layoutX="189.0" layoutY="123.0" text="K" toggleGroup="$units" />
+      <JFXButton fx:id="changeLocationButton" layoutX="189.0" layoutY="187.0" prefHeight="40.0" prefWidth="46.0" text="X">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>
