@@ -171,7 +171,7 @@ public class WeekViewController {
         CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME,WeatherData.COUNTRY_CODE);
 
         ZonedDateTime today = ZonedDateTime.now();
-        for(int i = 0; i < 7; i++){
+        for(int i = 1; i <= 7; i++){
             //setting the date
             dayNames[i].setText(today.plusDays(i).getDayOfWeek().toString());
             dayDates[i].setText(Integer.toString(today.plusDays(i).getDayOfMonth()));
