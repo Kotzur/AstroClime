@@ -7,6 +7,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Paths;
 import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.imageio.ImageIO;
 
@@ -100,9 +101,13 @@ public class MainWindowController {
 	public void initialize() throws JSONException, IOException, URISyntaxException {
 		CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
 		timer.scheduleAtFixedRate(new TimerTask() {
-			public void run() throws IOException {
-				refresh();
-			}
+			public void run() {
+                try {
+                    refresh();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
 		}, 2*60*1000, 2*60*1000);
 		
 		temperatureLabel.setText((WeatherData.getTemperature(cwd)) + "�C");
