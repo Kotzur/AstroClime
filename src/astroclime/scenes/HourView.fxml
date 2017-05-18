@@ -1,9 +1,544 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="667.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.TestController">
-
-</AnchorPane>
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <VBox prefHeight="791.0" prefWidth="302.0">
+          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+              <children>
+                  <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="22:00">
+                      <font>
+                          <Font name="Lato Light" size="22.0" />
+                      </font>
+                  </Label>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="67.0">
+                      <children>
+                          <Label text="Clouds">
+                              <font>
+                                  <Font name="Lato Thin" size="14.0" />
+                              </font>
+                          </Label>
+                          <Label text="5%">
+                              <font>
+                                  <Font name="Lato Thin" size="18.0" />
+                              </font>
+                          </Label>
+                      </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="72.0">
+                      <children>
+                          <Label text="Visibility">
+                              <font>
+                                  <Font name="Lato Thin" size="14.0" />
+                              </font>
+                          </Label>
+                          <Label text="10%">
+                              <font>
+                                  <Font name="Lato Thin" size="18.0" />
+                              </font>
+                          </Label>
+                      </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="59.0">
+                      <children>
+                          <Label text="Rain">
+                              <font>
+                                  <Font name="Lato Thin" size="14.0" />
+                              </font>
+                          </Label>
+                          <Label text="2%">
+                              <font>
+                                  <Font name="Lato Thin" size="18.0" />
+                              </font>
+                          </Label>
+                      </children>
+                  </VBox>
+                  <Label text="t">
+                      <font>
+                          <Font name="Lato Thin" size="18.0" />
+                      </font>
+                  </Label>
+                  <Label prefHeight="23.0" prefWidth="29.0" text="oC">
+                      <font>
+                          <Font name="Lato Thin" size="18.0" />
+                      </font>
+                  </Label>
+                  <ImageView fitHeight="43.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                          <Image url="@../graphics/moon.jpg" />
+                      </image>
+                  </ImageView>
+              </children>
+          </HBox>
+         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <children>
+               <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="23:00">
+                  <font>
+                     <Font name="Lato Light" size="22.0" />
+                  </font>
+               </Label>
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="67.0">
+                  <children>
+                     <Label text="Clouds">
+                        <font>
+                           <Font name="Lato Thin" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="5%">
+                        <font>
+                           <Font name="Lato Thin" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="72.0">
+                  <children>
+                     <Label text="Visibility">
+                        <font>
+                           <Font name="Lato Thin" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="10%">
+                        <font>
+                           <Font name="Lato Thin" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="59.0">
+                  <children>
+                     <Label text="Rain">
+                        <font>
+                           <Font name="Lato Thin" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="2%">
+                        <font>
+                           <Font name="Lato Thin" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <Label text="t">
+                  <font>
+                     <Font name="Lato Thin" size="18.0" />
+                  </font>
+               </Label>
+               <Label prefHeight="23.0" prefWidth="29.0" text="oC">
+                  <font>
+                     <Font name="Lato Thin" size="18.0" />
+                  </font>
+               </Label>
+               <ImageView fitHeight="43.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../graphics/moon.jpg" />
+                  </image>
+               </ImageView>
+            </children>
+         </HBox>
+         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <children>
+               <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="00:00">
+                  <font>
+                     <Font name="Lato Light" size="22.0" />
+                  </font>
+               </Label>
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="67.0">
+                  <children>
+                     <Label text="Clouds">
+                        <font>
+                           <Font name="Lato Thin" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="5%">
+                        <font>
+                           <Font name="Lato Thin" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="72.0">
+                  <children>
+                     <Label text="Visibility">
+                        <font>
+                           <Font name="Lato Thin" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="10%">
+                        <font>
+                           <Font name="Lato Thin" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="59.0">
+                  <children>
+                     <Label text="Rain">
+                        <font>
+                           <Font name="Lato Thin" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="2%">
+                        <font>
+                           <Font name="Lato Thin" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <Label text="t">
+                  <font>
+                     <Font name="Lato Thin" size="18.0" />
+                  </font>
+               </Label>
+               <Label prefHeight="23.0" prefWidth="29.0" text="oC">
+                  <font>
+                     <Font name="Lato Thin" size="18.0" />
+                  </font>
+               </Label>
+               <ImageView fitHeight="43.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../graphics/moon.jpg" />
+                  </image>
+               </ImageView>
+            </children>
+         </HBox>
+         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <children>
+               <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="01:00">
+                  <font>
+                     <Font name="Lato Light" size="22.0" />
+                  </font>
+               </Label>
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="67.0">
+                  <children>
+                     <Label text="Clouds">
+                        <font>
+                           <Font name="Lato Thin" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="5%">
+                        <font>
+                           <Font name="Lato Thin" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="72.0">
+                  <children>
+                     <Label text="Visibility">
+                        <font>
+                           <Font name="Lato Thin" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="10%">
+                        <font>
+                           <Font name="Lato Thin" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="59.0">
+                  <children>
+                     <Label text="Rain">
+                        <font>
+                           <Font name="Lato Thin" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="2%">
+                        <font>
+                           <Font name="Lato Thin" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <Label text="t">
+                  <font>
+                     <Font name="Lato Thin" size="18.0" />
+                  </font>
+               </Label>
+               <Label prefHeight="23.0" prefWidth="29.0" text="oC">
+                  <font>
+                     <Font name="Lato Thin" size="18.0" />
+                  </font>
+               </Label>
+               <ImageView fitHeight="43.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../graphics/moon.jpg" />
+                  </image>
+               </ImageView>
+            </children>
+         </HBox>
+         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <children>
+               <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="02:00">
+                  <font>
+                     <Font name="Lato Light" size="22.0" />
+                  </font>
+               </Label>
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="67.0">
+                  <children>
+                     <Label text="Clouds">
+                        <font>
+                           <Font name="Lato Thin" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="5%">
+                        <font>
+                           <Font name="Lato Thin" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="72.0">
+                  <children>
+                     <Label text="Visibility">
+                        <font>
+                           <Font name="Lato Thin" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="10%">
+                        <font>
+                           <Font name="Lato Thin" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="59.0">
+                  <children>
+                     <Label text="Rain">
+                        <font>
+                           <Font name="Lato Thin" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="2%">
+                        <font>
+                           <Font name="Lato Thin" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <Label text="t">
+                  <font>
+                     <Font name="Lato Thin" size="18.0" />
+                  </font>
+               </Label>
+               <Label prefHeight="23.0" prefWidth="29.0" text="oC">
+                  <font>
+                     <Font name="Lato Thin" size="18.0" />
+                  </font>
+               </Label>
+               <ImageView fitHeight="43.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../graphics/moon.jpg" />
+                  </image>
+               </ImageView>
+            </children>
+         </HBox>
+         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <children>
+               <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="03:00">
+                  <font>
+                     <Font name="Lato Light" size="22.0" />
+                  </font>
+               </Label>
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="67.0">
+                  <children>
+                     <Label text="Clouds">
+                        <font>
+                           <Font name="Lato Thin" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="5%">
+                        <font>
+                           <Font name="Lato Thin" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="72.0">
+                  <children>
+                     <Label text="Visibility">
+                        <font>
+                           <Font name="Lato Thin" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="10%">
+                        <font>
+                           <Font name="Lato Thin" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="59.0">
+                  <children>
+                     <Label text="Rain">
+                        <font>
+                           <Font name="Lato Thin" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="2%">
+                        <font>
+                           <Font name="Lato Thin" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <Label text="t">
+                  <font>
+                     <Font name="Lato Thin" size="18.0" />
+                  </font>
+               </Label>
+               <Label prefHeight="23.0" prefWidth="29.0" text="oC">
+                  <font>
+                     <Font name="Lato Thin" size="18.0" />
+                  </font>
+               </Label>
+               <ImageView fitHeight="43.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../graphics/moon.jpg" />
+                  </image>
+               </ImageView>
+            </children>
+         </HBox>
+         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <children>
+               <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="04:00">
+                  <font>
+                     <Font name="Lato Light" size="22.0" />
+                  </font>
+               </Label>
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="67.0">
+                  <children>
+                     <Label text="Clouds">
+                        <font>
+                           <Font name="Lato Thin" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="5%">
+                        <font>
+                           <Font name="Lato Thin" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="72.0">
+                  <children>
+                     <Label text="Visibility">
+                        <font>
+                           <Font name="Lato Thin" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="10%">
+                        <font>
+                           <Font name="Lato Thin" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="59.0">
+                  <children>
+                     <Label text="Rain">
+                        <font>
+                           <Font name="Lato Thin" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="2%">
+                        <font>
+                           <Font name="Lato Thin" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <Label text="t">
+                  <font>
+                     <Font name="Lato Thin" size="18.0" />
+                  </font>
+               </Label>
+               <Label prefHeight="23.0" prefWidth="29.0" text="oC">
+                  <font>
+                     <Font name="Lato Thin" size="18.0" />
+                  </font>
+               </Label>
+               <ImageView fitHeight="43.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../graphics/moon.jpg" />
+                  </image>
+               </ImageView>
+            </children>
+         </HBox>
+         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <children>
+               <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="05:00">
+                  <font>
+                     <Font name="Lato Light" size="22.0" />
+                  </font>
+               </Label>
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="67.0">
+                  <children>
+                     <Label text="Clouds">
+                        <font>
+                           <Font name="Lato Thin" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="5%">
+                        <font>
+                           <Font name="Lato Thin" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="72.0">
+                  <children>
+                     <Label text="Visibility">
+                        <font>
+                           <Font name="Lato Thin" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="10%">
+                        <font>
+                           <Font name="Lato Thin" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="59.0">
+                  <children>
+                     <Label text="Rain">
+                        <font>
+                           <Font name="Lato Thin" size="14.0" />
+                        </font>
+                     </Label>
+                     <Label text="2%">
+                        <font>
+                           <Font name="Lato Thin" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </VBox>
+               <Label text="t">
+                  <font>
+                     <Font name="Lato Thin" size="18.0" />
+                  </font>
+               </Label>
+               <Label prefHeight="23.0" prefWidth="29.0" text="oC">
+                  <font>
+                     <Font name="Lato Thin" size="18.0" />
+                  </font>
+               </Label>
+               <ImageView fitHeight="43.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../graphics/moon.jpg" />
+                  </image>
+               </ImageView>
+            </children>
+         </HBox>
+      </VBox>
+   </content>
+</ScrollPane>
