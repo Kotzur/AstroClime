@@ -13,13 +13,11 @@ package astroclime.controllers;
     import javafx.fxml.FXML;
     import javafx.scene.control.ToggleGroup;
     import javafx.event.ActionEvent;
-    import javafx.scene.text.TextBuilder;
     import org.controlsfx.control.textfield.TextFields;
 
     import java.io.BufferedReader;
     import java.io.FileNotFoundException;
     import java.io.FileReader;
-    import java.util.Collections;
     import java.util.List;
     import java.util.stream.Collectors;
 
