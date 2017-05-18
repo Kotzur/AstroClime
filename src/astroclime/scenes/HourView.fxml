@@ -10,7 +10,7 @@
 
 <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <content>
-      <VBox prefHeight="791.0" prefWidth="302.0">
+      <VBox prefHeight="800.0" prefWidth="302.0">
           <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
               <children>
                   <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="22:00">
@@ -18,49 +18,35 @@
                           <Font name="Lato Light" size="22.0" />
                       </font>
                   </Label>
-                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="67.0">
+                  <VBox alignment="CENTER" prefHeight="99.0" prefWidth="67.0">
                       <children>
                           <Label text="Clouds">
                               <font>
                                   <Font name="Lato Thin" size="14.0" />
                               </font>
                           </Label>
-                          <Label text="5%">
+                          <Label text="100%">
                               <font>
                                   <Font name="Lato Thin" size="18.0" />
                               </font>
                           </Label>
                       </children>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="72.0">
-                      <children>
-                          <Label text="Visibility">
-                              <font>
-                                  <Font name="Lato Thin" size="14.0" />
-                              </font>
-                          </Label>
-                          <Label text="10%">
-                              <font>
-                                  <Font name="Lato Thin" size="18.0" />
-                              </font>
-                          </Label>
-                      </children>
-                  </VBox>
-                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="59.0">
+                  <VBox alignment="CENTER" prefHeight="99.0" prefWidth="67.0">
                       <children>
                           <Label text="Rain">
                               <font>
                                   <Font name="Lato Thin" size="14.0" />
                               </font>
                           </Label>
-                          <Label text="2%">
+                          <Label text="100%">
                               <font>
                                   <Font name="Lato Thin" size="18.0" />
                               </font>
                           </Label>
                       </children>
                   </VBox>
-                  <Label text="t">
+                  <Label prefHeight="23.0" prefWidth="26.0" text="30">
                       <font>
                           <Font name="Lato Thin" size="18.0" />
                       </font>
@@ -70,7 +56,7 @@
                           <Font name="Lato Thin" size="18.0" />
                       </font>
                   </Label>
-                  <ImageView fitHeight="43.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                       <image>
                           <Image url="@../graphics/moon.jpg" />
                       </image>
@@ -98,21 +84,7 @@
                      </Label>
                   </children>
                </VBox>
-               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="72.0">
-                  <children>
-                     <Label text="Visibility">
-                        <font>
-                           <Font name="Lato Thin" size="14.0" />
-                        </font>
-                     </Label>
-                     <Label text="10%">
-                        <font>
-                           <Font name="Lato Thin" size="18.0" />
-                        </font>
-                     </Label>
-                  </children>
-               </VBox>
-               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="59.0">
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="67.0">
                   <children>
                      <Label text="Rain">
                         <font>
@@ -126,7 +98,7 @@
                      </Label>
                   </children>
                </VBox>
-               <Label text="t">
+               <Label prefWidth="26.0" text="t">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -136,7 +108,7 @@
                      <Font name="Lato Thin" size="18.0" />
                   </font>
                </Label>
-               <ImageView fitHeight="43.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@../graphics/moon.jpg" />
                   </image>
@@ -164,21 +136,7 @@
                      </Label>
                   </children>
                </VBox>
-               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="72.0">
-                  <children>
-                     <Label text="Visibility">
-                        <font>
-                           <Font name="Lato Thin" size="14.0" />
-                        </font>
-                     </Label>
-                     <Label text="10%">
-                        <font>
-                           <Font name="Lato Thin" size="18.0" />
-                        </font>
-                     </Label>
-                  </children>
-               </VBox>
-               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="59.0">
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="67.0">
                   <children>
                      <Label text="Rain">
                         <font>
@@ -192,7 +150,7 @@
                      </Label>
                   </children>
                </VBox>
-               <Label text="t">
+               <Label prefWidth="26.0" text="t">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -202,7 +160,7 @@
                      <Font name="Lato Thin" size="18.0" />
                   </font>
                </Label>
-               <ImageView fitHeight="43.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@../graphics/moon.jpg" />
                   </image>
@@ -230,21 +188,7 @@
                      </Label>
                   </children>
                </VBox>
-               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="72.0">
-                  <children>
-                     <Label text="Visibility">
-                        <font>
-                           <Font name="Lato Thin" size="14.0" />
-                        </font>
-                     </Label>
-                     <Label text="10%">
-                        <font>
-                           <Font name="Lato Thin" size="18.0" />
-                        </font>
-                     </Label>
-                  </children>
-               </VBox>
-               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="59.0">
+               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="67.0">
                   <children>
                      <Label text="Rain">
                         <font>
@@ -258,7 +202,7 @@
                      </Label>
                   </children>
                </VBox>
-               <Label text="t">
+               <Label prefWidth="26.0" text="t">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -268,7 +212,7 @@
                      <Font name="Lato Thin" size="18.0" />
                   </font>
                </Label>
-               <ImageView fitHeight="43.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@../graphics/moon.jpg" />
                   </image>
@@ -296,20 +240,6 @@
                      </Label>
                   </children>
                </VBox>
-               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="72.0">
-                  <children>
-                     <Label text="Visibility">
-                        <font>
-                           <Font name="Lato Thin" size="14.0" />
-                        </font>
-                     </Label>
-                     <Label text="10%">
-                        <font>
-                           <Font name="Lato Thin" size="18.0" />
-                        </font>
-                     </Label>
-                  </children>
-               </VBox>
                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="59.0">
                   <children>
                      <Label text="Rain">
@@ -324,7 +254,7 @@
                      </Label>
                   </children>
                </VBox>
-               <Label text="t">
+               <Label prefWidth="26.0" text="t">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -334,7 +264,7 @@
                      <Font name="Lato Thin" size="18.0" />
                   </font>
                </Label>
-               <ImageView fitHeight="43.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@../graphics/moon.jpg" />
                   </image>
@@ -362,20 +292,6 @@
                      </Label>
                   </children>
                </VBox>
-               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="72.0">
-                  <children>
-                     <Label text="Visibility">
-                        <font>
-                           <Font name="Lato Thin" size="14.0" />
-                        </font>
-                     </Label>
-                     <Label text="10%">
-                        <font>
-                           <Font name="Lato Thin" size="18.0" />
-                        </font>
-                     </Label>
-                  </children>
-               </VBox>
                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="59.0">
                   <children>
                      <Label text="Rain">
@@ -390,7 +306,7 @@
                      </Label>
                   </children>
                </VBox>
-               <Label text="t">
+               <Label prefWidth="26.0" text="t">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -400,7 +316,7 @@
                      <Font name="Lato Thin" size="18.0" />
                   </font>
                </Label>
-               <ImageView fitHeight="43.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@../graphics/moon.jpg" />
                   </image>
@@ -428,20 +344,6 @@
                      </Label>
                   </children>
                </VBox>
-               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="72.0">
-                  <children>
-                     <Label text="Visibility">
-                        <font>
-                           <Font name="Lato Thin" size="14.0" />
-                        </font>
-                     </Label>
-                     <Label text="10%">
-                        <font>
-                           <Font name="Lato Thin" size="18.0" />
-                        </font>
-                     </Label>
-                  </children>
-               </VBox>
                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="59.0">
                   <children>
                      <Label text="Rain">
@@ -456,7 +358,7 @@
                      </Label>
                   </children>
                </VBox>
-               <Label text="t">
+               <Label prefWidth="26.0" text="t">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -466,7 +368,7 @@
                      <Font name="Lato Thin" size="18.0" />
                   </font>
                </Label>
-               <ImageView fitHeight="43.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@../graphics/moon.jpg" />
                   </image>
@@ -494,20 +396,6 @@
                      </Label>
                   </children>
                </VBox>
-               <VBox alignment="CENTER" prefHeight="100.0" prefWidth="72.0">
-                  <children>
-                     <Label text="Visibility">
-                        <font>
-                           <Font name="Lato Thin" size="14.0" />
-                        </font>
-                     </Label>
-                     <Label text="10%">
-                        <font>
-                           <Font name="Lato Thin" size="18.0" />
-                        </font>
-                     </Label>
-                  </children>
-               </VBox>
                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="59.0">
                   <children>
                      <Label text="Rain">
@@ -522,7 +410,7 @@
                      </Label>
                   </children>
                </VBox>
-               <Label text="t">
+               <Label prefWidth="26.0" text="t">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -532,7 +420,7 @@
                      <Font name="Lato Thin" size="18.0" />
                   </font>
                </Label>
-               <ImageView fitHeight="43.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@../graphics/moon.jpg" />
                   </image>
