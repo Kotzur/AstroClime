@@ -160,18 +160,25 @@ public class WeekViewController {
 
     @FXML
     public void initialize() throws IOException{
+        //populating arrays for labels for 7 days
         Label [] dayNames = new Label[]{day1_name, day2_name, day3_name, day4_name, day5_name, day6_name, day7_name};
         Label [] dayDates = new Label[]{day1_date, day2_date, day3_date, day4_date, day5_date, day6_date, day7_date};
         Label [] dayMonths = new Label[]{day1_month, day2_month, day3_month, day4_month, day5_month, day6_month, day7_month};
-
+        Label [] percipitation = new Label[]{day1_percipitation, day2_percipitation, day3_percipitation, day4_percipitation, day5_percipitation, day6_percipitation, day7_percipitation};
+        Label [] humidity = new Label[]{day1_humidity, day2_humidity, day3_humidity, day4_humidity, day5_humidity, day6_humidity, day7_humidity};
+        ImageView [] images = new ImageView[]{day1_img, day2_img, day3_img, day4_img, day5_img, day6_img, day7_img};
 
         CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME,WeatherData.COUNTRY_CODE);
 
         ZonedDateTime today = ZonedDateTime.now();
         for(int i = 0; i < 7; i++){
+            //setting the date
             dayNames[i].setText(today.plusDays(i).getDayOfWeek().toString());
             dayDates[i].setText(Integer.toString(today.plusDays(i).getDayOfMonth()));
             dayMonths[i].setText(today.plusDays(i).getMonth().toString());
+
+            //setting the weather predictions
+
         }
 
     }
