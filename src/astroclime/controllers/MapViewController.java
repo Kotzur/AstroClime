@@ -18,7 +18,7 @@ public class MapViewController {
     //so that it displays the website with the light map onto the frame.
     public void initialize() {
         WebEngine webEngine = lightMapView.getEngine();
-        webEngine.load("https://markwgraves.carto.com/viz/c82ff74e-5e85-11e6-9e35-0e05a8b3e3d7/embed_map");
+        webEngine.load("https://markwgraves.carto.com/viz/c82ff74e-5e85-11e6-9e35-0e05a8b3e3d7/embed_map"); //loads the web page into the WebViewer object
     }
 
 }

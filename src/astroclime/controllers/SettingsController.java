@@ -1,5 +1,6 @@
 package astroclime.controllers;
 
+    import astroclime.backend.Unit;
     import astroclime.backend.WeatherData;
     import com.jfoenix.controls.JFXButton;
     import com.jfoenix.controls.JFXComboBox;
@@ -42,44 +43,53 @@ public class SettingsController {
 
 
         public void initialize() {
-                celcius.setSelected(WeatherData.CELCIUS);
-
-                locationOptions = FXCollections.observableArrayList(WeatherData.PREVIOUS_LOCATIONS);
-                locationOptions.add(WeatherData.CITY_NAME);
-                FXCollections.reverse(locationOptions);
-                locationBox.setItems(locationOptions);
-                locationBox.getSelectionModel().selectFirst();
-                locationBox.valueProperty().addListener(new ChangeListener<String>() {
-                    @Override
-                    public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                        //TODO: add to front of list
-                        if(!WeatherData.checkValidCity(newValue)){
-                            locationBox.getSelectionModel().select(oldValue);
-                        } else {
-                            locationOptions.add(oldValue);
-                        }
+            if(WeatherData.UNIT == Unit.C) {
+                celcius.setSelected(true);
+            } else if(WeatherData.UNIT == Unit.F) {
+                fahrenheit.setSelected(true);
+            } else {
+                kelvin.setSelected(true);
+            }
+            locationOptions = FXCollections.observableArrayList(WeatherData.PREVIOUS_LOCATIONS);
+            locationOptions.add(WeatherData.CITY_NAME);
+            FXCollections.reverse(locationOptions);
+            locationBox.setItems(locationOptions);
+            locationBox.getSelectionModel().selectFirst();
+            locationBox.valueProperty().addListener(new ChangeListener<String>() {
+                @Override
+                public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                    //TODO: add to front of list
+                    if(!WeatherData.checkValidCity(newValue)){
+                        locationBox.getSelectionModel().select(oldValue);
+                    } else {
+                        locationOptions.add(oldValue);
+                    }
                 }});
 
-                languageOptions = FXCollections.observableArrayList(WeatherData.LANGUAGES);
-                languageBox.setItems(languageOptions);
-                languageBox.getSelectionModel().select(WeatherData.LANGUAGE);
-                //:
-                changeLocationButton.setOnAction(new EventHandler<ActionEvent>() {
-                    @Override
-                    public void handle(ActionEvent event) {
-                        locationBox.getSelectionModel().clearSelection();
-                        locationBox.setEditable(true);
-                    }
-                });
+            languageOptions = FXCollections.observableArrayList(WeatherData.LANGUAGES);
+            languageBox.setItems(languageOptions);
+            languageBox.getSelectionModel().select(WeatherData.LANGUAGE);
+            //:
+            changeLocationButton.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    locationBox.getSelectionModel().clearSelection();
+                    locationBox.setEditable(true);
+                }
+            });
 
         }
 
 
         //:TODO link exit button with this fuction
         private void onExit() {
-            WeatherData.CELCIUS = celcius.isSelected();
+            if(celcius.isSelected()) {
+                WeatherData.UNIT = Unit.C;
+            } else if(fahrenheit.isSelected()) {
+                WeatherData.UNIT = Unit.F;
+            } else {
+                WeatherData.UNIT = Unit.K;
+            }
             WeatherData.CITY_NAME = locationBox.getValue().toString();
         }
-
-
     }

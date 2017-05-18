@@ -16,7 +16,7 @@ public class WeatherData {
 	
 	public static String CITY_NAME = "Cambridge";
 	public static String COUNTRY_CODE = "GB";
-	public static Boolean CELCIUS = true;
+	public static Unit UNIT = Unit.C;
 	public static List<String> PREVIOUS_LOCATIONS = new ArrayList<>();
 	public static String LANGUAGE = "English";
 	public static List<String> LANGUAGES = new ArrayList<>(Arrays.asList("English", "Polish"));
@@ -55,8 +55,11 @@ public class WeatherData {
 			t = c.getMainInstance().getTemperature();
 		}
 		
-		if (CELCIUS) {
+		if (UNIT != Unit.F) {
 			t = (t-32) * (0.5556f);
+		}
+		if (UNIT == Unit.K) {
+			t += 273;
 		}
 		
 		return Math.round(t);

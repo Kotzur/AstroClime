@@ -187,7 +187,7 @@ public class WeekViewController {
         
         
         ZonedDateTime today = ZonedDateTime.now();
-        for(int i = 0; i < 7; i++){
+        for(int i = 1; i <= 7; i++){
             //setting the date
             dayNames[i].setText(today.plusDays(i+1).getDayOfWeek().toString());
             dayDates[i].setText(Integer.toString(today.plusDays(i+1).getDayOfMonth()));
