@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Paths;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.imageio.ImageIO;
 
@@ -33,6 +35,8 @@ import javafx.scene.layout.VBox;
 import net.aksingh.owmjapis.CurrentWeather;
 
 public class MainWindowController {
+
+	private Timer timer = new Timer();
 	
 	@FXML
 	private AnchorPane mainPane;
@@ -69,12 +73,44 @@ public class MainWindowController {
 	
 	@FXML 
 	private JFXDrawer rightDrawer;
+
+
+	private void refresh() throws IOException {
+		CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
+		temperatureLabel.setText((WeatherData.getTemperature(cwd)) + "ï¿½C");
+		cloudCoverLabel.setText("Cloud Cover : " + (int) WeatherData.getCloudCover(cwd) + "%");
+		visibilityLabel.setText("Visibility : " + (int) WeatherData.getVisibility(cwd) + "km");
+		humidityLabel.setText("Humidity : " + (int) WeatherData.getHumidity(cwd) + "%");
+		rainfallLabel.setText("Rainfall : " + WeatherData.getRainfall(cwd) + "mm");
+
+		sunriseLabel.setText(WeatherData.getSunrise(cwd));
+		sunsetLabel.setText(WeatherData.getSunset(cwd));
+
+		cityLabel.setText(WeatherData.CITY_NAME);
+
+
+		FileInputStream f = new FileInputStream(Paths.get("Icons/" + cwd.getWeatherInstance(0).getWeatherIconName() + ".PNG").toFile());
+
+		Image img = new Image(f, weatherImage.getWidth(),weatherImage.getHeight(),false,false);
+		GraphicsContext gc = weatherImage.getGraphicsContext2D();
+		gc.setGlobalBlendMode(BlendMode.SCREEN);
+		gc.drawImage(img, 0, 0);
+	}
+
 	
 	public void initialize() throws JSONException, IOException, URISyntaxException {
 		CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
+		timer.scheduleAtFixedRate(new TimerTask() {
+			public void run() {
+                try {
+                    refresh();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+		}, 2*60*1000, 2*60*1000);
 		
-		
-		temperatureLabel.setText((WeatherData.getTemperature(cwd)) + "°C");
+		temperatureLabel.setText((WeatherData.getTemperature(cwd)) + "ï¿½C");
 		cloudCoverLabel.setText("Cloud Cover : " + (int) WeatherData.getCloudCover(cwd) + "%");
 		visibilityLabel.setText("Visibility : " + (int) WeatherData.getVisibility(cwd) + "km");
 		humidityLabel.setText("Humidity : " + (int) WeatherData.getHumidity(cwd) + "%");
