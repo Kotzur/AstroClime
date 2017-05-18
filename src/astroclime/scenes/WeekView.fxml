@@ -1,188 +1,408 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.EventController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.WeekViewController">
    <children>
-      <VBox prefHeight="450.0" prefWidth="300.0">
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="667.0" prefWidth="325.0">
          <children>
-            <HBox prefHeight="50.0" prefWidth="200.0">
+            <AnchorPane prefHeight="37.0" prefWidth="325.0">
                <children>
-                  <Label prefHeight="17.0" prefWidth="101.0" />
-                  <Label alignment="CENTER" text="Percipitation  /  Humidity" />
+                  <Label layoutX="94.0" layoutY="10.0" text="Percipitation">
+                     <font>
+                        <Font name="Lato Thin" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="188.0" layoutY="10.0" text="Humidity">
+                     <font>
+                        <Font name="Lato Thin" size="14.0" />
+                     </font>
+                  </Label>
                </children>
-            </HBox>
+            </AnchorPane>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                  <VBox alignment="CENTER" prefHeight="89.0" prefWidth="102.0">
                      <children>
-                        <Label text="Monday" />
-                        <Label text="01" />
-                        <Label text="May" />
+                        <Label fx:id="day1_name">
+                           <font>
+                              <Font name="Lato Light" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="day1_date">
+                           <font>
+                              <Font name="Lato Light" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="day1_month">
+                           <font>
+                              <Font name="Lato Light" size="18.0" />
+                           </font></Label>
                      </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                  <VBox alignment="CENTER" prefHeight="89.0" prefWidth="170.0">
                      <children>
-                        <Label text="Good Visibility" />
+                        <Label fx:id="day1_visibility" text="Good Visibility">
+                           <font>
+                              <Font name="Lato Thin" size="18.0" />
+                           </font></Label>
                         <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
                            <children>
-                              <Label text="20%" />
-                              <Label text="  /  " />
-                              <Label text="15%" />
+                              <Label fx:id="day1_percipitation" text="20%">
+                                 <font>
+                                    <Font name="Lato Thin" size="18.0" />
+                                 </font></Label>
+                              <Label text="    " />
+                              <Label fx:id="day1_humidity" text="15%">
+                                 <font>
+                                    <Font name="Lato Thin" size="18.0" />
+                                 </font></Label>
                            </children>
                         </HBox>
                      </children>
                   </VBox>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="day1_img" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/moon.jpg" />
+                     </image></ImageView>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                  <VBox alignment="CENTER" prefHeight="89.0" prefWidth="102.0">
                      <children>
-                        <Label text="Tuesday" />
-                        <Label text="02" />
-                        <Label text="May" />
+                        <Label fx:id="day2_name" text="Tuesday">
+                           <font>
+                              <Font name="Lato Light" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="day2_date" text="02">
+                           <font>
+                              <Font name="Lato Light" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="day2_month" text="May">
+                           <font>
+                              <Font name="Lato Light" size="18.0" />
+                           </font>
+                        </Label>
                      </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                  <VBox alignment="CENTER" prefHeight="89.0" prefWidth="170.0">
                      <children>
-                        <Label text="Moderate Visibility" />
+                        <Label fx:id="day2_visibility" text="Moderate Visibility">
+                           <font>
+                              <Font name="Lato Thin" size="18.0" />
+                           </font>
+                        </Label>
                         <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
                            <children>
-                              <Label text="22%" />
-                              <Label text="  /  " />
-                              <Label text="18%" />
+                              <Label fx:id="day2_percipitation" text="20%">
+                                 <font>
+                                    <Font name="Lato Thin" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="    " />
+                              <Label fx:id="day2_humidity" text="15%">
+                                 <font>
+                                    <Font name="Lato Thin" size="18.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </HBox>
                      </children>
                   </VBox>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="day2_img" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/moonbaby.jpg" />
+                     </image>
+                  </ImageView>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                  <VBox alignment="CENTER" prefHeight="89.0" prefWidth="102.0">
                      <children>
-                        <Label text="Wednesday" />
-                        <Label text="03" />
-                        <Label text="May" />
+                        <Label fx:id="day3_name" text="Wednesday">
+                           <font>
+                              <Font name="Lato Light" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="day3_date" text="03">
+                           <font>
+                              <Font name="Lato Light" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="day3_month" text="May">
+                           <font>
+                              <Font name="Lato Light" size="18.0" />
+                           </font>
+                        </Label>
                      </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                  <VBox alignment="CENTER" prefHeight="89.0" prefWidth="170.0">
                      <children>
-                        <Label text="Good Visibility" />
+                        <Label fx:id="day3_visibility" text="Poor Visibility">
+                           <font>
+                              <Font name="Lato Thin" size="18.0" />
+                           </font>
+                        </Label>
                         <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
                            <children>
-                              <Label text="18%" />
-                              <Label text="  /  " />
-                              <Label text="10%" />
+                              <Label fx:id="day3_percipitation" text="20%">
+                                 <font>
+                                    <Font name="Lato Thin" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="    " />
+                              <Label fx:id="day3_humidity" text="15%">
+                                 <font>
+                                    <Font name="Lato Thin" size="18.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </HBox>
                      </children>
                   </VBox>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="day3_img" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/sadmoon.jpg" />
+                     </image>
+                  </ImageView>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                  <VBox alignment="CENTER" prefHeight="89.0" prefWidth="102.0">
                      <children>
-                        <Label text="Thursday" />
-                        <Label text="04" />
-                        <Label text="May" />
+                        <Label fx:id="day4_name" text="Thursday">
+                           <font>
+                              <Font name="Lato Light" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="day4_date" text="04">
+                           <font>
+                              <Font name="Lato Light" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="day4_month" text="May">
+                           <font>
+                              <Font name="Lato Light" size="18.0" />
+                           </font>
+                        </Label>
                      </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                  <VBox alignment="CENTER" prefHeight="89.0" prefWidth="170.0">
                      <children>
-                        <Label text="Poor Visibility" />
+                        <Label fx:id="day4_visibility" text="Good Visibility">
+                           <font>
+                              <Font name="Lato Thin" size="18.0" />
+                           </font>
+                        </Label>
                         <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
                            <children>
-                              <Label text="20%" />
-                              <Label text="  /  " />
-                              <Label text="15%" />
+                              <Label fx:id="day4_percipitation" text="20%">
+                                 <font>
+                                    <Font name="Lato Thin" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="    " />
+                              <Label fx:id="day4_humidity" text="15%">
+                                 <font>
+                                    <Font name="Lato Thin" size="18.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </HBox>
                      </children>
                   </VBox>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="day4_img" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/moon.jpg" />
+                     </image>
+                  </ImageView>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                  <VBox alignment="CENTER" prefHeight="89.0" prefWidth="102.0">
                      <children>
-                        <Label text="Friday" />
-                        <Label text="05" />
-                        <Label text="May" />
+                        <Label fx:id="day5_name" text="Friday">
+                           <font>
+                              <Font name="Lato Light" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="day5_date" text="05">
+                           <font>
+                              <Font name="Lato Light" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="day5_month" text="May">
+                           <font>
+                              <Font name="Lato Light" size="18.0" />
+                           </font>
+                        </Label>
                      </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                  <VBox alignment="CENTER" prefHeight="89.0" prefWidth="170.0">
                      <children>
-                        <Label text="Moderate Visibility" />
+                        <Label fx:id="day5_visibility" text="Moderate Visibility">
+                           <font>
+                              <Font name="Lato Thin" size="18.0" />
+                           </font>
+                        </Label>
                         <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
                            <children>
-                              <Label text="15%" />
-                              <Label text="  /  " />
-                              <Label text="20%" />
+                              <Label fx:id="day5_percipitation" text="20%">
+                                 <font>
+                                    <Font name="Lato Thin" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="    " />
+                              <Label fx:id="day5_humidity" text="15%">
+                                 <font>
+                                    <Font name="Lato Thin" size="18.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </HBox>
                      </children>
                   </VBox>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="day5_img" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/mooon.jpg" />
+                     </image>
+                  </ImageView>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                  <VBox alignment="CENTER" prefHeight="89.0" prefWidth="102.0">
                      <children>
-                        <Label text="Saturday" />
-                        <Label text="06" />
-                        <Label text="May" />
+                        <Label fx:id="day6_name" text="Saturday">
+                           <font>
+                              <Font name="Lato Light" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="day6_date" text="06">
+                           <font>
+                              <Font name="Lato Light" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="day6_month" text="May">
+                           <font>
+                              <Font name="Lato Light" size="18.0" />
+                           </font>
+                        </Label>
                      </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                  <VBox alignment="CENTER" prefHeight="89.0" prefWidth="170.0">
                      <children>
-                        <Label text="Good Visibility" />
+                        <Label fx:id="day6_visibility" text="Poor Visibility">
+                           <font>
+                              <Font name="Lato Thin" size="18.0" />
+                           </font>
+                        </Label>
                         <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
                            <children>
-                              <Label text="09%" />
-                              <Label text="  /  " />
-                              <Label text="16%" />
+                              <Label fx:id="day6_percipitation" text="20%">
+                                 <font>
+                                    <Font name="Lato Thin" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="    " />
+                              <Label fx:id="day6_humidity" text="15%">
+                                 <font>
+                                    <Font name="Lato Thin" size="18.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </HBox>
                      </children>
                   </VBox>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="day6_img" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/sadmoon.jpg" />
+                     </image>
+                  </ImageView>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                  <VBox alignment="CENTER" prefHeight="89.0" prefWidth="102.0">
                      <children>
-                        <Label text="Sunday" />
-                        <Label text="07" />
-                        <Label text="May" />
+                        <Label fx:id="day7_name" text="Sunday">
+                           <font>
+                              <Font name="Lato Light" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="day7_date" text="07">
+                           <font>
+                              <Font name="Lato Light" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="day7_month" text="May">
+                           <font>
+                              <Font name="Lato Light" size="18.0" />
+                           </font>
+                        </Label>
                      </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                  <VBox alignment="CENTER" prefHeight="89.0" prefWidth="170.0">
                      <children>
-                        <Label text="Poor Visibility" />
+                        <Label fx:id="day7_visibility" text="Good Visibility">
+                           <font>
+                              <Font name="Lato Thin" size="18.0" />
+                           </font>
+                        </Label>
                         <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
                            <children>
-                              <Label text="70%" />
-                              <Label text="  /  " />
-                              <Label text="30%" />
+                              <Label fx:id="day7_percipitation" text="20%">
+                                 <font>
+                                    <Font name="Lato Thin" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label text="    " />
+                              <Label fx:id="day7_humidity" text="15%">
+                                 <font>
+                                    <Font name="Lato Thin" size="18.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </HBox>
                      </children>
                   </VBox>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="day7_img" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../graphics/moon.jpg" />
+                     </image>
+                  </ImageView>
                </children>
             </HBox>
          </children>
