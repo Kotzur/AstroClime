@@ -182,7 +182,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="16.0" prefWidth="165.0">
                      <children>
-                        <Label fx:id="day1_visibility2" alignment="CENTER" prefHeight="23.0" prefWidth="150.0" text="Moderate Visibility" underline="true">
+                        <Label fx:id="day3_visibility" alignment="CENTER" prefHeight="23.0" prefWidth="150.0" text="Moderate Visibility" underline="true">
                            <font>
                               <Font name="Lato Thin" size="18.0" />
                            </font>
@@ -260,7 +260,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="16.0" prefWidth="165.0">
                      <children>
-                        <Label fx:id="day3_visibility" alignment="CENTER" prefHeight="27.0" prefWidth="150.0" text="Moderate Visibility" underline="true">
+                        <Label fx:id="day4_visibility" alignment="CENTER" prefHeight="27.0" prefWidth="150.0" text="Moderate Visibility" underline="true">
                            <font>
                               <Font name="Lato Thin" size="18.0" />
                            </font>
@@ -335,7 +335,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="16.0" prefWidth="165.0">
                      <children>
-                        <Label fx:id="day4_visibility" alignment="CENTER" prefHeight="64.0" prefWidth="150.0" text="Good Visibility" underline="true">
+                        <Label fx:id="day5_visibility" alignment="CENTER" prefHeight="64.0" prefWidth="150.0" text="Good Visibility" underline="true">
                            <font>
                               <Font name="Lato Thin" size="18.0" />
                            </font>
@@ -413,7 +413,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="16.0" prefWidth="165.0">
                      <children>
-                        <Label fx:id="day5_visibility" alignment="CENTER" prefHeight="64.0" prefWidth="150.0" text="Good Visibility" underline="true">
+                        <Label fx:id="day6_visibility" alignment="CENTER" prefHeight="64.0" prefWidth="150.0" text="Good Visibility" underline="true">
                            <font>
                               <Font name="Lato Thin" size="18.0" />
                            </font>
@@ -491,7 +491,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="16.0" prefWidth="165.0">
                      <children>
-                        <Label fx:id="day6_visibility" alignment="CENTER" prefHeight="64.0" prefWidth="150.0" text="Good Visibility" underline="true">
+                        <Label fx:id="day7_visibility" alignment="CENTER" prefHeight="64.0" prefWidth="150.0" text="Good Visibility" underline="true">
                            <font>
                               <Font name="Lato Thin" size="18.0" />
                            </font>
