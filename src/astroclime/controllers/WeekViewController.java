@@ -181,8 +181,25 @@ public class WeekViewController {
     		Image img = new Image(f, images[i-1].getFitWidth(),images[i-1].getFitHeight(),false,false);
     		images[i-1].setImage(img);
     		
-	    	float h = df.getForecastInstance(i).getHumidity();
-	    	humidity[i-1].setText(String.valueOf((int)h) + "%");
+	    	float c = df.getForecastInstance(i).getPercentageOfClouds();
+	    	humidity[i-1].setText(String.valueOf((int)c) + "%");
+	    	
+	    	float p = df.getForecastInstance(i).getRain();
+	    	if (Float.isNaN(p)) {
+	    		p=0;
+	    	}
+	    	
+	    	
+	    	if (c > 75f) {
+	    		visibility[i-1].setText("Poor Visibility");
+	    	}else if (c > 50f) {
+	    		visibility[i-1].setText("Moderate Visibility");
+	    	}else {
+	    		visibility[i-1].setText("Good Visibility");
+	    	} 
+	    	
+	    	percipitation[i-1].setText(String.valueOf(p) + "mm");
+	    	
         }
         
         

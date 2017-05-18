@@ -77,7 +77,7 @@ public class MainWindowController {
 
 	private void refresh() throws IOException {
 		CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
-		temperatureLabel.setText((WeatherData.getTemperature(cwd)) + "ï¿½C");
+		temperatureLabel.setText((WeatherData.getTemperature(cwd)) + "°C");
 		cloudCoverLabel.setText("Cloud Cover : " + (int) WeatherData.getCloudCover(cwd) + "%");
 		visibilityLabel.setText("Visibility : " + (int) WeatherData.getVisibility(cwd) + "km");
 		humidityLabel.setText("Humidity : " + (int) WeatherData.getHumidity(cwd) + "%");
@@ -112,7 +112,7 @@ public class MainWindowController {
             }
 		}, 2*60*1000, 2*60*1000);
 		
-		temperatureLabel.setText((WeatherData.getTemperature(cwd)) + "ï¿½C");
+		temperatureLabel.setText((WeatherData.getTemperature(cwd)) + "°C");
 		cloudCoverLabel.setText("Cloud Cover : " + (int) WeatherData.getCloudCover(cwd) + "%");
 		visibilityLabel.setText("Visibility : " + (int) WeatherData.getVisibility(cwd) + "km");
 		humidityLabel.setText("Humidity : " + (int) WeatherData.getHumidity(cwd) + "%");
@@ -143,7 +143,7 @@ public class MainWindowController {
 		if (key.getCode().equals(KeyCode.DOWN)) {
 			if (topDrawer.isShown()) {
 				topDrawer.close();
-			}else{
+			}else if (!rightDrawer.isShown()){
 				topDrawer.open();
 			}
 		}
@@ -151,7 +151,7 @@ public class MainWindowController {
 		if (key.getCode().equals(KeyCode.RIGHT)) {
 			if (rightDrawer.isShown()) {
 				rightDrawer.close();
-			}else{
+			}else if (!topDrawer.isShown()){
 				rightDrawer.open();
 			}
 		}
