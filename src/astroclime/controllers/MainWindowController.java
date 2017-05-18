@@ -64,18 +64,19 @@ public class MainWindowController {
 	private Label cityLabel;
 	
 	@FXML
-	private Canvas weatherImage;
+	private ImageView weatherImage;
 	
 	@FXML
 	private JFXDrawer topDrawer;
 	
 	@FXML 
 	private JFXDrawer rightDrawer;
+	
 
 
 	private void refresh() throws IOException {
 		CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
-		temperatureLabel.setText((WeatherData.getTemperature(cwd)) + "�C");
+		temperatureLabel.setText((WeatherData.getTemperature(cwd)) +  Character.toString((char) 176 ) + "C");
 		cloudCoverLabel.setText("Cloud Cover : " + (int) WeatherData.getCloudCover(cwd) + "%");
 		visibilityLabel.setText("Visibility : " + (int) WeatherData.getVisibility(cwd) + "km");
 		humidityLabel.setText("Humidity : " + (int) WeatherData.getHumidity(cwd) + "%");
@@ -89,17 +90,15 @@ public class MainWindowController {
 
 		FileInputStream f = new FileInputStream(Paths.get("Icons/" + cwd.getWeatherInstance(0).getWeatherIconName() + ".PNG").toFile());
 
-		Image img = new Image(f, weatherImage.getWidth(),weatherImage.getHeight(),false,false);
-		GraphicsContext gc = weatherImage.getGraphicsContext2D();
-		gc.setGlobalBlendMode(BlendMode.SCREEN);
-		gc.drawImage(img, 0, 0);
+		Image img = new Image(f, weatherImage.getFitWidth(),weatherImage.getFitHeight(),false,false);
+		weatherImage.setImage(img);
 	}
 
 	
 	public void initialize() throws JSONException, IOException, URISyntaxException {
 		CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
 
-		temperatureLabel.setText((WeatherData.getTemperature(cwd)) + "�C");
+		temperatureLabel.setText((WeatherData.getTemperature(cwd)) +  Character.toString((char) 176 ) + "C");
 		cloudCoverLabel.setText("Cloud Cover : " + (int) WeatherData.getCloudCover(cwd) + "%");
 		visibilityLabel.setText("Visibility : " + (int) WeatherData.getVisibility(cwd) + "km");
 		humidityLabel.setText("Humidity : " + (int) WeatherData.getHumidity(cwd) + "%");
@@ -113,10 +112,8 @@ public class MainWindowController {
 		
 		FileInputStream f = new FileInputStream(Paths.get("Icons/" + cwd.getWeatherInstance(0).getWeatherIconName() + ".PNG").toFile());
 		
-		Image img = new Image(f, weatherImage.getWidth(),weatherImage.getHeight(),false,false);
-		GraphicsContext gc = weatherImage.getGraphicsContext2D();
-		gc.setGlobalBlendMode(BlendMode.SCREEN);
-		gc.drawImage(img, 0, 0);
+		Image img = new Image(f, weatherImage.getFitWidth(),weatherImage.getFitHeight(),false,false);
+		weatherImage.setImage(img);
 		
 		
 		AnchorPane map = FXMLLoader.load(getClass().getResource("../scenes/MapView.fxml"));

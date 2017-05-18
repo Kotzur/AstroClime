@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXDrawer?>
-<?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -50,7 +49,7 @@
             <Font name="Lato Thin" size="32.0" />
          </font>
       </Label>
-      <Canvas fx:id="weatherImage" height="200.0" layoutX="64.0" layoutY="141.0" width="200.0" />
+      <ImageView fx:id="weatherImage" fitHeight="200.0" fitWidth="200.0" layoutX="64.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fitHeight="53.0" fitWidth="53.0" layoutX="38.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Icons/sunset.png" />
@@ -63,5 +62,6 @@
       </ImageView>
       <JFXDrawer fx:id="topDrawer" defaultDrawerSize="789.0" direction="TOP" layoutX="-7.0" layoutY="-8.0" maxWidth="-Infinity" minWidth="-Infinity" overLayVisible="false" prefHeight="9.0" prefWidth="341.0" resizableOnDrag="true" />
       <JFXDrawer fx:id="rightDrawer" defaultDrawerSize="350.0" direction="RIGHT" layoutX="-8.0" layoutY="-1.0" prefHeight="685.0" prefWidth="348.0" resizableOnDrag="true" />
+      <JFXDrawer fx:id="bottomDrawer" defaultDrawerSize="333.0" direction="BOTTOM" layoutY="346.0" overLayVisible="false" prefHeight="321.0" prefWidth="325.0" resizableOnDrag="true" />
    </children>
 </AnchorPane>
