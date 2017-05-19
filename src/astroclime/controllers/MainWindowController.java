@@ -57,13 +57,13 @@ public class MainWindowController {
 	
 	@FXML 
 	private JFXDrawer rightDrawer;
-	
 	@FXML
 	private JFXDrawer bottomDrawer;
 
+
 	private void refresh() throws IOException {
 		CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
-		temperatureLabel.setText((WeatherData.getTemperature(cwd)) +  Character.toString((char) 176 ) + "C");
+		temperatureLabel.setText((WeatherData.getTemperature(cwd)) +  WeatherData.UNIT.getSymbol());
 		cloudCoverLabel.setText("Cloud Cover : " + (int) WeatherData.getCloudCover(cwd) + "%");
 		visibilityLabel.setText("Visibility : " + (int) WeatherData.getVisibility(cwd) + "km");
 		humidityLabel.setText("Humidity : " + (int) WeatherData.getHumidity(cwd) + "%");
@@ -85,7 +85,7 @@ public class MainWindowController {
 	public void initialize() throws JSONException, IOException, URISyntaxException {
 		CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
 
-		temperatureLabel.setText((WeatherData.getTemperature(cwd)) +  Character.toString((char) 176 ) + "C");
+		temperatureLabel.setText((WeatherData.getTemperature(cwd)) +  WeatherData.UNIT.getSymbol());
 		cloudCoverLabel.setText("Cloud Cover : " + (int) WeatherData.getCloudCover(cwd) + "%");
 		visibilityLabel.setText("Visibility : " + (int) WeatherData.getVisibility(cwd) + "km");
 		humidityLabel.setText("Humidity : " + (int) WeatherData.getHumidity(cwd) + "%");

@@ -18,7 +18,6 @@ public class WeatherData {
 	public static String CITY_NAME = "Cambridge";
 	public static String COUNTRY_CODE = "GB";
 	public static Unit UNIT = Unit.C;
-	public static List<String> PREVIOUS_LOCATIONS = new ArrayList<>();
 	public static String LANGUAGE = "English";
 	public static List<String> LANGUAGES = new ArrayList<>(Arrays.asList("English", "Polish"));
 	
@@ -129,11 +128,6 @@ public class WeatherData {
 		String time = format.format(c.getSysInstance().getSunriseTime());
 		
 		return time;
-	}
-
-	//TODO check if valid city
-	public static Boolean checkValidCity(String cityName){
-		return true;
 	}
 
 	public static void main(String args[]) {
