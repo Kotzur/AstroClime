@@ -113,6 +113,12 @@ public class MainWindowController {
 		hourlyView.setStyle("-fx-focus-color: transparent; -fx-faint-focus-color: transparent; -fx-box-border: transparent;");
 		//set the bottom drawer to the hourly view
 		bottomDrawer.setSidePane(hourlyView);
+		
+		//allows us to interact with the main screen
+		topDrawer.toBack();
+		bottomDrawer.toBack();
+		rightDrawer.toBack();
+		
 	}
 	
 	public void swipeInput(KeyEvent key)  {
@@ -121,6 +127,7 @@ public class MainWindowController {
 		//in the real app this would be up, down, left and right swipe, but we can't do this on a laptop
 		//every time we go back to the main page we refresh the view
 		
+		//we bring the drawers to the front and back to allow us to interact with the main screen
 		
 		try {
 			switch (key.getCode()) {
@@ -129,6 +136,7 @@ public class MainWindowController {
 				if (bottomDrawer.isShown()) {
 					refresh();
 					bottomDrawer.close();
+					bottomDrawer.toBack();
 				}else if (!rightDrawer.isShown() && !topDrawer.isShown()) {
 					topDrawer.open();
 					topDrawer.toFront();
@@ -138,6 +146,7 @@ public class MainWindowController {
 				if (topDrawer.isShown()) {
 					refresh();
 					topDrawer.close();
+					topDrawer.toBack();
 				}else if (!rightDrawer.isShown() && !bottomDrawer.isShown()) {
 					bottomDrawer.open();
 					bottomDrawer.toFront();
@@ -155,6 +164,7 @@ public class MainWindowController {
 				if (rightDrawer.isShown()) {
 					refresh();
 					rightDrawer.close();
+					rightDrawer.toBack();
 					
 				}
 				break;
