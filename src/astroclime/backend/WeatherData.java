@@ -24,6 +24,9 @@ public class WeatherData {
 	private static OpenWeatherMap OWM;
 	
 	private static OpenWeatherMap getOWM() {
+		
+		//get a singleton instance of the open weather API
+		
 		if (OWM == null) {
 			OWM = new OpenWeatherMap("");
 			OWM.setApiKey("5b9c6f952fad43199fd6b949f7f9bbb0");
@@ -35,21 +38,25 @@ public class WeatherData {
 	
 	
 	public static CurrentWeather getCurrentWeather(String cityName, String countryCode) throws JSONException, IOException{
+		
+		//get current weather data from a given cityname and country code
+		
 		CurrentWeather cwd = getOWM().currentWeatherByCityName(cityName, countryCode);
 		return cwd;
 	}
 	
 	public static float getCloudCover(CurrentWeather c) {
+		//get the cloud cover
 		if (c.hasCloudsInstance()) {
 			return c.getCloudsInstance().getPercentageOfClouds();
 		}else{
-			return -1;
+			return 0;
 		}
 	}
 	
 	public static int getTemperature(CurrentWeather c) {
-		
-		float t = -1;
+		//get the temperature depending on the current unit
+		float t = 0;
 		
 		if (c.hasMainInstance()) {
 			t = c.getMainInstance().getTemperature();
@@ -66,7 +73,9 @@ public class WeatherData {
 	}
 	
 	public static float getVisibility(CurrentWeather c) {
+		//get the current visibility.
 		
+		//API does not provide this so this scrapes the raw response
 		float v = 0;
 		
 		if (c.hasRawResponse()) {
@@ -81,12 +90,14 @@ public class WeatherData {
 			}
 		}
 		
+		//return in km
 		return v / 1000f;
 		
 	}
 	
 	public static float getHumidity(CurrentWeather c) {
-		float h = -1;
+		//get current humidity
+		float h = 0;
 		
 		if (c.hasMainInstance() && c.getMainInstance().hasHumidity()) {
 			h = c.getMainInstance().getHumidity();
@@ -96,6 +107,7 @@ public class WeatherData {
 	}
 	
 	public static float getRainfall(CurrentWeather c) {
+		//get rainfall
 		float r = 0;
 		
 		if (c.hasRainInstance() && c.getRainInstance().hasRain3h()) {
@@ -106,17 +118,8 @@ public class WeatherData {
 		return r;
 	}
 	
-	public static String getWeather(CurrentWeather c) {
-
-		
-		String w = "NOTHING";
-		
-		w = c.getWeatherInstance(0).getWeatherName();
-		
-		return w;
-	}
-
 	public static String getSunset(CurrentWeather c) {
+		//get the sunset time returned in the HH:mm format
 		SimpleDateFormat format = new SimpleDateFormat("HH:mm");
 		String time = format.format(c.getSysInstance().getSunsetTime());
 		
@@ -124,24 +127,15 @@ public class WeatherData {
 	}
 	
 	public static String getSunrise(CurrentWeather c) {
+		//get the sunrise time returned in the HH:mm format
 		SimpleDateFormat format = new SimpleDateFormat("HH:mm");
 		String time = format.format(c.getSysInstance().getSunriseTime());
 		
 		return time;
 	}
-
-	public static void main(String args[]) {
-		try {
-			CurrentWeather cwd = getCurrentWeather("Cambridge","GB");
-			System.out.println(getSunrise(cwd));
-		} catch (JSONException | IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}	
-	}
 	
 	public static DailyForecast getDailyForecast(String cityName, String countryCode) throws JSONException, IOException {
-		
+		//get a daily forecast for the next 8 days. This means we get today plus the next 7 days
 		DailyForecast df = getOWM().dailyForecastByCityName(cityName, countryCode, (byte) 8);
 		
 		return df;

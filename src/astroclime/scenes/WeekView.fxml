@@ -42,12 +42,12 @@
                            </font></Label>
                         <HBox alignment="CENTER" prefHeight="11.0" prefWidth="162.0">
                            <children>
-                              <Label fx:id="day1_percipitation" text="20%">
+                              <Label fx:id="day1_precipitation" text="20%">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font></Label>
                               <Label text="    " />
-                              <Label fx:id="day1_humidity" text="15%">
+                              <Label fx:id="day1_cloudCover" text="15%">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font></Label>
@@ -55,7 +55,7 @@
                         </HBox>
                         <HBox prefHeight="0.0" prefWidth="165.0">
                            <children>
-                              <Label maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="95.0" text="Percipitation">
+                              <Label maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="95.0" text="Precipitation">
                                  <font>
                                     <Font name="Lato Thin" size="14.0" />
                                  </font>
@@ -114,13 +114,13 @@
                         </Label>
                         <HBox alignment="CENTER" prefHeight="11.0" prefWidth="162.0">
                            <children>
-                              <Label fx:id="day2_percipitation" text="20%">
+                              <Label fx:id="day2_precipitation" text="20%">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
                               </Label>
                               <Label text="    " />
-                              <Label fx:id="day2_humidity" text="15%">
+                              <Label fx:id="day2_cloudCover" text="15%">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
@@ -129,7 +129,7 @@
                         </HBox>
                         <HBox prefHeight="0.0" prefWidth="165.0">
                            <children>
-                              <Label maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="95.0" text="Percipitation">
+                              <Label maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="95.0" text="Precipitation">
                                  <font>
                                     <Font name="Lato Thin" size="14.0" />
                                  </font>
@@ -189,13 +189,13 @@
                         </Label>
                         <HBox alignment="CENTER" prefHeight="11.0" prefWidth="162.0">
                            <children>
-                              <Label fx:id="day3_percipitation" text="20%">
+                              <Label fx:id="day3_precipitation" text="20%">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
                               </Label>
                               <Label text="    " />
-                              <Label fx:id="day3_humidity" text="15%">
+                              <Label fx:id="day3_cloudCover" text="15%">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
@@ -207,7 +207,7 @@
                         </HBox>
                         <HBox prefHeight="0.0" prefWidth="165.0">
                            <children>
-                              <Label prefWidth="95.0" text="Percipitation">
+                              <Label prefWidth="95.0" text="Precipitation">
                                  <font>
                                     <Font name="Lato Thin" size="14.0" />
                                  </font>
@@ -267,13 +267,13 @@
                         </Label>
                         <HBox alignment="CENTER" prefHeight="11.0" prefWidth="162.0">
                            <children>
-                              <Label fx:id="day4_percipitation" text="20%">
+                              <Label fx:id="day4_precipitation" text="20%">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
                               </Label>
                               <Label text="    " />
-                              <Label fx:id="day4_humidity" text="15%">
+                              <Label fx:id="day4_cloudCover" text="15%">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
@@ -282,7 +282,7 @@
                         </HBox>
                         <HBox prefHeight="0.0" prefWidth="165.0">
                            <children>
-                              <Label prefWidth="95.0" text="Percipitation">
+                              <Label prefWidth="95.0" text="Precipitation">
                                  <font>
                                     <Font name="Lato Thin" size="14.0" />
                                  </font>
@@ -345,13 +345,13 @@
                         </Label>
                         <HBox alignment="CENTER" prefHeight="11.0" prefWidth="162.0">
                            <children>
-                              <Label fx:id="day5_percipitation" text="20%">
+                              <Label fx:id="day5_precipitation" text="20%">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
                               </Label>
                               <Label text="    " />
-                              <Label fx:id="day5_humidity" text="15%">
+                              <Label fx:id="day5_cloudCover" text="15%">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
@@ -360,7 +360,7 @@
                         </HBox>
                         <HBox prefHeight="0.0" prefWidth="165.0">
                            <children>
-                              <Label prefWidth="95.0" text="Percipitation">
+                              <Label prefWidth="95.0" text="Precipitation">
                                  <font>
                                     <Font name="Lato Thin" size="14.0" />
                                  </font>
@@ -423,13 +423,13 @@
                         </Label>
                         <HBox alignment="CENTER" prefHeight="11.0" prefWidth="162.0">
                            <children>
-                              <Label fx:id="day6_percipitation" text="20%">
+                              <Label fx:id="day6_precipitation" text="20%">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
                               </Label>
                               <Label text="    " />
-                              <Label fx:id="day6_humidity" text="15%">
+                              <Label fx:id="day6_cloudCover" text="15%">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
@@ -438,7 +438,7 @@
                         </HBox>
                         <HBox prefHeight="0.0" prefWidth="165.0">
                            <children>
-                              <Label prefWidth="95.0" text="Percipitation">
+                              <Label prefWidth="95.0" text="Precipitation">
                                  <font>
                                     <Font name="Lato Thin" size="14.0" />
                                  </font>
@@ -501,13 +501,13 @@
                         </Label>
                         <HBox alignment="CENTER" prefHeight="11.0" prefWidth="162.0">
                            <children>
-                              <Label fx:id="day7_percipitation" text="20%">
+                              <Label fx:id="day7_precipitation" text="20%">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
                               </Label>
                               <Label text="    " />
-                              <Label fx:id="day7_humidity" text="15%">
+                              <Label fx:id="day7_cloudCover" text="15%">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
@@ -516,7 +516,7 @@
                         </HBox>
                         <HBox prefHeight="0.0" prefWidth="165.0">
                            <children>
-                              <Label prefWidth="95.0" text="Percipitation">
+                              <Label prefWidth="95.0" text="Precipitation">
                                  <font>
                                     <Font name="Lato Thin" size="14.0" />
                                  </font>

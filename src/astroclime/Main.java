@@ -23,23 +23,26 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("scenes/MainWindow.fxml")); //selects the frame to load
-		
-		Parent root = loader.load(); //loads the frame
-		primaryStage.setTitle("AstroClimeGazes"); //sets the name of the window
-		primaryStage.setResizable(false); //means you cant rescale the window size
-		primaryStage.setOnCloseRequest(e -> {
-			Platform.exit(); // when you close the app this will make sure all the bits are terminated properly
-		});
-
-		Scene scene = new Scene(root, primaryStage.getWidth(), primaryStage.getHeight()); //creates the main frame
-
-		MainWindowController controllerHandle = (MainWindowController) loader.getController(); //loads in the observer
-		
-		scene.setOnKeyPressed(event -> controllerHandle.swipeInput(event)); //don't know why this is here
-		
-		primaryStage.setScene(scene); // sets to show the main screen
-		primaryStage.show(); //makes the app visible
+		//create a new loader from the main window fxml
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("scenes/MainWindow.fxml"));
+		//load the parent node
+		Parent root = loader.load();
+		//sets the name of the window
+		primaryStage.setTitle("AstroClimeGazes"); 
+		//means you cant rescale the window size
+		primaryStage.setResizable(false); 
+		// when you close the app this will make sure all the bits are terminated properly
+		primaryStage.setOnCloseRequest(e -> {Platform.exit();});
+		//create a scene with the loaded root as the parent node
+		Scene scene = new Scene(root, primaryStage.getWidth(), primaryStage.getHeight());
+		//get the instance of the controller for the main window
+		MainWindowController controllerHandle = (MainWindowController) loader.getController(); 
+		//set the on key pressed event handler to the swipe input function in the controller instance
+		scene.setOnKeyReleased(event -> controllerHandle.swipeInput(event));
+		//sets the window with the created scene
+		primaryStage.setScene(scene);
+		//show the window
+		primaryStage.show(); 
 
 	}
 }

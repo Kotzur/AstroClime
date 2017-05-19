@@ -2,7 +2,6 @@ package astroclime.controllers;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.net.URISyntaxException;
 import java.nio.file.Paths;
 
 import org.json.JSONException;
@@ -61,61 +60,68 @@ public class MainWindowController {
 	private JFXDrawer bottomDrawer;
 
 
-	private void refresh() throws IOException {
-		CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
-		temperatureLabel.setText((WeatherData.getTemperature(cwd)) +  WeatherData.UNIT.getSymbol());
-		cloudCoverLabel.setText("Cloud Cover : " + (int) WeatherData.getCloudCover(cwd) + "%");
-		visibilityLabel.setText("Visibility : " + (int) WeatherData.getVisibility(cwd) + "km");
-		humidityLabel.setText("Humidity : " + (int) WeatherData.getHumidity(cwd) + "%");
-		rainfallLabel.setText("Rainfall : " + WeatherData.getRainfall(cwd) + "mm");
 
+	
+	private void refresh() throws IOException {
+		//refreshes the current weather data
+		
+		//creates an instance of current weather
+		CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
+		//get the current temperature
+		temperatureLabel.setText((WeatherData.getTemperature(cwd)) +  WeatherData.UNIT.getSymbol());
+		//get the cloud cover
+		cloudCoverLabel.setText("Cloud Cover : " + (int) WeatherData.getCloudCover(cwd) + "%");
+		//get the visibility
+		visibilityLabel.setText("Visibility : " + (int) WeatherData.getVisibility(cwd) + "km");
+		//get the humidity
+		humidityLabel.setText("Humidity : " + (int) WeatherData.getHumidity(cwd) + "%");
+		//get the rainfall
+		rainfallLabel.setText("Rainfall : " + WeatherData.getRainfall(cwd) + "mm");
+		
+		//get sunrise and sunset time
 		sunriseLabel.setText(WeatherData.getSunrise(cwd));
 		sunsetLabel.setText(WeatherData.getSunset(cwd));
 
+		//get the current city name
 		cityLabel.setText(WeatherData.CITY_NAME);
 
-
+		//get the current image for the weather
 		FileInputStream f = new FileInputStream(Paths.get("Icons/" + cwd.getWeatherInstance(0).getWeatherIconName() + ".PNG").toFile());
 
+		//set the image
 		Image img = new Image(f, weatherImage.getFitWidth(),weatherImage.getFitHeight(),false,false);
 		weatherImage.setImage(img);
 	}
 
 	
-	public void initialize() throws JSONException, IOException, URISyntaxException {
-		CurrentWeather cwd = WeatherData.getCurrentWeather(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
-
-		temperatureLabel.setText((WeatherData.getTemperature(cwd)) +  WeatherData.UNIT.getSymbol());
-		cloudCoverLabel.setText("Cloud Cover : " + (int) WeatherData.getCloudCover(cwd) + "%");
-		visibilityLabel.setText("Visibility : " + (int) WeatherData.getVisibility(cwd) + "km");
-		humidityLabel.setText("Humidity : " + (int) WeatherData.getHumidity(cwd) + "%");
-		rainfallLabel.setText("Rainfall : " + WeatherData.getRainfall(cwd) + "mm");
+	public void initialize() throws JSONException, IOException {
 		
-		sunriseLabel.setText(WeatherData.getSunrise(cwd));
-		sunsetLabel.setText(WeatherData.getSunset(cwd));
+		//refresh weather data
+		refresh();
 		
-		cityLabel.setText(WeatherData.CITY_NAME);
-		
-		
-		FileInputStream f = new FileInputStream(Paths.get("Icons/" + cwd.getWeatherInstance(0).getWeatherIconName() + ".PNG").toFile());
-		
-		Image img = new Image(f, weatherImage.getFitWidth(),weatherImage.getFitHeight(),false,false);
-		weatherImage.setImage(img);
-		
-		
+		//set the top drawer to display the map
 		AnchorPane map = FXMLLoader.load(getClass().getResource("../scenes/MapView.fxml"));
 		topDrawer.setSidePane(map);
 		
+		//set the right drawer to display the weekly view
 		AnchorPane weeklyView = FXMLLoader.load(getClass().getResource("../scenes/WeekView.fxml"));
 		rightDrawer.setSidePane(weeklyView);
 		
+		//sets the bottom drawer to display the hourly view
 		ScrollPane hourlyView = FXMLLoader.load(getClass().getResource("../scenes/HourView.fxml"));
+		//removes the borders from the hourly view
 		hourlyView.setStyle("-fx-focus-color: transparent; -fx-faint-focus-color: transparent; -fx-box-border: transparent;");
-		hourlyView.setOnKeyPressed(event -> closeHourlyView(event));
+		//set the bottom drawer to the hourly view
 		bottomDrawer.setSidePane(hourlyView);
 	}
 	
 	public void swipeInput(KeyEvent key)  {
+		
+		//this is the event handler for any keyboard inputs.
+		//in the real app this would be up, down, left and right swipe, but we can't do this on a laptop
+		//every time we go back to the main page we refresh the view
+		
+		
 		try {
 			switch (key.getCode()) {
 			
@@ -157,19 +163,6 @@ public class MainWindowController {
 			e.printStackTrace();
 		}
 	}
-	
-	public void closeHourlyView(KeyEvent key) {
 		
-			switch (key.getCode()) {
-			
-			case DOWN : 
-				if (bottomDrawer.isShown()) {
-					mainPane.requestFocus();
-					bottomDrawer.close();
-				}
-				break;
-			}
-	}
-	
    
 }
