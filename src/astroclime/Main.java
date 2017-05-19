@@ -36,7 +36,7 @@ public class Main extends Application {
 
 		MainWindowController controllerHandle = (MainWindowController) loader.getController(); //loads in the observer
 		
-		scene.setOnKeyPressed(event -> controllerHandle.test(event)); //don't know why this is here
+		scene.setOnKeyPressed(event -> controllerHandle.swipeInput(event)); //don't know why this is here
 		
 		primaryStage.setScene(scene); // sets to show the main screen
 		primaryStage.show(); //makes the app visible
