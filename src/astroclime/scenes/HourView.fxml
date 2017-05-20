@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.HourViewController">
    <content>
       <VBox prefHeight="800.0" prefWidth="302.0">
           <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
@@ -25,7 +25,7 @@
                                   <Font name="Lato Thin" size="14.0" />
                               </font>
                           </Label>
-                          <Label text="100%">
+                          <Label fx:id="clouds1" text="100%">
                               <font>
                                   <Font name="Lato Thin" size="18.0" />
                               </font>
@@ -39,14 +39,14 @@
                                   <Font name="Lato Thin" size="14.0" />
                               </font>
                           </Label>
-                          <Label text="100%">
+                          <Label fx:id="rain1" text="100%">
                               <font>
                                   <Font name="Lato Thin" size="18.0" />
                               </font>
                           </Label>
                       </children>
                   </VBox>
-                  <Label prefHeight="23.0" prefWidth="26.0" text="30">
+                  <Label fx:id="temp1" prefHeight="23.0" prefWidth="26.0" text="30">
                       <font>
                           <Font name="Lato Thin" size="18.0" />
                       </font>
@@ -56,7 +56,7 @@
                           <Font name="Lato Thin" size="18.0" />
                       </font>
                   </Label>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="img1" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                       <image>
                           <Image url="@../graphics/moon.jpg" />
                       </image>
@@ -77,7 +77,7 @@
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label text="5%">
+                     <Label fx:id="clouds2" text="5%">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
@@ -91,14 +91,14 @@
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label text="2%">
+                     <Label fx:id="rain2" text="2%">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
                      </Label>
                   </children>
                </VBox>
-               <Label prefWidth="26.0" text="t">
+               <Label fx:id="temp2" prefWidth="26.0" text="t">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -108,7 +108,7 @@
                      <Font name="Lato Thin" size="18.0" />
                   </font>
                </Label>
-               <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fx:id="img2" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@../graphics/moon.jpg" />
                   </image>
@@ -129,7 +129,7 @@
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label text="5%">
+                     <Label fx:id="clouds3" text="5%">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
@@ -143,14 +143,14 @@
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label text="2%">
+                     <Label fx:id="rain3" text="2%">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
                      </Label>
                   </children>
                </VBox>
-               <Label prefWidth="26.0" text="t">
+               <Label fx:id="temp3" prefWidth="26.0" text="t">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -160,7 +160,7 @@
                      <Font name="Lato Thin" size="18.0" />
                   </font>
                </Label>
-               <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fx:id="img3" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@../graphics/moon.jpg" />
                   </image>
@@ -181,7 +181,7 @@
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label text="5%">
+                     <Label fx:id="clouds4" text="5%">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
@@ -195,14 +195,14 @@
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label text="2%">
+                     <Label fx:id="rain4" text="2%">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
                      </Label>
                   </children>
                </VBox>
-               <Label prefWidth="26.0" text="t">
+               <Label fx:id="temp4" prefWidth="26.0" text="t">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -212,7 +212,7 @@
                      <Font name="Lato Thin" size="18.0" />
                   </font>
                </Label>
-               <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fx:id="img4" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@../graphics/moon.jpg" />
                   </image>
@@ -233,7 +233,7 @@
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label text="5%">
+                     <Label fx:id="clouds5" text="5%">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
@@ -247,14 +247,14 @@
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label text="2%">
+                     <Label fx:id="rain5" text="2%">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
                      </Label>
                   </children>
                </VBox>
-               <Label prefWidth="26.0" text="t">
+               <Label fx:id="temp5" prefWidth="26.0" text="t">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -264,7 +264,7 @@
                      <Font name="Lato Thin" size="18.0" />
                   </font>
                </Label>
-               <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fx:id="img5" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@../graphics/moon.jpg" />
                   </image>
@@ -285,7 +285,7 @@
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label text="5%">
+                     <Label fx:id="clouds6" text="5%">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
@@ -299,14 +299,14 @@
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label text="2%">
+                     <Label fx:id="rain6" text="2%">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
                      </Label>
                   </children>
                </VBox>
-               <Label prefWidth="26.0" text="t">
+               <Label fx:id="temp6" prefWidth="26.0" text="t">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -316,7 +316,7 @@
                      <Font name="Lato Thin" size="18.0" />
                   </font>
                </Label>
-               <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fx:id="img6" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@../graphics/moon.jpg" />
                   </image>
@@ -337,7 +337,7 @@
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label text="5%">
+                     <Label fx:id="clouds7" text="5%">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
@@ -351,14 +351,14 @@
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label text="2%">
+                     <Label fx:id="rain7" text="2%">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
                      </Label>
                   </children>
                </VBox>
-               <Label prefWidth="26.0" text="t">
+               <Label fx:id="temp7" prefWidth="26.0" text="t">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -368,7 +368,7 @@
                      <Font name="Lato Thin" size="18.0" />
                   </font>
                </Label>
-               <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fx:id="img7" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@../graphics/moon.jpg" />
                   </image>
@@ -389,7 +389,7 @@
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label text="5%">
+                     <Label fx:id="clouds8" text="5%">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
@@ -403,14 +403,14 @@
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label text="2%">
+                     <Label fx:id="rain8" text="2%">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
                      </Label>
                   </children>
                </VBox>
-               <Label prefWidth="26.0" text="t">
+               <Label fx:id="temp8" prefWidth="26.0" text="t">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -420,7 +420,7 @@
                      <Font name="Lato Thin" size="18.0" />
                   </font>
                </Label>
-               <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fx:id="img8" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@../graphics/moon.jpg" />
                   </image>
