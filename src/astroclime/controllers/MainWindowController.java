@@ -136,27 +136,28 @@ public class MainWindowController {
 				if (bottomDrawer.isShown()) {
 					refresh();
 					bottomDrawer.close();
-					bottomDrawer.toBack();
 				}else if (!rightDrawer.isShown() && !topDrawer.isShown()) {
-					topDrawer.open();
 					topDrawer.toFront();
+					topDrawer.open();
+					
 				}
 				break;
 			case UP :
 				if (topDrawer.isShown()) {
 					refresh();
 					topDrawer.close();
-					topDrawer.toBack();
 				}else if (!rightDrawer.isShown() && !bottomDrawer.isShown()) {
-					bottomDrawer.open();
 					bottomDrawer.toFront();
+					bottomDrawer.open();
+					
 				}
 				break;
 				
 			case LEFT :
 				if (!topDrawer.isShown() && !bottomDrawer.isShown() && !rightDrawer.isShown()) {
-					rightDrawer.open();
 					rightDrawer.toFront();
+					rightDrawer.open();
+					
 				}
 				break;
 				
@@ -164,7 +165,6 @@ public class MainWindowController {
 				if (rightDrawer.isShown()) {
 					refresh();
 					rightDrawer.close();
-					rightDrawer.toBack();
 					
 				}
 				break;

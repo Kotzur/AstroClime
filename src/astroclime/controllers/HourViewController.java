@@ -2,9 +2,15 @@ package astroclime.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import net.aksingh.owmjapis.HourlyForecast;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.file.Paths;
+
+import astroclime.backend.WeatherData;
 
 public class HourViewController {
     @FXML
@@ -110,6 +116,21 @@ public class HourViewController {
         Label [] temps = new Label[]{temp1, temp2, temp3, temp4, temp5, temp6, temp7, temp8};
         ImageView [] imgs = new ImageView[]{img1, img2, img3, img4, img5, img6, img7, img8};
 
+        HourlyForecast hf = WeatherData.getHourlyForecast(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
+        
+        
+        for (int i = 0; i < 8; i++) {
+        	clouds[i].setText((int) hf.getForecastInstance(i).getCloudsInstance().getPercentageOfClouds() + "%");
+        	
+        	FileInputStream f = new FileInputStream(Paths.get("Icons/" + hf.getForecastInstance(i).getWeatherInstance(0).getWeatherIconName() + ".PNG").toFile());
+    		Image img = new Image(f, imgs[i].getFitWidth(),imgs[i].getFitHeight(),false,false);
+    		imgs[i].setImage(img);
+    		
+    		rains[i].setText("0.0 mm");
 
+    		
+    		temps[i].setText(WeatherData.getTemperature(hf.getForecastInstance(i)) + WeatherData.UNIT.getSymbol());
+        }
+        
     }
 }
