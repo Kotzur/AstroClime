@@ -119,6 +119,9 @@ public class MainWindowController {
 		bottomDrawer.toBack();
 		rightDrawer.toBack();
 		
+		topDrawer.setOnDrawerClosed(event -> {topDrawer.toBack();});
+		bottomDrawer.setOnDrawerClosed(event -> {bottomDrawer.toBack();});
+		rightDrawer.setOnDrawerClosed(event -> {rightDrawer.toBack();});
 	}
 	
 	public void swipeInput(KeyEvent key)  {
