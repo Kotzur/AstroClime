@@ -46,12 +46,12 @@
                           </Label>
                       </children>
                   </VBox>
-                  <Label fx:id="temp1" prefHeight="23.0" prefWidth="26.0" text="30">
+                  <Label fx:id="temp1" prefHeight="23.0" prefWidth="26.0" text="t">
                       <font>
                           <Font name="Lato Thin" size="18.0" />
                       </font>
                   </Label>
-                  <Label prefHeight="23.0" prefWidth="29.0" text="oC">
+                  <Label prefHeight="23.0" prefWidth="29.0">
                       <font>
                           <Font name="Lato Thin" size="18.0" />
                       </font>
@@ -103,7 +103,7 @@
                      <Font name="Lato Thin" size="18.0" />
                   </font>
                </Label>
-               <Label prefHeight="23.0" prefWidth="29.0" text="oC">
+               <Label prefHeight="23.0" prefWidth="29.0">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -155,7 +155,7 @@
                      <Font name="Lato Thin" size="18.0" />
                   </font>
                </Label>
-               <Label prefHeight="23.0" prefWidth="29.0" text="oC">
+               <Label prefHeight="23.0" prefWidth="29.0">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -207,7 +207,7 @@
                      <Font name="Lato Thin" size="18.0" />
                   </font>
                </Label>
-               <Label prefHeight="23.0" prefWidth="29.0" text="oC">
+               <Label prefHeight="23.0" prefWidth="29.0">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -259,7 +259,7 @@
                      <Font name="Lato Thin" size="18.0" />
                   </font>
                </Label>
-               <Label prefHeight="23.0" prefWidth="29.0" text="oC">
+               <Label prefHeight="23.0" prefWidth="29.0">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -311,7 +311,7 @@
                      <Font name="Lato Thin" size="18.0" />
                   </font>
                </Label>
-               <Label prefHeight="23.0" prefWidth="29.0" text="oC">
+               <Label prefHeight="23.0" prefWidth="29.0">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -363,7 +363,7 @@
                      <Font name="Lato Thin" size="18.0" />
                   </font>
                </Label>
-               <Label prefHeight="23.0" prefWidth="29.0" text="oC">
+               <Label prefHeight="23.0" prefWidth="29.0">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -415,7 +415,7 @@
                      <Font name="Lato Thin" size="18.0" />
                   </font>
                </Label>
-               <Label prefHeight="23.0" prefWidth="29.0" text="oC">
+               <Label prefHeight="23.0" prefWidth="29.0">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
