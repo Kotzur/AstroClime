@@ -11,6 +11,7 @@ import org.json.JSONException;
 import net.aksingh.owmjapis.CurrentWeather;
 import net.aksingh.owmjapis.DailyForecast;
 import net.aksingh.owmjapis.HourlyForecast;
+import net.aksingh.owmjapis.HourlyForecast.Forecast;
 import net.aksingh.owmjapis.OpenWeatherMap;
 
 public class WeatherData {
@@ -45,6 +46,7 @@ public class WeatherData {
 		return cwd;
 	}
 	
+	
 	public static float getCloudCover(CurrentWeather c) {
 		//get the cloud cover
 		if (c.hasCloudsInstance()) {
@@ -60,6 +62,24 @@ public class WeatherData {
 		
 		if (c.hasMainInstance()) {
 			t = c.getMainInstance().getTemperature();
+		}
+		
+		if (UNIT != Unit.F) {
+			t = (t-32) * (0.5556f);
+		}
+		if (UNIT == Unit.K) {
+			t += 273;
+		}
+		
+		return Math.round(t);
+	}
+	
+	public static int getTemperature(Forecast f) {
+		//get the temperature depending on the current unit
+		float t = 0;
+		
+		if (f.hasMainInstance()) {
+			t = f.getMainInstance().getTemperature();
 		}
 		
 		if (UNIT != Unit.F) {
@@ -141,6 +161,12 @@ public class WeatherData {
 		return df;
 	}
 	
+	
+	public static HourlyForecast getHourlyForecast(String cityName, String countryCode) throws JSONException, IOException {
+		
+		HourlyForecast hf = getOWM().hourlyForecastByCityName(cityName, countryCode);
+		return hf;
+	}
 	
 
 }
