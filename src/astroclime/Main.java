@@ -8,6 +8,7 @@ import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -26,7 +27,7 @@ public class Main extends Application {
 		//create a new loader from the main window fxml
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("scenes/MainWindow.fxml"));
 		//load the parent node
-		Parent root = loader.load();
+		AnchorPane root = (AnchorPane) loader.load();
 		//sets the name of the window
 		primaryStage.setTitle("AstroClimeGazes"); 
 		//means you cant rescale the window size

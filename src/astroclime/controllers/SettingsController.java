@@ -12,15 +12,20 @@ package astroclime.controllers;
     import javafx.collections.ObservableList;
     import javafx.event.EventHandler;
     import javafx.fxml.FXML;
-    import javafx.scene.control.ToggleGroup;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.ToggleGroup;
     import javafx.event.ActionEvent;
     import javafx.scene.layout.AnchorPane;
-    import org.controlsfx.control.textfield.TextFields;
+import javafx.stage.Stage;
+
+import org.controlsfx.control.textfield.TextFields;
 
     import java.io.BufferedReader;
     import java.io.FileNotFoundException;
     import java.io.FileReader;
-    import java.util.List;
+import java.io.IOException;
+import java.util.List;
     import java.util.stream.Collectors;
 
 public class SettingsController {
@@ -58,9 +63,10 @@ public class SettingsController {
         private ObservableList<String> locationOptions;
         private ObservableList<String> languageOptions;
         private List<String> locationList;
+        
+        private AnchorPane mainPane;
 
-
-        public void initialize() {
+        public void initialize() throws IOException {
             //initialize unit button based on value in WeatherData
             if(WeatherData.UNIT == Unit.C) {
                 celcius.setSelected(true);
@@ -77,7 +83,7 @@ public class SettingsController {
                 e.printStackTrace();
             }
 
-            Test.show();
+            
 
             backButton.setOnAction(event -> onExit());
 
@@ -121,7 +127,7 @@ public class SettingsController {
 
 
 
-    private void onExit() {
+    private void onExit()  {
         //check if valid city
         if (!locationBox.isEditable()) { //valid city
             //checks which unit is selected and changed variable in WeatherData
@@ -133,8 +139,16 @@ public class SettingsController {
                 WeatherData.UNIT = Unit.K;
             }
             WeatherData.CITY_NAME = locationBox.getValue().toString();
-
-            settingsPane.setVisible(false);
+            
+            
+            settingsPane.getScene().setRoot(MainWindowController.getInstance().getMainPane());
+            try {
+				MainWindowController.getInstance().refresh();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+            
         } else
         {    //invalid city
             //bring up invalid city dialog box

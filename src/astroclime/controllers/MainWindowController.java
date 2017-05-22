@@ -70,10 +70,9 @@ public class MainWindowController {
 
 	private AnchorPane settingsPane;
 	
+	private static MainWindowController mainWindowInstance;
 	
-
-	
-	private void refresh() throws IOException {
+	public void refresh() throws IOException {
 		//refreshes the current weather data
 		
 		//creates an instance of current weather
@@ -140,26 +139,19 @@ public class MainWindowController {
 		
 		settingsPane = FXMLLoader.load(getClass().getResource("../scenes/SettingsView.fxml"));
 		
-		mainPane.getChildren().add(settingsPane);
-		settingsPane.toFront();
-		settingsPane.setVisible(false);
-		settingsPane.setStyle("-fx-background-color: red");
-		settingsPane.setPrefHeight(mainPane.getPrefHeight() + 10);
-		settingsPane.setPrefWidth(mainPane.getPrefWidth() + 10);
-		
 		FileInputStream f = new FileInputStream(Paths.get("Icons/settings.PNG").toFile());
 		//set the image
 		Image img = new Image(f, settingsButton.getWidth(),settingsButton.getHeight(),false,false);
 
 		
-		//ImageView imgView = new ImageView(img);
-		//imgView.prefHeight(settingsButton.getWidth());
-		//imgView.prefWidth(settingsButton.getHeight());
+		ImageView imgView = new ImageView(img);
+		imgView.prefHeight(settingsButton.getWidth());
+		imgView.prefWidth(settingsButton.getHeight());
 		
-		//settingsButton.setGraphic(imgView);
+		settingsButton.setGraphic(imgView);
 		settingsButton.setOnAction(event -> goToSettings());
 		
-		
+		mainWindowInstance = this;
 	}
 	
 	public void swipeInput(KeyEvent key)  {
@@ -215,9 +207,17 @@ public class MainWindowController {
 		}
 	}
 	
-	public void goToSettings()  {
-		settingsPane.setVisible(true);
-
+	public void goToSettings(){
+		mainPane.getScene().setRoot(settingsPane);
+		
+	}
+	
+	public AnchorPane getMainPane() {
+		return mainPane;
+	}
+	
+	public static MainWindowController getInstance() {
+		return mainWindowInstance;
 	}
 		
    
