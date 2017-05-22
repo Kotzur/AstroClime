@@ -9,6 +9,21 @@
 
 <AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.MainWindowController">
    <children>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="138.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Icons/down.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="275.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Icons/left.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="138.0" layoutY="617.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Icons/up.png" />
+         </image>
+      </ImageView>
       <Label fx:id="temperatureLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-7.0" layoutY="545.0" prefHeight="61.0" prefWidth="341.0" text="t oC" textAlignment="CENTER" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="-9.0" AnchorPane.topAnchor="545.0">
          <font>
             <Font name="Lato Thin" size="47.0" />
