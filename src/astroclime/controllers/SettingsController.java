@@ -4,6 +4,7 @@ package astroclime.controllers;
     import astroclime.backend.WeatherData;
     import com.jfoenix.controls.JFXButton;
     import com.jfoenix.controls.JFXComboBox;
+    import com.jfoenix.controls.JFXDialog;
     import com.jfoenix.controls.JFXRadioButton;
     import javafx.beans.value.ChangeListener;
     import javafx.beans.value.ObservableValue;
@@ -13,6 +14,7 @@ package astroclime.controllers;
     import javafx.fxml.FXML;
     import javafx.scene.control.ToggleGroup;
     import javafx.event.ActionEvent;
+    import javafx.scene.layout.AnchorPane;
     import org.controlsfx.control.textfield.TextFields;
 
     import java.io.BufferedReader;
@@ -22,6 +24,9 @@ package astroclime.controllers;
     import java.util.stream.Collectors;
 
 public class SettingsController {
+
+        @FXML
+        private AnchorPane settingsPane;
 
         @FXML
         private JFXComboBox<String> locationBox;
@@ -38,12 +43,17 @@ public class SettingsController {
         @FXML
         private JFXRadioButton fahrenheit;
 
+        @FXML
+        private JFXButton backButton;
 
         @FXML
         private JFXRadioButton kelvin;
 
         @FXML
         private JFXButton changeLocationButton;
+
+        @FXML
+        private JFXDialog Test;
 
         private ObservableList<String> locationOptions;
         private ObservableList<String> languageOptions;
@@ -67,8 +77,13 @@ public class SettingsController {
                 e.printStackTrace();
             }
 
+            Test.show();
+
+            backButton.setOnAction(event -> onExit());
+
             //get current location and display in location box, and add previous locations to list for drop down
-            locationBox.setItems(FXCollections.observableArrayList(locationList));
+            locationOptions = FXCollections.observableArrayList(locationList);
+            locationBox.setItems(locationOptions);
             locationBox.getSelectionModel().select(WeatherData.CITY_NAME);
             //add autocompletion to location combo box
             TextFields.bindAutoCompletion(locationBox.getEditor(),locationBox.getItems());
@@ -76,7 +91,12 @@ public class SettingsController {
             locationBox.valueProperty().addListener(new ChangeListener<String>() {
                 @Override
                 public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                    locationBox.setEditable(false);
+                    if(newValue !=null) {
+                        if (locationOptions.contains(newValue)) {
+                            locationBox.setEditable(false);
+                            locationBox.setValue(newValue);
+                        }
+                    }
                 }
             });
 
@@ -97,17 +117,27 @@ public class SettingsController {
         }
 
 
-        //:TODO link exit button with this fuction
-        private void onExit() {
+
+    private void onExit() {
+        //check if valid city
+        if (!locationBox.isEditable()) { //valid city
             //checks which unit is selected and changed variable in WeatherData
-            if(celcius.isSelected()) {
+            if (celcius.isSelected()) {
                 WeatherData.UNIT = Unit.C;
-            } else if(fahrenheit.isSelected()) {
+            } else if (fahrenheit.isSelected()) {
                 WeatherData.UNIT = Unit.F;
             } else {
                 WeatherData.UNIT = Unit.K;
             }
             WeatherData.CITY_NAME = locationBox.getValue().toString();
+
+            settingsPane.setVisible(false);
+        } else
+        {    //invalid city
+            //bring up invalid city dialog box
+            //Test.show();
         }
+
+    }
 
 }
