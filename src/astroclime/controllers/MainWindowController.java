@@ -20,6 +20,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundImage;
 import javafx.stage.Stage;
 import net.aksingh.owmjapis.CurrentWeather;
 
@@ -136,16 +138,27 @@ public class MainWindowController {
 		bottomDrawer.setOnDrawerClosed(event -> {bottomDrawer.toBack();});
 		rightDrawer.setOnDrawerClosed(event -> {rightDrawer.toBack();});
 		
-		 settingsPane = FXMLLoader.load(getClass().getResource("../scenes/SettingsView.fxml"));
+		settingsPane = FXMLLoader.load(getClass().getResource("../scenes/SettingsView.fxml"));
 		
-		settingsButton.setOnAction(event -> {
-			try {
-				goToSettings();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		});
+		mainPane.getChildren().add(settingsPane);
+		settingsPane.toFront();
+		settingsPane.setVisible(false);
+		settingsPane.setStyle("-fx-background-color: red");
+		settingsPane.setPrefHeight(mainPane.getPrefHeight() + 10);
+		settingsPane.setPrefWidth(mainPane.getPrefWidth() + 10);
+		
+		FileInputStream f = new FileInputStream(Paths.get("Icons/settings.PNG").toFile());
+		//set the image
+		Image img = new Image(f, settingsButton.getWidth(),settingsButton.getHeight(),false,false);
+
+		
+		//ImageView imgView = new ImageView(img);
+		//imgView.prefHeight(settingsButton.getWidth());
+		//imgView.prefWidth(settingsButton.getHeight());
+		
+		//settingsButton.setGraphic(imgView);
+		settingsButton.setOnAction(event -> goToSettings());
+		
 		
 	}
 	
@@ -202,13 +215,9 @@ public class MainWindowController {
 		}
 	}
 	
-	public void goToSettings() throws IOException {
-		Stage mainStage = (Stage) mainPane.getScene().getWindow();
-		
-		
-		Scene settingsScene = new Scene(settingsPane, mainStage.getWidth(), mainStage.getHeight());
-		
-		mainStage.setScene(settingsScene);
+	public void goToSettings()  {
+		settingsPane.setVisible(true);
+
 	}
 		
    
