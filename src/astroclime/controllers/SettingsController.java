@@ -4,7 +4,6 @@ package astroclime.controllers;
     import astroclime.backend.WeatherData;
     import com.jfoenix.controls.JFXButton;
     import com.jfoenix.controls.JFXComboBox;
-    import com.jfoenix.controls.JFXDialog;
     import com.jfoenix.controls.JFXRadioButton;
     import javafx.beans.value.ChangeListener;
     import javafx.beans.value.ObservableValue;
@@ -12,14 +11,12 @@ package astroclime.controllers;
     import javafx.collections.ObservableList;
     import javafx.event.EventHandler;
     import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.control.ToggleGroup;
+    import javafx.scene.control.Label;
+    import javafx.scene.control.ToggleGroup;
     import javafx.event.ActionEvent;
     import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
-
-import org.controlsfx.control.textfield.TextFields;
+    import javafx.scene.paint.Color;
+    import org.controlsfx.control.textfield.TextFields;
 
     import java.io.BufferedReader;
     import java.io.FileNotFoundException;
@@ -34,10 +31,16 @@ public class SettingsController {
         private AnchorPane settingsPane;
 
         @FXML
+        private Label locationText;
+
+        @FXML
         private JFXComboBox<String> locationBox;
 
         @FXML
         private JFXComboBox<String> languageBox;
+
+        @FXML
+        private Label invalidLocation;
 
         @FXML
         private ToggleGroup units;
@@ -57,13 +60,14 @@ public class SettingsController {
         @FXML
         private JFXButton changeLocationButton;
 
-        @FXML
-        private JFXDialog Test;
-
         private ObservableList<String> locationOptions;
         private ObservableList<String> languageOptions;
         private List<String> locationList;
-        
+
+    public SettingsController() {
+    }
+
+
         private AnchorPane mainPane;
 
         public void initialize() throws IOException {
@@ -83,7 +87,7 @@ public class SettingsController {
                 e.printStackTrace();
             }
 
-            
+
 
             backButton.setOnAction(event -> onExit());
 
@@ -103,6 +107,13 @@ public class SettingsController {
                             //if city valid set combobox uneditable
                             locationBox.setEditable(false);
                             locationBox.setValue(newValue);
+                            //hide invalidLocation label
+                            invalidLocation.setVisible(false);
+                            //set text back to black
+                            locationText.setTextFill(Color.BLACK);
+                            locationBox.setFocusColor(Color.BLACK);
+                            locationBox.setUnFocusColor(Color.BLACK);
+                        } else {
                         }
                     }
                 }
@@ -127,7 +138,7 @@ public class SettingsController {
 
 
 
-    private void onExit()  {
+    private void onExit() {
         //check if valid city
         if (!locationBox.isEditable()) { //valid city
             //checks which unit is selected and changed variable in WeatherData
@@ -139,8 +150,8 @@ public class SettingsController {
                 WeatherData.UNIT = Unit.K;
             }
             WeatherData.CITY_NAME = locationBox.getValue().toString();
-            
-            
+
+
             settingsPane.getScene().setRoot(MainWindowController.getInstance().getMainPane());
             try {
 				MainWindowController.getInstance().refresh();
@@ -148,12 +159,15 @@ public class SettingsController {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-            
+
         } else
         {    //invalid city
-            //bring up invalid city dialog box
-            //Test.show();
-            System.out.println("invalid city");
+            //make location text blue
+            locationText.setTextFill(Color.BLUE);
+            locationBox.setFocusColor(Color.BLUE);
+            locationBox.setUnFocusColor(Color.BLUE);
+            //make location label visible
+            invalidLocation.setVisible(true);
         }
 
     }
