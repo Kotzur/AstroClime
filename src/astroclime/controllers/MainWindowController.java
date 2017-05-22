@@ -141,17 +141,20 @@ public class MainWindowController {
 		
 		FileInputStream f = new FileInputStream(Paths.get("Icons/settings.PNG").toFile());
 		//set the image
-		Image img = new Image(f, settingsButton.getWidth(),settingsButton.getHeight(),false,false);
+		Image img = new Image(f, settingsButton.getPrefWidth(), settingsButton.getPrefHeight(),false,false);
 
 		
 		ImageView imgView = new ImageView(img);
-		imgView.prefHeight(settingsButton.getWidth());
-		imgView.prefWidth(settingsButton.getHeight());
+		
+		
+		imgView.setFitWidth(settingsButton.getWidth());
+		imgView.setFitHeight(settingsButton.getHeight());
 		
 		settingsButton.setGraphic(imgView);
 		settingsButton.setOnAction(event -> goToSettings());
-		
+		settingsButton.setFocusTraversable(false);
 		mainWindowInstance = this;
+		
 	}
 	
 	public void swipeInput(KeyEvent key)  {
@@ -161,7 +164,7 @@ public class MainWindowController {
 		//every time we go back to the main page we refresh the view
 		
 		//we bring the drawers to the front and back to allow us to interact with the main screen
-		
+	
 		try {
 			switch (key.getCode()) {
 			
@@ -182,6 +185,7 @@ public class MainWindowController {
 				}else if (!rightDrawer.isShown() && !bottomDrawer.isShown()) {
 					bottomDrawer.toFront();
 					bottomDrawer.open();
+					HourViewController.getHVC().refresh();
 					
 				}
 				break;
@@ -190,6 +194,8 @@ public class MainWindowController {
 				if (!topDrawer.isShown() && !bottomDrawer.isShown() && !rightDrawer.isShown()) {
 					rightDrawer.toFront();
 					rightDrawer.open();
+					WeekViewController.getwvc().refresh();
+					
 					
 				}
 				break;
@@ -206,6 +212,7 @@ public class MainWindowController {
 			e.printStackTrace();
 		}
 	}
+
 	
 	public void goToSettings(){
 		mainPane.getScene().setRoot(settingsPane);

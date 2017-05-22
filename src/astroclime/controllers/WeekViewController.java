@@ -12,6 +12,8 @@ import java.io.IOException;
 import java.nio.file.Paths;
 import java.time.ZonedDateTime;
 
+import org.json.JSONException;
+
 public class WeekViewController {
 
     @FXML
@@ -160,10 +162,17 @@ public class WeekViewController {
 
     @FXML
     private ImageView day7_img;
+    
+    private static WeekViewController wvc;
 
     @FXML
     public void initialize() throws IOException{
-        //populating arrays for labels for 7 days
+       refresh();
+       wvc = this;
+    }
+    
+    public void refresh() throws JSONException, IOException {
+    	 //populating arrays for labels for 7 days
         Label [] dayNames = new Label[]{day1_name, day2_name, day3_name, day4_name, day5_name, day6_name, day7_name};
         Label [] dayDates = new Label[]{day1_date, day2_date, day3_date, day4_date, day5_date, day6_date, day7_date};
         Label [] dayMonths = new Label[]{day1_month, day2_month, day3_month, day4_month, day5_month, day6_month, day7_month};
@@ -217,6 +226,10 @@ public class WeekViewController {
             dayMonths[i-1].setText(today.plusDays(i).getMonth().toString());
         }
 
+    }
+    
+    public static WeekViewController getwvc() {
+    	return wvc;
     }
 
 }
