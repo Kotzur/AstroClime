@@ -91,8 +91,10 @@ public class SettingsController {
             locationBox.valueProperty().addListener(new ChangeListener<String>() {
                 @Override
                 public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                    //check if valid city
                     if(newValue !=null) {
                         if (locationOptions.contains(newValue)) {
+                            //if city valid set combobox uneditable
                             locationBox.setEditable(false);
                             locationBox.setValue(newValue);
                         }
@@ -109,8 +111,9 @@ public class SettingsController {
             changeLocationButton.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
+                    locationBox.setValue("");
                     locationBox.setEditable(true);
-                    locationBox.getSelectionModel().clearSelection();
+                    locationBox.requestFocus();
                 }
             });
 
@@ -136,6 +139,7 @@ public class SettingsController {
         {    //invalid city
             //bring up invalid city dialog box
             //Test.show();
+            System.out.println("invalid city");
         }
 
     }
