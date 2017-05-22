@@ -6,17 +6,21 @@ import java.nio.file.Paths;
 
 import org.json.JSONException;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDrawer;
 
 import astroclime.backend.WeatherData;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import net.aksingh.owmjapis.CurrentWeather;
 
 public class MainWindowController {
@@ -58,8 +62,13 @@ public class MainWindowController {
 	private JFXDrawer rightDrawer;
 	@FXML
 	private JFXDrawer bottomDrawer;
+	
+	@FXML
+	private JFXButton settingsButton;
 
-
+	private AnchorPane settingsPane;
+	
+	
 
 	
 	private void refresh() throws IOException {
@@ -91,6 +100,10 @@ public class MainWindowController {
 		//set the image
 		Image img = new Image(f, weatherImage.getFitWidth(),weatherImage.getFitHeight(),false,false);
 		weatherImage.setImage(img);
+		
+		
+		
+		
 	}
 
 	
@@ -122,6 +135,18 @@ public class MainWindowController {
 		topDrawer.setOnDrawerClosed(event -> {topDrawer.toBack();});
 		bottomDrawer.setOnDrawerClosed(event -> {bottomDrawer.toBack();});
 		rightDrawer.setOnDrawerClosed(event -> {rightDrawer.toBack();});
+		
+		 settingsPane = FXMLLoader.load(getClass().getResource("../scenes/SettingsView.fxml"));
+		
+		settingsButton.setOnAction(event -> {
+			try {
+				goToSettings();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		});
+		
 	}
 	
 	public void swipeInput(KeyEvent key)  {
@@ -175,6 +200,15 @@ public class MainWindowController {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void goToSettings() throws IOException {
+		Stage mainStage = (Stage) mainPane.getScene().getWindow();
+		
+		
+		Scene settingsScene = new Scene(settingsPane, mainStage.getWidth(), mainStage.getHeight());
+		
+		mainStage.setScene(settingsScene);
 	}
 		
    

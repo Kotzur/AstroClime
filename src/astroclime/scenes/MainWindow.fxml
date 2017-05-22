@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXDrawer?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -78,5 +79,6 @@
       <JFXDrawer fx:id="topDrawer" defaultDrawerSize="789.0" direction="TOP" layoutX="-7.0" layoutY="-8.0" maxWidth="-Infinity" minWidth="-Infinity" overLayVisible="false" prefHeight="9.0" prefWidth="341.0" resizableOnDrag="true" />
       <JFXDrawer fx:id="rightDrawer" defaultDrawerSize="350.0" direction="RIGHT" layoutX="-8.0" layoutY="-1.0" prefHeight="685.0" prefWidth="348.0" resizableOnDrag="true" />
       <JFXDrawer fx:id="bottomDrawer" defaultDrawerSize="330.0" direction="BOTTOM" layoutY="346.0" overLayVisible="false" prefHeight="330.0" prefWidth="325.0" resizableOnDrag="true" />
+      <JFXButton fx:id="settingsButton" buttonType="RAISED" layoutX="100.0" layoutY="300.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #FF0000;" />
    </children>
 </AnchorPane>
