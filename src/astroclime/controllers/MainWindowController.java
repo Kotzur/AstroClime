@@ -232,7 +232,7 @@ public class MainWindowController {
 	
 	public void goToSettings(){
 		mainPane.getScene().setRoot(settingsPane);
-		
+		bottomDrawer.close();
 	}
 	
 	public AnchorPane getMainPane() {
