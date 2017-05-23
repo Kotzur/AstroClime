@@ -10,6 +10,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Paths;
 
+import org.json.JSONException;
+
 import astroclime.backend.WeatherData;
 
 public class HourViewController {
@@ -108,10 +110,17 @@ public class HourViewController {
 
     @FXML
     private ImageView img8;
+    
+    private static HourViewController hvc;
 
     @FXML
     public void initialize() throws IOException {
-        Label [] clouds = new Label[]{clouds1, clouds2, clouds3, clouds4, clouds5, clouds6, clouds7, clouds8};
+        refresh();
+        hvc = this;
+    }
+    
+    public void refresh() throws JSONException, IOException {
+    	Label [] clouds = new Label[]{clouds1, clouds2, clouds3, clouds4, clouds5, clouds6, clouds7, clouds8};
         Label [] rains = new Label[]{rain1, rain2, rain3, rain4, rain5, rain6, rain7, rain8};
         Label [] temps = new Label[]{temp1, temp2, temp3, temp4, temp5, temp6, temp7, temp8};
         ImageView [] imgs = new ImageView[]{img1, img2, img3, img4, img5, img6, img7, img8};
@@ -130,7 +139,13 @@ public class HourViewController {
 
     		
     		temps[i].setText(WeatherData.getTemperature(hf.getForecastInstance(i)) + WeatherData.UNIT.getSymbol());
+    		
+    		
         }
-        
     }
+    
+    public static HourViewController getHVC() {
+    	return hvc;
+    }
+    
 }

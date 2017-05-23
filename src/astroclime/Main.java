@@ -39,7 +39,7 @@ public class Main extends Application {
 		//get the instance of the controller for the main window
 		MainWindowController controllerHandle = (MainWindowController) loader.getController(); 
 		//set the on key pressed event handler to the swipe input function in the controller instance
-		scene.setOnKeyReleased(event -> controllerHandle.swipeInput(event));
+		scene.setOnKeyReleased(event -> {if (scene.getRoot() == root){controllerHandle.swipeInput(event);}});
 		//sets the window with the created scene
 		primaryStage.setScene(scene);
 		//show the window

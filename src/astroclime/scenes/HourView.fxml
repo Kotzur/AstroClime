@@ -8,10 +8,10 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.HourViewController">
+<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.HourViewController">
    <content>
-      <VBox prefHeight="800.0" prefWidth="302.0">
-          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <VBox prefHeight="800.0" prefWidth="325.0">
+          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="354.0">
               <children>
                   <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="22:00">
                       <font>
@@ -46,12 +46,7 @@
                           </Label>
                       </children>
                   </VBox>
-                  <Label fx:id="temp1" prefHeight="23.0" prefWidth="26.0" text="t">
-                      <font>
-                          <Font name="Lato Thin" size="18.0" />
-                      </font>
-                  </Label>
-                  <Label prefHeight="23.0" prefWidth="29.0">
+                  <Label fx:id="temp1" alignment="CENTER" contentDisplay="CENTER" prefHeight="23.0" prefWidth="60.0" text="t" textAlignment="CENTER">
                       <font>
                           <Font name="Lato Thin" size="18.0" />
                       </font>
@@ -98,12 +93,7 @@
                      </Label>
                   </children>
                </VBox>
-               <Label fx:id="temp2" prefWidth="26.0" text="t">
-                  <font>
-                     <Font name="Lato Thin" size="18.0" />
-                  </font>
-               </Label>
-               <Label prefHeight="23.0" prefWidth="29.0">
+               <Label fx:id="temp2" alignment="CENTER" contentDisplay="CENTER" prefWidth="60.0" text="t" textAlignment="CENTER">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -150,12 +140,7 @@
                      </Label>
                   </children>
                </VBox>
-               <Label fx:id="temp3" prefWidth="26.0" text="t">
-                  <font>
-                     <Font name="Lato Thin" size="18.0" />
-                  </font>
-               </Label>
-               <Label prefHeight="23.0" prefWidth="29.0">
+               <Label fx:id="temp3" alignment="CENTER" contentDisplay="CENTER" prefWidth="60.0" text="t" textAlignment="CENTER">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -202,12 +187,7 @@
                      </Label>
                   </children>
                </VBox>
-               <Label fx:id="temp4" prefWidth="26.0" text="t">
-                  <font>
-                     <Font name="Lato Thin" size="18.0" />
-                  </font>
-               </Label>
-               <Label prefHeight="23.0" prefWidth="29.0">
+               <Label fx:id="temp4" alignment="CENTER" contentDisplay="CENTER" prefWidth="60.0" text="t" textAlignment="CENTER">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -254,12 +234,7 @@
                      </Label>
                   </children>
                </VBox>
-               <Label fx:id="temp5" prefWidth="26.0" text="t">
-                  <font>
-                     <Font name="Lato Thin" size="18.0" />
-                  </font>
-               </Label>
-               <Label prefHeight="23.0" prefWidth="29.0">
+               <Label fx:id="temp5" alignment="CENTER" contentDisplay="CENTER" prefWidth="60.0" text="t" textAlignment="CENTER">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -306,12 +281,7 @@
                      </Label>
                   </children>
                </VBox>
-               <Label fx:id="temp6" prefWidth="26.0" text="t">
-                  <font>
-                     <Font name="Lato Thin" size="18.0" />
-                  </font>
-               </Label>
-               <Label prefHeight="23.0" prefWidth="29.0">
+               <Label fx:id="temp6" alignment="CENTER" contentDisplay="CENTER" prefWidth="60.0" text="t" textAlignment="CENTER">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -358,12 +328,7 @@
                      </Label>
                   </children>
                </VBox>
-               <Label fx:id="temp7" prefWidth="26.0" text="t">
-                  <font>
-                     <Font name="Lato Thin" size="18.0" />
-                  </font>
-               </Label>
-               <Label prefHeight="23.0" prefWidth="29.0">
+               <Label fx:id="temp7" alignment="CENTER" contentDisplay="CENTER" prefWidth="60.0" text="t">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -410,12 +375,7 @@
                      </Label>
                   </children>
                </VBox>
-               <Label fx:id="temp8" prefWidth="26.0" text="t">
-                  <font>
-                     <Font name="Lato Thin" size="18.0" />
-                  </font>
-               </Label>
-               <Label prefHeight="23.0" prefWidth="29.0">
+               <Label fx:id="temp8" alignment="CENTER" contentDisplay="CENTER" prefWidth="60.0" text="t" textAlignment="CENTER">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
