@@ -6,13 +6,12 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import net.aksingh.owmjapis.DailyForecast;
+import org.json.JSONException;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.time.ZonedDateTime;
-
-import org.json.JSONException;
 
 public class WeekViewController {
 
