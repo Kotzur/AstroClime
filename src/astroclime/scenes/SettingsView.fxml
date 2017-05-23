@@ -30,9 +30,9 @@
          <font>
             <Font size="18.0" />
          </font></JFXButton>
-      <JFXComboBox fx:id="locationBox" layoutX="21.0" layoutY="295.0" prefHeight="39.0" prefWidth="205.0" style="-fx-text-fill: #ff5100;" unFocusColor="#ff5100" />
+      <JFXComboBox fx:id="locationBox" layoutX="21.0" layoutY="295.0" prefHeight="39.0" prefWidth="205.0" style="-jfx-focus-color: #ff5100; -jfx-unfocus-color: #ff5100;" unFocusColor="#ff5100" />
       <JFXComboBox fx:id="languageBox" layoutX="24.0" layoutY="427.0" prefHeight="39.0" prefWidth="199.0" />
-      <JFXRadioButton fx:id="celcius" layoutX="14.0" layoutY="159.0" text="°C" textFill="#ff5100">
+      <JFXRadioButton fx:id="celcius" layoutX="14.0" layoutY="159.0" style="-jfx-selected-color: #ff5100;" text="°C" textFill="#ff5100">
          <toggleGroup>
             <ToggleGroup fx:id="units" />
          </toggleGroup>
@@ -40,11 +40,11 @@
             <Font size="32.0" />
          </font>
       </JFXRadioButton>
-      <JFXRadioButton fx:id="fahrenheit" layoutX="108.0" layoutY="159.0" text="°F" textFill="#ff5100" toggleGroup="$units">
+      <JFXRadioButton fx:id="fahrenheit" layoutX="108.0" layoutY="159.0" style="-jfx-selected-color: #ff5100;" text="°F" textFill="#ff5100" toggleGroup="$units">
          <font>
             <Font size="32.0" />
          </font></JFXRadioButton>
-      <JFXRadioButton fx:id="kelvin" layoutX="190.0" layoutY="159.0" text="K" textFill="#ff5100" toggleGroup="$units">
+      <JFXRadioButton fx:id="kelvin" layoutX="190.0" layoutY="159.0" style="-jfx-selected-color: #ff5100;" text="K" textFill="#ff5100" toggleGroup="$units">
          <font>
             <Font size="32.0" />
          </font></JFXRadioButton>
