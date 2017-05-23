@@ -1,18 +1,16 @@
 package astroclime.controllers;
 
+import astroclime.backend.WeatherData;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import net.aksingh.owmjapis.HourlyForecast;
+import org.json.JSONException;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Paths;
-
-import org.json.JSONException;
-
-import astroclime.backend.WeatherData;
 
 public class HourViewController {
     @FXML
@@ -115,6 +113,7 @@ public class HourViewController {
 
     @FXML
     public void initialize() throws IOException {
+
         refresh();
         hvc = this;
     }
