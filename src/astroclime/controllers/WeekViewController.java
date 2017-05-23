@@ -36,6 +36,9 @@ public class WeekViewController {
     private ImageView day1_img;
 
     @FXML
+    private ImageView suggestionImg1;
+
+    @FXML
     private Label day2_name;
 
     @FXML
@@ -55,6 +58,9 @@ public class WeekViewController {
 
     @FXML
     private ImageView day2_img;
+
+    @FXML
+    private ImageView suggestionImg2;
 
     @FXML
     private Label day3_name;
@@ -78,6 +84,9 @@ public class WeekViewController {
     private ImageView day3_img;
 
     @FXML
+    private ImageView suggestionImg3;
+
+    @FXML
     private Label day4_name;
 
     @FXML
@@ -97,6 +106,9 @@ public class WeekViewController {
 
     @FXML
     private ImageView day4_img;
+
+    @FXML
+    private ImageView suggestionImg4;
 
     @FXML
     private Label day5_name;
@@ -120,6 +132,9 @@ public class WeekViewController {
     private ImageView day5_img;
 
     @FXML
+    private ImageView suggestionImg5;
+
+    @FXML
     private Label day6_name;
 
     @FXML
@@ -139,6 +154,9 @@ public class WeekViewController {
 
     @FXML
     private ImageView day6_img;
+
+    @FXML
+    private ImageView suggestionImg6;
 
     @FXML
     private Label day7_name;
@@ -162,6 +180,10 @@ public class WeekViewController {
     private ImageView day7_img;
 
     @FXML
+    private ImageView suggestionImg7;
+
+
+    @FXML
     public void initialize() throws IOException{
         //populating arrays for labels for 7 days
         Label [] dayNames = new Label[]{day1_name, day2_name, day3_name, day4_name, day5_name, day6_name, day7_name};
@@ -171,6 +193,7 @@ public class WeekViewController {
         Label [] cloudCover = new Label[]{day1_cloudCover, day2_cloudCover, day3_cloudCover, day4_cloudCover, day5_cloudCover, day6_cloudCover, day7_cloudCover};
         Label [] visibility = new Label[]{day1_visibility, day2_visibility, day3_visibility, day4_visibility, day5_visibility, day6_visibility, day7_visibility};
         ImageView [] images = new ImageView[]{day1_img, day2_img, day3_img, day4_img, day5_img, day6_img, day7_img};
+        ImageView [] suggestions = new ImageView[]{suggestionImg1, suggestionImg2, suggestionImg3, suggestionImg4, suggestionImg5, suggestionImg6, suggestionImg7};
 
         //get the daily forecast
         DailyForecast df = WeatherData.getDailyForecast(WeatherData.CITY_NAME, WeatherData.COUNTRY_CODE);
@@ -185,25 +208,38 @@ public class WeekViewController {
     		images[i-1].setImage(img);
     		
     		//set the cloud percentage
-	    	float c = df.getForecastInstance(i).getPercentageOfClouds();
-	    	cloudCover[i-1].setText(String.valueOf((int)c) + "%");
+	    	float percentageOfClouds = df.getForecastInstance(i).getPercentageOfClouds();
+	    	cloudCover[i-1].setText(String.valueOf((int)percentageOfClouds) + "%");
 	    	
 	    	//set the rain forecast - be weary of NaNs
-	    	float p = df.getForecastInstance(i).getRain();
-	    	if (Float.isNaN(p)) {
-	    		p=0;
+	    	float rain = df.getForecastInstance(i).getRain();
+	    	if (Float.isNaN(rain)) {
+	    		rain=0;
 	    	}
-	    	precipitation[i-1].setText(String.valueOf(p) + "mm");
+	    	precipitation[i-1].setText(String.valueOf(rain) + "mm");
 	    	
 	    	
 	    	//estimate visibility depending on cloud cover as we can not get this with the current info
-	    	if (c > 75f) {
+            //setting the suggestion depending on visibility
+            String suggestion = "";
+	    	if (percentageOfClouds > 75f) {
 	    		visibility[i-1].setText("Poor Visibility");
-	    	}else if (c > 50f) {
+                suggestion = "cross";
+	    	}else if (percentageOfClouds > 50f) {
 	    		visibility[i-1].setText("Moderate Visibility");
+                suggestion = "wave";
 	    	}else {
 	    		visibility[i-1].setText("Good Visibility");
-	    	} 
+                suggestion = "tick";
+	    	}
+
+            if(rain > 1f){
+                suggestion = "cross";
+            }
+
+            f = new FileInputStream(Paths.get("Icons/" + suggestion + ".PNG").toFile());
+            img = new Image(f, suggestions[i-1].getFitWidth(), suggestions[i-1].getFitHeight(), false, false);
+            suggestions[i-1].setImage(img);
 	    	
         }
         

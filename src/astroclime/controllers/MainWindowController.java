@@ -1,29 +1,22 @@
 package astroclime.controllers;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.nio.file.Paths;
-
-import org.json.JSONException;
-
+import astroclime.backend.WeatherData;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDrawer;
-
-import astroclime.backend.WeatherData;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundImage;
-import javafx.stage.Stage;
 import net.aksingh.owmjapis.CurrentWeather;
+import org.json.JSONException;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.nio.file.Paths;
 
 public class MainWindowController {
 
@@ -56,6 +49,9 @@ public class MainWindowController {
 	
 	@FXML
 	private ImageView weatherImage;
+
+	@FXML
+	private ImageView suggestionImg;
 	
 	@FXML
 	private JFXDrawer topDrawer;
@@ -102,7 +98,27 @@ public class MainWindowController {
 		Image img = new Image(f, weatherImage.getFitWidth(),weatherImage.getFitHeight(),false,false);
 		weatherImage.setImage(img);
 		
-		
+		//set the suggestion
+		String suggestion = "";
+		int cloudCover = (int) WeatherData.getCloudCover(cwd);
+		int visibility = (int) WeatherData.getVisibility(cwd);
+		int rainfall = (int) WeatherData.getRainfall(cwd);
+		if(rainfall > 1){
+			suggestion = "cross";
+		}
+		else if(visibility > 30 && cloudCover < 25){
+			suggestion = "tick";
+		}
+		else if(visibility > 10 && cloudCover < 50){
+			suggestion = "wave";
+		}
+		else{
+			suggestion = "cross";
+		}
+
+		f = new FileInputStream(Paths.get("Icons/" + suggestion + ".PNG").toFile());
+		img = new Image(f, suggestionImg.getFitWidth(), suggestionImg.getFitHeight(), false, false);
+		suggestionImg.setImage(img);
 		
 		
 	}

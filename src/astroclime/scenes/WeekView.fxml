@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -75,10 +76,23 @@
                         <Insets bottom="10.0" top="10.0" />
                      </padding>
                   </VBox>
-                  <ImageView fx:id="day1_img" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../graphics/moon.jpg" />
-                     </image></ImageView>
+                  <AnchorPane prefHeight="95.0" prefWidth="58.0">
+                     <children>
+                        <ImageView fx:id="day1_img" fitHeight="69.0" fitWidth="69.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/moon.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="suggestionImg1" fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../../Icons/tick.PNG" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
@@ -149,11 +163,23 @@
                         <Insets top="10.0" />
                      </padding>
                   </VBox>
-                  <ImageView fx:id="day2_img" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../graphics/moonbaby.jpg" />
-                     </image>
-                  </ImageView>
+                  <AnchorPane prefHeight="102.0" prefWidth="0.0">
+                     <children>
+                        <ImageView fx:id="day2_img" fitHeight="69.0" fitWidth="69.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/moonbaby.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="suggestionImg2" fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../../Icons/tick.PNG" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
@@ -227,11 +253,23 @@
                         <Insets top="10.0" />
                      </padding>
                   </VBox>
-                  <ImageView fx:id="day3_img" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../graphics/sadmoon.jpg" />
-                     </image>
-                  </ImageView>
+                  <AnchorPane prefHeight="102.0" prefWidth="38.0">
+                     <children>
+                        <ImageView fx:id="day3_img" fitHeight="69.0" fitWidth="69.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/sadmoon.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="suggestionImg3" fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../../Icons/tick.PNG" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
@@ -302,11 +340,23 @@
                         <Insets top="10.0" />
                      </padding>
                   </VBox>
-                  <ImageView fx:id="day4_img" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../graphics/moon.jpg" />
-                     </image>
-                  </ImageView>
+                  <AnchorPane prefHeight="102.0" prefWidth="13.0">
+                     <children>
+                        <ImageView fx:id="day4_img" fitHeight="69.0" fitWidth="69.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/moon.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="suggestionImg4" fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../../Icons/tick.PNG" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
@@ -380,11 +430,23 @@
                         <Insets top="10.0" />
                      </padding>
                   </VBox>
-                  <ImageView fx:id="day5_img" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../graphics/mooon.jpg" />
-                     </image>
-                  </ImageView>
+                  <AnchorPane prefHeight="95.0" prefWidth="5.0">
+                     <children>
+                        <ImageView fx:id="day5_img" fitHeight="69.0" fitWidth="69.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/mooon.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="suggestionImg5" fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../../Icons/tick.PNG" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
@@ -458,11 +520,23 @@
                         <Insets top="10.0" />
                      </padding>
                   </VBox>
-                  <ImageView fx:id="day6_img" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../graphics/sadmoon.jpg" />
-                     </image>
-                  </ImageView>
+                  <AnchorPane prefHeight="96.0" prefWidth="0.0">
+                     <children>
+                        <ImageView fx:id="day6_img" fitHeight="69.0" fitWidth="69.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/sadmoon.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="suggestionImg6" fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../../Icons/tick.PNG" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
@@ -536,11 +610,23 @@
                         <Insets bottom="10.0" top="10.0" />
                      </padding>
                   </VBox>
-                  <ImageView fx:id="day7_img" fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../graphics/moon.jpg" />
-                     </image>
-                  </ImageView>
+                  <AnchorPane prefHeight="102.0" prefWidth="0.0">
+                     <children>
+                        <ImageView fx:id="day7_img" fitHeight="69.0" fitWidth="69.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../graphics/moon.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="suggestionImg7" fitHeight="30.0" fitWidth="30.0" layoutX="35.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../../Icons/tick.PNG" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
                </children>
             </HBox>
          </children>
