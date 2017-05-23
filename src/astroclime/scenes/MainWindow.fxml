@@ -79,7 +79,7 @@
       <JFXDrawer fx:id="topDrawer" defaultDrawerSize="789.0" direction="TOP" layoutX="-7.0" layoutY="-8.0" maxWidth="-Infinity" minWidth="-Infinity" overLayVisible="false" prefHeight="9.0" prefWidth="341.0" resizableOnDrag="true" />
       <JFXDrawer fx:id="rightDrawer" defaultDrawerSize="350.0" direction="RIGHT" layoutX="-8.0" layoutY="-1.0" overLayVisible="false" prefHeight="685.0" prefWidth="348.0" style="-fx-border-color: #333333;" />
       <JFXDrawer fx:id="bottomDrawer" defaultDrawerSize="330.0" direction="BOTTOM" layoutY="346.0" overLayVisible="false" prefHeight="330.0" prefWidth="325.0" resizableOnDrag="true" />
-      <JFXButton fx:id="settingsButton" layoutX="275.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" />
+      <JFXButton fx:id="settingsButton" layoutX="275.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="50.0" ripplerFill="#ff5100" />
       <ImageView fx:id="suggestionImg" fitHeight="50.0" fitWidth="50.0" layoutX="213.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Icons/tick.PNG" />
