@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.WeekViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="350.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.WeekViewController">
    <children>
       <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="667.0" prefWidth="325.0">
          <children>
@@ -18,15 +18,15 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="89.0" prefWidth="102.0">
                      <children>
-                        <Label fx:id="day1_name" text="Monday">
+                        <Label fx:id="day1_name" text="Monday" textFill="#ff5100">
                            <font>
                               <Font name="Lato Light" size="15.0" />
                            </font></Label>
-                        <Label fx:id="day1_date" text="01">
+                        <Label fx:id="day1_date" text="01" textFill="#ff5100">
                            <font>
                               <Font name="Lato Light" size="18.0" />
                            </font></Label>
-                        <Label fx:id="day1_month" text="May">
+                        <Label fx:id="day1_month" text="May" textFill="#ff5100">
                            <font>
                               <Font name="Lato Light" size="18.0" />
                            </font></Label>
@@ -37,18 +37,18 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="16.0" prefWidth="165.0">
                      <children>
-                        <Label fx:id="day1_visibility" alignment="CENTER" prefHeight="64.0" prefWidth="112.0" text="Good Visibility" underline="true">
+                        <Label fx:id="day1_visibility" alignment="CENTER" prefHeight="64.0" prefWidth="112.0" text="Good Visibility" textFill="#ff5100" underline="true">
                            <font>
                               <Font name="Lato Thin" size="18.0" />
                            </font></Label>
                         <HBox alignment="CENTER" prefHeight="11.0" prefWidth="162.0">
                            <children>
-                              <Label fx:id="day1_precipitation" text="20%">
+                              <Label fx:id="day1_precipitation" text="20%" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font></Label>
-                              <Label text="    " />
-                              <Label fx:id="day1_cloudCover" text="15%">
+                              <Label text="    " textFill="#ff5100" />
+                              <Label fx:id="day1_cloudCover" text="15%" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font></Label>
@@ -56,12 +56,12 @@
                         </HBox>
                         <HBox prefHeight="0.0" prefWidth="165.0">
                            <children>
-                              <Label maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="95.0" text="Precipitation">
+                              <Label maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="95.0" text="Precipitation" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="14.0" />
                                  </font>
                               </Label>
-                              <Label maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="89.0" text="Cloud Cover">
+                              <Label maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="89.0" text="Cloud Cover" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="14.0" />
                                  </font>
@@ -99,17 +99,17 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="89.0" prefWidth="102.0">
                      <children>
-                        <Label fx:id="day2_name" text="Tuesday">
+                        <Label fx:id="day2_name" text="Tuesday" textFill="#ff5100">
                            <font>
                               <Font name="Lato Light" size="15.0" />
                            </font>
                         </Label>
-                        <Label fx:id="day2_date" text="02">
+                        <Label fx:id="day2_date" text="02" textFill="#ff5100">
                            <font>
                               <Font name="Lato Light" size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="day2_month" text="May">
+                        <Label fx:id="day2_month" text="May" textFill="#ff5100">
                            <font>
                               <Font name="Lato Light" size="18.0" />
                            </font>
@@ -121,20 +121,20 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="16.0" prefWidth="165.0">
                      <children>
-                        <Label fx:id="day2_visibility" alignment="CENTER" prefHeight="27.0" prefWidth="150.0" text="Moderate Visibility" underline="true">
+                        <Label fx:id="day2_visibility" alignment="CENTER" prefHeight="27.0" prefWidth="150.0" text="Moderate Visibility" textFill="#ff5100" underline="true">
                            <font>
                               <Font name="Lato Thin" size="18.0" />
                            </font>
                         </Label>
                         <HBox alignment="CENTER" prefHeight="11.0" prefWidth="162.0">
                            <children>
-                              <Label fx:id="day2_precipitation" text="20%">
+                              <Label fx:id="day2_precipitation" text="20%" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
                               </Label>
-                              <Label text="    " />
-                              <Label fx:id="day2_cloudCover" text="15%">
+                              <Label text="    " textFill="#ff5100" />
+                              <Label fx:id="day2_cloudCover" text="15%" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
@@ -143,12 +143,12 @@
                         </HBox>
                         <HBox prefHeight="0.0" prefWidth="165.0">
                            <children>
-                              <Label maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="95.0" text="Precipitation">
+                              <Label maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="95.0" text="Precipitation" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="14.0" />
                                  </font>
                               </Label>
-                              <Label maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="89.0" text="Cloud Cover">
+                              <Label maxWidth="1.7976931348623157E308" prefHeight="18.0" prefWidth="89.0" text="Cloud Cover" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="14.0" />
                                  </font>
@@ -186,17 +186,17 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="89.0" prefWidth="102.0">
                      <children>
-                        <Label fx:id="day3_name" text="Wednesday">
+                        <Label fx:id="day3_name" text="Wednesday" textFill="#ff5100">
                            <font>
                               <Font name="Lato Light" size="15.0" />
                            </font>
                         </Label>
-                        <Label fx:id="day3_date" text="03">
+                        <Label fx:id="day3_date" text="03" textFill="#ff5100">
                            <font>
                               <Font name="Lato Light" size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="day3_month" text="May">
+                        <Label fx:id="day3_month" text="May" textFill="#ff5100">
                            <font>
                               <Font name="Lato Light" size="18.0" />
                            </font>
@@ -208,20 +208,20 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="16.0" prefWidth="165.0">
                      <children>
-                        <Label fx:id="day3_visibility" alignment="CENTER" prefHeight="23.0" prefWidth="150.0" text="Moderate Visibility" underline="true">
+                        <Label fx:id="day3_visibility" alignment="CENTER" prefHeight="23.0" prefWidth="150.0" text="Moderate Visibility" textFill="#ff5100" underline="true">
                            <font>
                               <Font name="Lato Thin" size="18.0" />
                            </font>
                         </Label>
                         <HBox alignment="CENTER" prefHeight="11.0" prefWidth="162.0">
                            <children>
-                              <Label fx:id="day3_precipitation" text="20%">
+                              <Label fx:id="day3_precipitation" text="20%" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
                               </Label>
-                              <Label text="    " />
-                              <Label fx:id="day3_cloudCover" text="15%">
+                              <Label text="    " textFill="#ff5100" />
+                              <Label fx:id="day3_cloudCover" text="15%" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
@@ -233,12 +233,12 @@
                         </HBox>
                         <HBox prefHeight="0.0" prefWidth="165.0">
                            <children>
-                              <Label prefWidth="95.0" text="Precipitation">
+                              <Label prefWidth="95.0" text="Precipitation" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="14.0" />
                                  </font>
                               </Label>
-                              <Label prefWidth="89.0" text="Cloud Cover">
+                              <Label prefWidth="89.0" text="Cloud Cover" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="14.0" />
                                  </font>
@@ -276,17 +276,17 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="89.0" prefWidth="102.0">
                      <children>
-                        <Label fx:id="day4_name" text="Thursday">
+                        <Label fx:id="day4_name" text="Thursday" textFill="#ff5100">
                            <font>
                               <Font name="Lato Light" size="15.0" />
                            </font>
                         </Label>
-                        <Label fx:id="day4_date" text="04">
+                        <Label fx:id="day4_date" text="04" textFill="#ff5100">
                            <font>
                               <Font name="Lato Light" size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="day4_month" text="May">
+                        <Label fx:id="day4_month" text="May" textFill="#ff5100">
                            <font>
                               <Font name="Lato Light" size="18.0" />
                            </font>
@@ -298,20 +298,20 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="16.0" prefWidth="165.0">
                      <children>
-                        <Label fx:id="day4_visibility" alignment="CENTER" prefHeight="27.0" prefWidth="150.0" text="Moderate Visibility" underline="true">
+                        <Label fx:id="day4_visibility" alignment="CENTER" prefHeight="27.0" prefWidth="150.0" text="Moderate Visibility" textFill="#ff5100" underline="true">
                            <font>
                               <Font name="Lato Thin" size="18.0" />
                            </font>
                         </Label>
                         <HBox alignment="CENTER" prefHeight="11.0" prefWidth="162.0">
                            <children>
-                              <Label fx:id="day4_precipitation" text="20%">
+                              <Label fx:id="day4_precipitation" text="20%" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
                               </Label>
-                              <Label text="    " />
-                              <Label fx:id="day4_cloudCover" text="15%">
+                              <Label text="    " textFill="#ff5100" />
+                              <Label fx:id="day4_cloudCover" text="15%" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
@@ -320,12 +320,12 @@
                         </HBox>
                         <HBox prefHeight="0.0" prefWidth="165.0">
                            <children>
-                              <Label prefWidth="95.0" text="Precipitation">
+                              <Label prefWidth="95.0" text="Precipitation" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="14.0" />
                                  </font>
                               </Label>
-                              <Label prefWidth="89.0" text="Cloud Cover">
+                              <Label prefWidth="89.0" text="Cloud Cover" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="14.0" />
                                  </font>
@@ -363,17 +363,17 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="89.0" prefWidth="102.0">
                      <children>
-                        <Label fx:id="day5_name" text="Friday">
+                        <Label fx:id="day5_name" text="Friday" textFill="#ff5100">
                            <font>
                               <Font name="Lato Light" size="15.0" />
                            </font>
                         </Label>
-                        <Label fx:id="day5_date" text="05">
+                        <Label fx:id="day5_date" text="05" textFill="#ff5100">
                            <font>
                               <Font name="Lato Light" size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="day5_month" text="May">
+                        <Label fx:id="day5_month" text="May" textFill="#ff5100">
                            <font>
                               <Font name="Lato Light" size="18.0" />
                            </font>
@@ -383,9 +383,9 @@
                         <Insets />
                      </HBox.margin>
                   </VBox>
-                  <VBox alignment="CENTER" prefHeight="16.0" prefWidth="165.0">
+                  <VBox alignment="CENTER" prefHeight="16.0" prefWidth="160.0">
                      <children>
-                        <Label fx:id="day5_visibility" alignment="CENTER" prefHeight="64.0" prefWidth="150.0" text="Good Visibility" underline="true">
+                        <Label fx:id="day5_visibility" alignment="CENTER" prefHeight="64.0" prefWidth="150.0" text="Good Visibility" textFill="#ff5100" underline="true">
                            <font>
                               <Font name="Lato Thin" size="18.0" />
                            </font>
@@ -395,13 +395,13 @@
                         </Label>
                         <HBox alignment="CENTER" prefHeight="11.0" prefWidth="162.0">
                            <children>
-                              <Label fx:id="day5_precipitation" text="20%">
+                              <Label fx:id="day5_precipitation" text="20%" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
                               </Label>
-                              <Label text="    " />
-                              <Label fx:id="day5_cloudCover" text="15%">
+                              <Label text="    " textFill="#ff5100" />
+                              <Label fx:id="day5_cloudCover" text="15%" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
@@ -410,12 +410,12 @@
                         </HBox>
                         <HBox prefHeight="0.0" prefWidth="165.0">
                            <children>
-                              <Label prefWidth="95.0" text="Precipitation">
+                              <Label prefWidth="95.0" text="Precipitation" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="14.0" />
                                  </font>
                               </Label>
-                              <Label prefWidth="89.0" text="Cloud Cover">
+                              <Label prefWidth="89.0" text="Cloud Cover" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="14.0" />
                                  </font>
@@ -453,17 +453,17 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="89.0" prefWidth="102.0">
                      <children>
-                        <Label fx:id="day6_name" text="Saturday">
+                        <Label fx:id="day6_name" text="Saturday" textFill="#ff5100">
                            <font>
                               <Font name="Lato Light" size="15.0" />
                            </font>
                         </Label>
-                        <Label fx:id="day6_date" text="06">
+                        <Label fx:id="day6_date" text="06" textFill="#ff5100">
                            <font>
                               <Font name="Lato Light" size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="day6_month" text="May">
+                        <Label fx:id="day6_month" text="May" textFill="#ff5100">
                            <font>
                               <Font name="Lato Light" size="18.0" />
                            </font>
@@ -475,7 +475,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="16.0" prefWidth="165.0">
                      <children>
-                        <Label fx:id="day6_visibility" alignment="CENTER" prefHeight="64.0" prefWidth="150.0" text="Good Visibility" underline="true">
+                        <Label fx:id="day6_visibility" alignment="CENTER" prefHeight="64.0" prefWidth="150.0" text="Good Visibility" textFill="#ff5100" underline="true">
                            <font>
                               <Font name="Lato Thin" size="18.0" />
                            </font>
@@ -485,13 +485,13 @@
                         </Label>
                         <HBox alignment="CENTER" prefHeight="11.0" prefWidth="162.0">
                            <children>
-                              <Label fx:id="day6_precipitation" text="20%">
+                              <Label fx:id="day6_precipitation" text="20%" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
                               </Label>
-                              <Label text="    " />
-                              <Label fx:id="day6_cloudCover" text="15%">
+                              <Label text="    " textFill="#ff5100" />
+                              <Label fx:id="day6_cloudCover" text="15%" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
@@ -500,12 +500,12 @@
                         </HBox>
                         <HBox prefHeight="0.0" prefWidth="165.0">
                            <children>
-                              <Label prefWidth="95.0" text="Precipitation">
+                              <Label prefWidth="95.0" text="Precipitation" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="14.0" />
                                  </font>
                               </Label>
-                              <Label prefWidth="89.0" text="Cloud Cover">
+                              <Label prefWidth="89.0" text="Cloud Cover" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="14.0" />
                                  </font>
@@ -543,17 +543,17 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="89.0" prefWidth="102.0">
                      <children>
-                        <Label fx:id="day7_name" text="Sunday">
+                        <Label fx:id="day7_name" text="Sunday" textFill="#ff5100">
                            <font>
                               <Font name="Lato Light" size="15.0" />
                            </font>
                         </Label>
-                        <Label fx:id="day7_date" text="07">
+                        <Label fx:id="day7_date" text="07" textFill="#ff5100">
                            <font>
                               <Font name="Lato Light" size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="day7_month" text="May">
+                        <Label fx:id="day7_month" text="May" textFill="#ff5100">
                            <font>
                               <Font name="Lato Light" size="18.0" />
                            </font>
@@ -565,7 +565,7 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="16.0" prefWidth="165.0">
                      <children>
-                        <Label fx:id="day7_visibility" alignment="CENTER" prefHeight="64.0" prefWidth="150.0" text="Good Visibility" underline="true">
+                        <Label fx:id="day7_visibility" alignment="CENTER" prefHeight="64.0" prefWidth="150.0" text="Good Visibility" textFill="#ff5100" underline="true">
                            <font>
                               <Font name="Lato Thin" size="18.0" />
                            </font>
@@ -575,13 +575,13 @@
                         </Label>
                         <HBox alignment="CENTER" prefHeight="11.0" prefWidth="162.0">
                            <children>
-                              <Label fx:id="day7_precipitation" text="20%">
+                              <Label fx:id="day7_precipitation" text="20%" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
                               </Label>
-                              <Label text="    " />
-                              <Label fx:id="day7_cloudCover" text="15%">
+                              <Label text="    " textFill="#ff5100" />
+                              <Label fx:id="day7_cloudCover" text="15%" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="18.0" />
                                  </font>
@@ -590,12 +590,12 @@
                         </HBox>
                         <HBox prefHeight="0.0" prefWidth="165.0">
                            <children>
-                              <Label prefWidth="95.0" text="Precipitation">
+                              <Label prefWidth="95.0" text="Precipitation" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="14.0" />
                                  </font>
                               </Label>
-                              <Label prefWidth="89.0" text="Cloud Cover">
+                              <Label prefWidth="89.0" text="Cloud Cover" textFill="#ff5100">
                                  <font>
                                     <Font name="Lato Thin" size="14.0" />
                                  </font>
