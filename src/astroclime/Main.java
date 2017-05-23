@@ -8,10 +8,13 @@ import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -29,7 +32,13 @@ public class Main extends Application {
 		//load the parent node
 		AnchorPane root = (AnchorPane) loader.load();
 		//sets the name of the window
-		primaryStage.setTitle("AstroClimeGazes"); 
+		primaryStage.setTitle("AstroClime"); 
+		//load icon from file
+		FileInputStream f = new FileInputStream(Paths.get("Icons/logo.PNG").toFile());
+		//create image object
+		Image img = new Image(f);
+		//set the stage's icon to the image
+		primaryStage.getIcons().add(img);
 		//means you cant rescale the window size
 		primaryStage.setResizable(false); 
 		// when you close the app this will make sure all the bits are terminated properly
