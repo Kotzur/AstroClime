@@ -140,7 +140,7 @@ public class MainWindowController {
 		//sets the bottom drawer to display the hourly view
 		ScrollPane hourlyView = FXMLLoader.load(getClass().getResource("../scenes/HourView.fxml"));
 		//removes the borders from the hourly view
-		hourlyView.setStyle("-fx-focus-color: transparent; -fx-faint-focus-color: transparent; -fx-box-border: transparent;");
+		hourlyView.setStyle("-fx-focus-color: #333333; -fx-faint-focus-color: #333333; -fx-box-border: #333333;");
 		//set the bottom drawer to the hourly view
 		bottomDrawer.setSidePane(hourlyView);
 		
