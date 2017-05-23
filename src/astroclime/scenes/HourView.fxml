@@ -8,24 +8,24 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.HourViewController">
+<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="333.0" prefWidth="335.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="astroclime.controllers.HourViewController">
    <content>
-      <VBox prefHeight="800.0" prefWidth="325.0">
+      <VBox prefHeight="800.0" prefWidth="325.0" style="-fx-background-color: #333333;">
           <HBox alignment="CENTER" prefHeight="100.0" prefWidth="354.0">
               <children>
-                  <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="22:00">
+                  <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="22:00" textFill="#ff5100">
                       <font>
                           <Font name="Lato Light" size="22.0" />
                       </font>
                   </Label>
                   <VBox alignment="CENTER" prefHeight="99.0" prefWidth="67.0">
                       <children>
-                          <Label text="Clouds">
+                          <Label text="Clouds" textFill="#ff5100">
                               <font>
                                   <Font name="Lato Thin" size="14.0" />
                               </font>
                           </Label>
-                          <Label fx:id="clouds1" text="100%">
+                          <Label fx:id="clouds1" text="100%" textFill="#ff5100">
                               <font>
                                   <Font name="Lato Thin" size="18.0" />
                               </font>
@@ -34,19 +34,19 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="99.0" prefWidth="67.0">
                       <children>
-                          <Label text="Rain">
+                          <Label text="Rain" textFill="#ff5100">
                               <font>
                                   <Font name="Lato Thin" size="14.0" />
                               </font>
                           </Label>
-                          <Label fx:id="rain1" text="100%">
+                          <Label fx:id="rain1" text="100%" textFill="#ff5100">
                               <font>
                                   <Font name="Lato Thin" size="18.0" />
                               </font>
                           </Label>
                       </children>
                   </VBox>
-                  <Label fx:id="temp1" alignment="CENTER" contentDisplay="CENTER" prefHeight="23.0" prefWidth="60.0" text="t" textAlignment="CENTER">
+                  <Label fx:id="temp1" alignment="CENTER" contentDisplay="CENTER" prefHeight="23.0" prefWidth="60.0" text="t" textAlignment="CENTER" textFill="#ff5100">
                       <font>
                           <Font name="Lato Thin" size="18.0" />
                       </font>
@@ -60,19 +60,19 @@
           </HBox>
          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
             <children>
-               <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="23:00">
+               <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="23:00" textFill="#ff5100">
                   <font>
                      <Font name="Lato Light" size="22.0" />
                   </font>
                </Label>
                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="67.0">
                   <children>
-                     <Label text="Clouds">
+                     <Label text="Clouds" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label fx:id="clouds2" text="5%">
+                     <Label fx:id="clouds2" text="5%" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
@@ -81,19 +81,19 @@
                </VBox>
                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="67.0">
                   <children>
-                     <Label text="Rain">
+                     <Label text="Rain" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label fx:id="rain2" text="2%">
+                     <Label fx:id="rain2" text="2%" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
                      </Label>
                   </children>
                </VBox>
-               <Label fx:id="temp2" alignment="CENTER" contentDisplay="CENTER" prefWidth="60.0" text="t" textAlignment="CENTER">
+               <Label fx:id="temp2" alignment="CENTER" contentDisplay="CENTER" prefWidth="60.0" text="t" textAlignment="CENTER" textFill="#ff5100">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -107,19 +107,19 @@
          </HBox>
          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
             <children>
-               <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="00:00">
+               <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="00:00" textFill="#ff5100">
                   <font>
                      <Font name="Lato Light" size="22.0" />
                   </font>
                </Label>
                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="67.0">
                   <children>
-                     <Label text="Clouds">
+                     <Label text="Clouds" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label fx:id="clouds3" text="5%">
+                     <Label fx:id="clouds3" text="5%" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
@@ -128,19 +128,19 @@
                </VBox>
                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="67.0">
                   <children>
-                     <Label text="Rain">
+                     <Label text="Rain" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label fx:id="rain3" text="2%">
+                     <Label fx:id="rain3" text="2%" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
                      </Label>
                   </children>
                </VBox>
-               <Label fx:id="temp3" alignment="CENTER" contentDisplay="CENTER" prefWidth="60.0" text="t" textAlignment="CENTER">
+               <Label fx:id="temp3" alignment="CENTER" contentDisplay="CENTER" prefWidth="60.0" text="t" textAlignment="CENTER" textFill="#ff5100">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -154,19 +154,19 @@
          </HBox>
          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
             <children>
-               <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="01:00">
+               <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="01:00" textFill="#ff5100">
                   <font>
                      <Font name="Lato Light" size="22.0" />
                   </font>
                </Label>
                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="67.0">
                   <children>
-                     <Label text="Clouds">
+                     <Label text="Clouds" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label fx:id="clouds4" text="5%">
+                     <Label fx:id="clouds4" text="5%" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
@@ -175,19 +175,19 @@
                </VBox>
                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="67.0">
                   <children>
-                     <Label text="Rain">
+                     <Label text="Rain" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label fx:id="rain4" text="2%">
+                     <Label fx:id="rain4" text="2%" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
                      </Label>
                   </children>
                </VBox>
-               <Label fx:id="temp4" alignment="CENTER" contentDisplay="CENTER" prefWidth="60.0" text="t" textAlignment="CENTER">
+               <Label fx:id="temp4" alignment="CENTER" contentDisplay="CENTER" prefWidth="60.0" text="t" textAlignment="CENTER" textFill="#ff5100">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -201,19 +201,19 @@
          </HBox>
          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
             <children>
-               <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="02:00">
+               <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="02:00" textFill="#ff5100">
                   <font>
                      <Font name="Lato Light" size="22.0" />
                   </font>
                </Label>
                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="67.0">
                   <children>
-                     <Label text="Clouds">
+                     <Label text="Clouds" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label fx:id="clouds5" text="5%">
+                     <Label fx:id="clouds5" text="5%" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
@@ -222,19 +222,19 @@
                </VBox>
                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="59.0">
                   <children>
-                     <Label text="Rain">
+                     <Label text="Rain" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label fx:id="rain5" text="2%">
+                     <Label fx:id="rain5" text="2%" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
                      </Label>
                   </children>
                </VBox>
-               <Label fx:id="temp5" alignment="CENTER" contentDisplay="CENTER" prefWidth="60.0" text="t" textAlignment="CENTER">
+               <Label fx:id="temp5" alignment="CENTER" contentDisplay="CENTER" prefWidth="60.0" text="t" textAlignment="CENTER" textFill="#ff5100">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -248,19 +248,19 @@
          </HBox>
          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
             <children>
-               <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="03:00">
+               <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="03:00" textFill="#ff5100">
                   <font>
                      <Font name="Lato Light" size="22.0" />
                   </font>
                </Label>
                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="67.0">
                   <children>
-                     <Label text="Clouds">
+                     <Label text="Clouds" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label fx:id="clouds6" text="5%">
+                     <Label fx:id="clouds6" text="5%" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
@@ -269,19 +269,19 @@
                </VBox>
                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="59.0">
                   <children>
-                     <Label text="Rain">
+                     <Label text="Rain" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label fx:id="rain6" text="2%">
+                     <Label fx:id="rain6" text="2%" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
                      </Label>
                   </children>
                </VBox>
-               <Label fx:id="temp6" alignment="CENTER" contentDisplay="CENTER" prefWidth="60.0" text="t" textAlignment="CENTER">
+               <Label fx:id="temp6" alignment="CENTER" contentDisplay="CENTER" prefWidth="60.0" text="t" textAlignment="CENTER" textFill="#ff5100">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -295,19 +295,19 @@
          </HBox>
          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
             <children>
-               <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="04:00">
+               <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="04:00" textFill="#ff5100">
                   <font>
                      <Font name="Lato Light" size="22.0" />
                   </font>
                </Label>
                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="67.0">
                   <children>
-                     <Label text="Clouds">
+                     <Label text="Clouds" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label fx:id="clouds7" text="5%">
+                     <Label fx:id="clouds7" text="5%" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
@@ -316,19 +316,19 @@
                </VBox>
                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="59.0">
                   <children>
-                     <Label text="Rain">
+                     <Label text="Rain" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label fx:id="rain7" text="2%">
+                     <Label fx:id="rain7" text="2%" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
                      </Label>
                   </children>
                </VBox>
-               <Label fx:id="temp7" alignment="CENTER" contentDisplay="CENTER" prefWidth="60.0" text="t">
+               <Label fx:id="temp7" alignment="CENTER" contentDisplay="CENTER" prefWidth="60.0" text="t" textFill="#ff5100">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
@@ -342,19 +342,19 @@
          </HBox>
          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
             <children>
-               <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="05:00">
+               <Label alignment="CENTER" prefHeight="100.0" prefWidth="65.0" text="05:00" textFill="#ff5100">
                   <font>
                      <Font name="Lato Light" size="22.0" />
                   </font>
                </Label>
                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="67.0">
                   <children>
-                     <Label text="Clouds">
+                     <Label text="Clouds" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label fx:id="clouds8" text="5%">
+                     <Label fx:id="clouds8" text="5%" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
@@ -363,19 +363,19 @@
                </VBox>
                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="59.0">
                   <children>
-                     <Label text="Rain">
+                     <Label text="Rain" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="14.0" />
                         </font>
                      </Label>
-                     <Label fx:id="rain8" text="2%">
+                     <Label fx:id="rain8" text="2%" textFill="#ff5100">
                         <font>
                            <Font name="Lato Thin" size="18.0" />
                         </font>
                      </Label>
                   </children>
                </VBox>
-               <Label fx:id="temp8" alignment="CENTER" contentDisplay="CENTER" prefWidth="60.0" text="t" textAlignment="CENTER">
+               <Label fx:id="temp8" alignment="CENTER" contentDisplay="CENTER" prefWidth="60.0" text="t" textAlignment="CENTER" textFill="#ff5100">
                   <font>
                      <Font name="Lato Thin" size="18.0" />
                   </font>
