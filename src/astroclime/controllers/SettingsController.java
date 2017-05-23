@@ -110,9 +110,9 @@ public class SettingsController {
                             //hide invalidLocation label
                             invalidLocation.setVisible(false);
                             //set text back to black
-                            locationText.setTextFill(Color.BLACK);
+                            locationText.setTextFill(Color.rgb(255, 81, 0));
                             locationBox.setFocusColor(Color.BLACK);
-                            locationBox.setUnFocusColor(Color.BLACK);
+                            locationBox.setUnFocusColor(Color.rgb(255, 81, 0));
                         } else {
                         }
                     }
